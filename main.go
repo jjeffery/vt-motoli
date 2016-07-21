@@ -2,13 +2,15 @@ package main
 
 import (
 	"bufio"
-	"fmt"
+	"html/template"
 	"io"
 	"log"
 	"os"
 	"regexp"
+	"strconv"
 	"strings"
 
+	"github.com/jjeffery/vt-motoli/scanner"
 	"github.com/jjeffery/vt-motoli/story"
 )
 
@@ -27,7 +29,7 @@ func main() {
 
 	s := scanStory(file)
 
-	fmt.Printf("%+v\n", s)
+	printStory(s)
 }
 
 // Regular expressions for parsing the line contents
@@ -43,6 +45,60 @@ var (
 )
 
 func scanStory(r io.Reader) *story.Story {
+	s := story.New()
+	scan := scanner.New(r)
+	for scan.Scan() {
+		if scan.Err != nil {
+			log.Fatal(scan.Err)
+		}
+		if scan.Prefixes.Match("Page", "Line") {
+			page, err := s.GetPage(scan.Prefixes[0].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			line, err := page.GetLine(scan.Prefixes[1].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			line.SetText(scan.Prefixes[1].Cont, scan.Arg)
+		} else if scan.Prefixes.Match("Page", "Text") {
+			page, err := s.GetPage(scan.Prefixes[0].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			page.SetText(scan.Prefixes[1].Index, scan.Arg)
+		} else if scan.Prefixes.Match("Page", "Time") {
+			page, err := s.GetPage(scan.Prefixes[0].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			line, err := page.GetLine(scan.Prefixes[1].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			value, err := strconv.ParseFloat(scan.Arg, 64)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			line.Time = value
+		} else if scan.Prefixes.Match("Page") {
+			page, err := s.GetPage(scan.Prefixes[0].Index)
+			if err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+			if err := page.Process(scan.Command, scan.Arg); err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+		} else if scan.Prefixes.Match() {
+			if err := s.Process(scan.Command, scan.Arg); err != nil {
+				log.Fatalf("line %d: %v", scan.Line, err)
+			}
+		}
+	}
+	return s
+}
+
+func scanStory_1(r io.Reader) *story.Story {
 	s := story.New()
 	scanner := bufio.NewScanner(r)
 
@@ -82,3 +138,30 @@ func isComment(text string) bool {
 	}
 	return false
 }
+
+func printStory(s *story.Story) {
+	t := template.Must(template.New("tmpl").Parse(tmpl))
+	t.Execute(os.Stdout, s)
+}
+
+const tmpl = `<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<div>Name: {{.Name}}</div>
+{{range .Pages -}}
+<div>
+	<div>Page {{.Number}}</div>
+	{{range .Lines}}
+		<div>
+			{{range .Texts -}}
+			<div>{{.}}</div>
+			{{- end -}}
+		</div>
+	{{end}}
+</div>
+{{- end -}}
+</body>
+</html>
+`
