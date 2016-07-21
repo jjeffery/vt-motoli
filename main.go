@@ -52,40 +52,27 @@ func scanStory(r io.Reader) *story.Story {
 			log.Fatal(scan.Err)
 		}
 		if scan.Prefixes.Match("Page", "Line") {
-			page, err := s.GetPage(scan.Prefixes[0].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
-			line, err := page.GetLine(scan.Prefixes[1].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
+			pageNum := scan.Prefixes[0].Index
+			lineNum := scan.Prefixes[1].Index
+			line := s.Page(pageNum).Line(lineNum)
 			line.SetText(scan.Prefixes[1].Cont, scan.Arg)
 		} else if scan.Prefixes.Match("Page", "Text") {
-			page, err := s.GetPage(scan.Prefixes[0].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
-			page.SetText(scan.Prefixes[1].Index, scan.Arg)
+			pageNum := scan.Prefixes[0].Index
+			textNum := scan.Prefixes[1].Index
+			page := s.Page(pageNum)
+			page.SetText(textNum, scan.Arg)
 		} else if scan.Prefixes.Match("Page", "Time") {
-			page, err := s.GetPage(scan.Prefixes[0].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
-			line, err := page.GetLine(scan.Prefixes[1].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
+			pageNum := scan.Prefixes[0].Index
+			lineNum := scan.Prefixes[1].Index
+			line := s.Page(pageNum).Line(lineNum)
 			value, err := strconv.ParseFloat(scan.Arg, 64)
 			if err != nil {
 				log.Fatalf("line %d: %v", scan.Line, err)
 			}
 			line.Time = value
 		} else if scan.Prefixes.Match("Page") {
-			page, err := s.GetPage(scan.Prefixes[0].Index)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
+			pageNum := scan.Prefixes[0].Index
+			page := s.Page(pageNum)
 			if err := page.Process(scan.Command, scan.Arg); err != nil {
 				log.Fatalf("line %d: %v", scan.Line, err)
 			}
