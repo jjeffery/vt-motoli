@@ -13,9 +13,9 @@ import (
 var (
 	// regular expressions indicating a comment line
 	commentREs = []*regexp.Regexp{
-		regexp.MustCompile(`^#(#|[^#]+\s)`), // eg "### comment"
-		regexp.MustCompile(`^#[^#]\s`),      // eg "#This is a comment"
-		regexp.MustCompile(`^\s*<`),         // eg "<Identifier> <-- start of line etc"
+		regexp.MustCompile(`^##`),       // eg "### comment"
+		regexp.MustCompile(`^#[^#]*\s`), // eg "#This is a comment"
+		regexp.MustCompile(`^<`),        // eg "<Identifier> <-- start of line etc"
 	}
 
 	commandRE = regexp.MustCompile(`^#([A-Za-z0-9-]+)#\s+(.*)$`)
