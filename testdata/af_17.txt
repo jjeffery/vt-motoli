@@ -1,0 +1,191 @@
+# This is the title of the story
+#StoryName#	Our wonderful world
+# This is the layout of the story
+#Format#	side
+# This is the total number of story pages not including the title page
+#MaxPages#	16
+# This is the maximum number of lines on any page
+#MaxLines#	10
+# This is the maximum number of continuation lines
+#MaxCont# 5
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+####################################
+#Following are the lines of text for each page
+<Identifier>		<-- Start of line -------------------- End of line -->
+##Title Page
+#Page0Line1#		Our wonderful world
+#Page0Time1#		1.23
+#Page0Text2#		Writer: Herminder Ohri
+#Page0Text3#		© Pratham Books, 2014
+ 
+##Page 1
+#Page1Line1-0#		Once upon a time,| when there were no
+#Page1Line1-1#		people,| God looked down at the beautiful world he had made.
+#Page1Time1#		6.9
+#Page1Line2-0#		He thought| I must have someone to look after my
+#Page1Line2-1#		creation.
+#Page1Time2#		3.76
+ 
+##Page 2
+#Page2Line1-0#		The lion roared,| "I am the king of the jungle, I
+#Page2Line1-1#		can look after the world."
+#Page2Time1#		5.2
+ 
+##Page 3
+#Page3Line1-0#		The elephant trumpeted loudly,| "My Lord, you have
+#Page3Line1-1#		made me so big and majestic."
+#Page3Time1#		6.7
+#Page3Line2#		"Surely I am right for the job."
+#Page3Time2#		1.9
+ 
+##Page 4
+#Page4Line1-0#		The whale looked up at the sky and spouted a
+#Page4Line1-1#		fountain of water,| "Do they know how to swim and 
+#Page4Line1-2#		look after the fish, the reefs, the coral and
+#Page4Line1-3#		millions of tiny sea animals?".
+#Page4Time1#		11.15
+#Page4Line2-0#		"I can look after the oceans.|| "I can also keep
+#Page4Line2-1#		my head above water and see what is going on|
+#Page4Line2-2#		on the land."
+#Page4Time2#		8.54
+#Page4Line3-0#		"I am so LARGE, no one will dare to do anything
+#Page4Line3-1#		against your will."
+#Page4Time3#		4.7
+ 
+##Page 5
+#Page5Line1-0#		The shark thought his sharp teeth were all that
+#Page5Line1-1#		were needed to do the job.
+#Page5Time1#		5.35
+ 
+##Page 6
+#Page6Line1-0#		The eagle laughed,| "These animals can only look
+#Page6Line1-1#		after those on land, while the whale and the shark
+#Page6Line1-2#		can only see the water animals."
+#Page6Time1#		8.72
+#Page6Line2-0#		"But I fly, I see the land, sky and water.||
+#Page6Line2-1#		I am the only one fit to be the keeper of
+#Page6Line2-2#		the world."
+#Page6Time2#		8.4
+ 
+##Page 7
+#Page7Line1-0#		God listened carefully to the animals, to the
+#Page7Line1-1#		fish and the birds.|| "I will create man," he said.
+#Page7Time1#		6.95
+#Page7Line2-0#		The animals all wondered,| what was this
+#Page7Line2-1#		thing called "man".|| What colour, with feathers
+#Page7Line2-2#		or fur, or scales?
+#Page7Time2#		7.95
+#Page7Line3-0#		Will he run like a lion?| Swim like a fish?
+#Page7Line3-1#		Fly high like the eagle?
+#Page7Time3#		5.25
+ 
+##Page 8
+#Page8Line1#		The sun had set and it was night.
+#Page8Time1#		1.8
+#Page8Line2-0#		He wrapped himself in the night sky,| put the
+#Page8Line2-1#		twinkle of stars into the eyes and used the
+#Page8Line2-2#		black clouds for hair.
+#Page8Time2#		6.95
+#Page8Line3-0#		He also put pieces of the moon in nails and
+#Page8Line3-1#		the shine of far away stars in teeth.
+#Page8Time3#		5.15
+#Page8Line4-0#		So the first man and woman were created with
+#Page8Line4-1#		shiny black skins like the night.
+#Page8Time4#		4.25
+ 
+##Page 9
+#Page9Line1#		Soon the night faded and it was morning.
+#Page9Time1#		2.65
+#Page9Line2-0#		God covered himself in the white morning light,
+#Page9Line2-1#		took the blue sky for the eyes, the gold of the
+#Page9Line2-2#		sun he spun into hair, and before him stood a man
+#Page9Line2-3#		and woman with white skins, blue eyes and golden hair.
+#Page9Time2#		13.72
+ 
+##Page 10
+#Page10Line1#		Now the morning had turned into afternoon.
+#Page10Time1#		2.45
+#Page10Line2-0#		The sun was very bright, so he pulled the yellow
+#Page10Line2-1#		light, and the deep black shadows of the afternoon and
+#Page10Line2-2#		made a man and woman with yellow skins, black hair and
+#Page10Line2-3#		eyes that slanted to look into the sun.
+#Page10Time2#		14.15
+ 
+##Page 11
+#Page11Line1-0#		It was now evening, the sky had become dusky and
+#Page11Line1-1#		a few stars had also appeared in the sky.
+#Page11Time1#		6.3
+#Page11Line2-0#		God looked down and saw the beautiful rich brown
+#Page11Line2-1#		of the earth and the dusk of the sky for the skin.
+#Page11Time2#		6.1
+#Page11Line3-0#		The black colour of the night was for the hair
+#Page11Line3-1#		and he used the sparkle of the stars for the eyes.
+#Page11Time3#		5.56
+#Page11Line4-0#		Before him stood a man and woman with brown
+#Page11Line4-1#		skins, black hair and eyes.
+#Page11Time4#		5.15
+ 
+##Page 12
+#Page12Line1-0#		The animals all looked in wonder at the strange
+#Page12Line1-1#		creature who stood on two legs, with naked skin,
+#Page12Line1-2#		with no fur or feathers or even scales.
+#Page12Time1#		9.2
+#Page12Line2-0#		The lion looked down his kingly nose and roared,
+#Page12Line2-1#		"I can outrun them and with a swipe of my paw I
+#Page12Line2-2#		can kill them,| sorry for saying so."
+#Page12Time2#		8.93
+ 
+##Page 13
+#Page13Line1-0#		Zebra suggested, "Some stripes would have
+#Page13Line1-1#		improved their look."
+#Page13Time1#		4.2
+#Page13Line2#		The leopard said, "A few spots."
+#Page13Time2#		2.1
+#Page13Line3-0#		The elephant trumpeted, "Surely grey would have
+#Page13Line3-1#		been a better colour?"
+#Page13Time3#		4.0
+ 
+##Page 14
+#Page14Line1-0#		The shark looked at their teeth and smiled
+#Page14Line1-1#		showing his sharp teeth.
+#Page14Time1#		4.4
+#Page14Line2-0#		"Ah! No fins, how will they swim? And they are
+#Page14Line2-1#		going to be the keeper.|| Ha! Ha! Ha!".
+#Page14Time2#		7.0
+#Page14Line3-0#		The fish,| big and small, laughed as they dived
+#Page14Line3-1#		into the deep water leaving a trail of bubbles
+#Page14Line3-2#		of laughter.
+#Page14Time3#		6.8
+ 
+##Page 15
+#Page15Line1-0#		God smiled kindly, "You see, to survive, man will
+#Page15Line1-1#		have to look after the animals, the oceans with all
+#Page15Line1-2#		their life, the plants, from the tiniest to the
+#Page15Line1-3#		largest trees."
+#Page15Time1#		11.4
+#Page15Line2-0#		"The day he starts destroying the world with his
+#Page15Line2-1#		greed, he will be destroyed."
+#Page15Time2#		4.7
+#Page15Line3-0#		The animals,| the fish and the birds bowed their
+#Page15Line3-1#		heads and hoped they would be safe.
+#Page15Time3#		5.35
+#Page15Line4-0#		So let us,| YOU and I,| look after this wonderful
+#Page15Line4-1#		world.
+#Page15Time4#		4.25
+ 
+##Page 16
+#Page16Pic#			pratham-books
+#Page16Text1-0#		Our wonderful world.
+#Page16Text1-1#		Writer: Herminder Ohri.
+#Page16Text1-2#		Audio: Eve McKenzie-McHugh.
+#Page16Text1-3#		VT Software: AJR, NJA, TLG.
+
+#Page16Text2-0#		© Pratham Books, 2014.
+#Page16Text2-1# 	This work is licensed under a Creative Commons Attribution
+#Page16Text2-2# 	(CC-BY) Version 3.0 Unported Licence
+#Page16Text2-3# 	Disclaimer: You are free to download, copy, translate 
+#Page16Text2-4# 	or adapt this story and use the illustrations as long as you  
+#Page16Text2-5# 	attribute or credit the original creators.
+

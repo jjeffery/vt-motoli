@@ -1,0 +1,253 @@
+﻿
+# This is the title of the story
+#StoryName#	A Fish and a Gift
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	13
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 10
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+####################################
+
+
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		A Fish and a Gift
+#Page0Time1#		2.2
+
+#Page0Text2#		Writer: Liesl Jobson
+#Page0Text3#		Illustration: Jesse Breeytenbach
+#Page0Text4#		© Liesl Jobson, Jesse Breytenbach, 
+#Page0Text5#		Andy Thesen and bookdash.org, 2014
+
+
+##Page 1
+#Page1Line1-0#    	One special Friday Yusuf’s father gets dressed before a
+#Page1Line1-1#    	flicker of light brightens the sky.
+#Page1Time1#		7.1
+
+#Page1Line2-0#    	He pulls on his heavy weather-proof jacket and  green 
+#Page1Line2-1#    	woolen cap that covers his ears.|
+#Page1Line2-2#    	He waves his boy goodbye.
+#Page1Time2#		9.1
+
+#Page1Line3-0#    	Yusuf’s eyes brighten when Papa says,| “Today is the day 
+#Page1Line3-1#    	I will catch a fish and bring home a gift for you.”
+#Page1Time3#		9.3
+
+
+##Page 2
+#Page2Line1#  		A fish and a gift?| Oh, what will it be?
+#Page2Time1#		3.6
+
+#Page2Line2-0#  	Papa cycles down to Muizenberg Beach.| Squeak squeak go the
+#Page2Line2-1#  	wheels all the way to Surfer’s Corner.
+#Page2Time2#		8.3
+
+#Page2Line3-0#  	Gulls circle the sky.| “Whaaat? Whaaat? Whaaat?” they cry.|
+#Page2Line3-1#  	“What will you bring back for Yusuf?”
+#Page2Time3#		9.0
+
+#Page2Line4#  		Papa rings his bell.| “Wait and see what it will be!” 
+#Page2Time4#		3.6
+
+
+##Page 3
+#Page3Line1#  		The fishermen watch the sun rise.
+#Page3Time1#		2.6
+
+#Page3Line2-0#  	They check their nets.| They check their oars.|
+#Page3Line2-1#  	They listen to the wind.
+#Page3Time2#		4.8
+
+#Page3Line3-0#  	They drag their boats down to the water.| Yusuf’s  
+#Page3Line3-1#  	grandfather,| Oupa Salie| was a treknet fisherman.
+#Page3Time3#		7.0
+
+#Page3Line4#  		Before his father,| Oupagrootjie Ridwaan,| knew the sea too.
+#Page3Time4#		4.7
+
+
+##Page 4
+#Page4Line1#  		The boat rides into the waves.
+#Page4Time1#		2.5
+
+#Page4Line2-0#  	Papa’s arms stretch to the oar.| 
+#Page4Line2-1#  	His leg braces against the side.
+#Page4Time2#		5.3
+
+#Page4Line3#  		His neck strains,| his back muscles ripple.
+#Page4Time3#		3.5
+
+#Page4Line4-0#  	Papa sings as he works:| “Drop and swish.|
+#Page4Line4-1#  	Find a fish.| Pull and plop.| Don’t you stop.”
+#Page4Time4#		7.3
+
+
+##Page 5
+#Page5Line1-0#  	All day long Yusuf looks at the sky.|
+#Page5Line1-1#  	It is bright and clear and windless.
+#Page5Time1#		7.0
+
+#Page5Line2-0#  	A fish and a gift!| What will Papa bring home from  
+#Page5Line2-1#  	the sea?| Sometimes he brings a beautiful shell. 
+#Page5Time2#		7.7
+
+#Page5Line3-0#  	Sometimes he brings a jewel green bottle rinsed
+#Page5Line3-1#  	by the waves.
+#Page5Time3#		4.6
+
+
+##Page 6
+#Page6Line1#  		Some days Yusuf’s father brings a story.
+#Page6Time1#		3.6
+
+#Page6Line2-0#  	Like the time they found sea turtles on the sand,|
+#Page6Line2-1#  	hundreds washed up in a storm.
+#Page6Time2#		6.0
+
+#Page6Line3-0#  	“Whaaat? Whaaat? Whaaat?”| cried the gulls.|
+#Page6Line3-1#  	“What will you do to help the turtles?”
+#Page6Time3#		6.2
+
+#Page6Line4-0#  	Papa said,| “We saved those turtles,| I tell you straight.|
+#Page6Line4-1#  	We sent them back to the ocean,| every last one.”
+#Page6Time4#		7.3
+
+
+##Page 7
+#Page7Line1#  		Always Papa brings a song.
+#Page7Time1#		2.1
+
+#Page7Line2-0#  	He sings the song while he pulls the oars.| 
+#Page7Line2-1#  	He sings the song while he pulls the nets.
+#Page7Time2#		6.0
+
+#Page7Line3-0#  	He sings the song as he winds the ropes.| 
+#Page7Line3-1#  	He sings the song as he cycles home.
+#Page7Time3#		6.3
+
+#Page7Line4-0#  	“Drop and swish.| Find a fish.|
+#Page7Line4-1#  	Pull and plop.| Don’t you stop.”
+#Page7Time4#		5.0
+
+
+##Page 8
+#Page8Line1-0#  	Ouma Safiya wants a nice fat yellowtail for her supper.| 
+#Page8Line1-1#  	Mother wants a new dress.
+#Page8Time1#		7.4
+
+#Page8Line2-0#  	“Don’t be silly,”| says Ouma.| “You’ll be lucky if they 
+#Page8Line2-1#  	even catch a tiny crab.| More likely it will be fish tail 
+#Page8Line2-2#  	Friday.| There’s not so many fish left in the sea.”
+#Page8Time2#		13.6
+
+#Page8Line3#  		Yusuf holds Ouma’s hand.| They cross the road at the bathing cabins.
+#Page8Time3#		5.7
+
+#Page8Line4-0#  	“Whaaat? Whaaat? Whaaat?”| cry the gulls perched on the bright 
+#Page8Line4-1#  	rooftops.| “What's for supper?”
+#Page8Time4#		7.1
+
+
+##Page 9
+#Page9Line1-0#  	Last year the fishermen fought with the surfers.|
+#Page9Line1-1#  	Angry fists and shouting words.
+#Page9Time1#		7.1
+
+#Page9Line2#  		“Whaaat? Whaaat? Whaaat?”| cried the gulls.
+#Page9Time2#		4.0
+
+#Page9Line3-0#  	“There’s enough sea for everybody,”| said Yusuf’s father.|
+#Page9Line3-1#  	He showed them the fishing license that had been Oupa Salie’s.|
+#Page9Line3-2#  	“Waves for all.| Water for free.”
+#Page9Time3#		10.2
+
+
+##Page 10
+#Page10Line1-0#  	Ouma Safiya watches through her binoculars,| 
+#Page10Line1-1#  	her fingers curled in curiosity.
+#Page10Time1#		6.3
+
+#Page10Line2#  		The shark siren sounds.
+#Page10Time2#		2.4
+
+#Page10Line3-0#  	Swimmers run back to the sand and grab their towels.|
+#Page10Line3-1#  	Surfers rush to the shore,| carrying their boards under their arms.|
+#Page10Line3-2#  	Under the showers they strip off their wetsuits.
+#Page10Time3#		12.5
+
+#Page10Line4-0#  	“Whaaat? Whaaat? Whaaat?”| cry the gulls.| 
+#Page10Line4-1#  	“What will Yusuf’s father bring from the ocean?”
+#Page10Time4#		7.7
+
+
+##Page 11
+#Page11Line1#  		Yusuf’s father and uncle and cousins heave and pull. 
+#Page11Time1#		5.1
+
+#Page11Line2#  		A little shark has been caught.| It twists and thrashes in the waves.
+#Page11Time2#		5.8
+
+#Page11Line3-0#  	Yusuf’s father untangles the nets,| singing to the shark:| 
+#Page11Line3-1#  	“Drop and swish.| Find a fish.|
+#Page11Line3-2#  	Pull and plop.| Don’t you stop.”
+#Page11Time3#		8.7
+
+#Page11Line4-0#  	When the shark at last is free it streaks back into the waves,| 
+#Page11Line4-1#  	leaving only one fat yellowtail in the net.
+#Page11Time4#		9.5
+
+#Page11Line5#  		Ouma Safiya will be pleased.
+#Page11Time5#		2.7
+
+
+##Page 12
+#Page12Line1-0#  	The men pull the boat in and coil up the cables.| 
+#Page12Line1-1#  	A hard white triangle catches Papa’s finger. 
+#Page12Time1#		7.0
+
+#Page12Line2-0#  	“Whaaat? Whaaat? Whaaat?”| cry the gulls.| 
+#Page12Line2-1#  	“What did you bring back for Yusuf?”
+#Page12Time2#		5.6
+
+#Page12Line3-0#  	As the sun goes down,| Papa answers the gulls.| 
+#Page12Line3-1#  	“A lucky shark tooth for my boy.”
+#Page12Time3#		6.0
+
+#Page12Line4#  		At home Yusuf holds his gift up to the stars. 
+#Page12Time4#		4.2
+
+
+##Page 13
+#Page13Pic#				book-dash.jpg
+#Page13Text1-0#		A Fish and a Gift
+#Page13Text1-1#		Writer: Liesl Jobson
+#Page13Text1-2#		Illustration: Jesse Breeytenbach
+#Page13Text1-3#		© Liesl Jobson, Jesse Breytenbach, 
+#Page13Text1-4#		Andy Thesen and bookdash.org, 2014
+#Page13Text1-5#		Audio: Hyeon Shaw
+#Page13Text1-6#		VT Software: AJR, NJA, TLG
+
+#Page13Text2-0# 	This work is licensed under a Creative Commons Attribution
+#Page13Text2-1# 	(CC-BY) Version 3.0 Unported Licence
+#Page13Text2-2# 	Disclaimer: You are free to download, copy, translate 
+#Page13Text2-3# 	or adapt this story and use the illustrations as long as you  
+#Page13Text2-4# 	attribute or credit the original creators.
+
+
+

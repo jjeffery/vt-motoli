@@ -1,0 +1,101 @@
+﻿
+# This is the title of the story
+#StoryName#	Chicken and Millipede
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	13
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+####################################
+
+
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Chicken and Millipede
+#Page0Time1#		1.5
+
+#Page0Text2#		Writer: Winny Asara
+#Page0Text3#		Illustration: Winny Asara
+#Page0Text4#		© African Storybook Initiative, 2014
+
+
+##Page 1
+#Page1Line1#    C	hicken and Millipede were friends.
+#Page1Time1#		2.4
+
+##Page 2
+#Page2Line1#  		They decided to play football. 
+#Page2Time1#		2.1
+
+##Page 3
+#Page3Line1#  		They took turns to defend the goal.
+#Page3Time1#		2.7
+
+##Page 4
+#Page4Line1# 		Millipede won the game.
+#Page4Time1#		2.1
+
+##Page 5
+#Page5Line1#  		Chicken was very mad. 
+#Page5Time1#		2.2
+
+##Page 6
+#Page6Line1#  		Chicken swallowed Millipede.
+#Page6Time1#		2.1
+
+##Page 7
+#Page7Line1#  		Mother Millipede searched for Millipede. 
+#Page7Time1#		2.5
+
+##Page 8
+#Page8Line1#  	Mother Millipede heard her son in Chicken.
+#Page8Time1#		2.6
+
+##Page 9
+#Page9Line1#  		Chicken began to feel ill.
+#Page9Time1#		2.4
+
+##Page 10
+#Page10Line1#  		Chicken started to cough.
+#Page10Time1#		1.4
+
+#Page 11
+#Page11Line1#   	Millipede fell out.
+#Page11Time1#		1.3
+
+##Page 12
+#Page12Line1# 		Chicken and Millipede were not friends anymore.
+#Page12Time1#		3.0
+
+##Page 13
+#Page13Pic#			african-storybook
+#Page13Text1-0#		Chicken and Millipede
+#Page13Text1-1#		Writer/Illustrator: Winny Asara
+#Page13Text1-2#		Adapted by: Dedre Grobler
+#Page13Text1-3#		Audio: Eve McKenzie-McHarg
+#Page13Text1-4# 	VT Software: AJR, NJA, TLG
+
+#Page13Text2-0#		© African Storybook Initiative, 2014
+#Page13Text2-1# 	This work is licensed under a Creative Commons Attribution
+#Page13Text2-2# 	(CC-BY) Version 3.0 Unported Licence
+#Page13Text2-3# 	Disclaimer: You are free to download, copy, translate 
+#Page13Text2-4# 	or adapt this story and use the illustrations as long as you  
+#Page13Text2-5# 	attribute or credit the original creators.
+
+
+

@@ -1,0 +1,214 @@
+
+# This is the title of the story
+#StoryName#	Maguru Gives Out Legs
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	17
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+#############################################
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Maguru Gives Out Legs
+#Page0Time1#		1.8
+
+#Page0Text2-0#		Writer: Mutugi Kamundi
+#Page0Text2-1#		Illustration: Wiehan de Jager
+#Page0Text2-2#		Audio: Hyeon Shaw
+#Page0Text2-3#		VT Software: AJR, NJA, TLG
+#Page0Text2-4#		© African Storybook Initiative, 2015
+
+
+##Page 1
+#Page1Line1#    	Long time ago,| no animal had legs.
+#Page1Time1#		3.3
+
+#Page1Line2#    	They all used to crawl on the ground.
+#Page1Time2#		2.0
+
+
+##Page 2
+#Page2Line1-0#  	Only human beings had legs because 
+#Page2Line1-1#  	Maguru had given legs to humans.
+#Page2Time1#		4.5
+
+
+##Page 3
+#Page3Line1#  		One day,| Maguru decided to give legs to every animal.
+#Page3Time1#		3.5
+
+#Page3Line2-0#  	He walked round the village 
+#Page3Line2-1#  	announcing from a loudspeaker.
+#Page3Time2#		3.0
+
+#Page3Line3#  		He wanted each animal to walk like a human being.
+#Page3Time3#		3.5
+
+
+##Page 4
+#Page4Line1-0#		The animals were happy when they heard 
+#Page4Line1-1#		that they would be given legs.
+#Page4Time1#		3.6
+
+#Page4Line2-0#		Each animal wanted to have legs so that 
+#Page4Line2-1#		it could walk and run.
+#Page4Time2#		4.7
+
+#Page4Line3#		They sang,| wagged their tails and flapped their wings.
+#Page4Time3#		4.0
+
+
+##Page 5
+#Page5Line1-0#  	Animals gathered and discussed how difficult 
+#Page5Line1-1#  	it was to crawl.
+#Page5Time1#		3.5
+
+#Page5Line2#  		The ground scratched their bellies.
+#Page5Time2#		2.0
+
+#Page5Line3-0#  	Legs would also help them to stand and see far,| 
+#Page5Line3-1#  	like human beings did.
+#Page5Time3#		5.0
+
+
+##Page 6
+#Page6Line1-0#  	When the day came,| many animals crawled 
+#Page6Line1-1#  	to Maguru’s house to get their legs.
+#Page6Time1#		5.5
+
+#Page6Line2-0#  	Giraffes,| lions,| elephants,| rabbits,| crocodiles,| 
+#Page6Line2-1#  	and birds queued and waited to be given legs.
+#Page6Time2#		8.0
+
+
+##Page 7
+#Page7Line1#  		Each animal was given four legs.
+#Page7Time1#		2.2
+
+#Page7Line2#  		Birds were given two legs each.
+#Page7Time2#		2.5
+
+
+##Page 8
+#Page8Line1#  		Animals looked different on legs.
+#Page8Time1#		2.0
+
+#Page8Line2-0#  	Some danced in joy.| 
+#Page8Line2-1#  	Others had difficulty walking and fell down.
+#Page8Time2#		5.5
+
+
+##Page 9
+#Page9Line1-0#  	They walked round the village 
+#Page9Line1-1#  	showing off to human beings.
+#Page9Time1#		3.8
+
+#Page9Line2#    	All the animals said,| “We will never crawl again.”
+#Page9Time2#		3.8
+
+
+##Page 10
+#Page10Line1#   	The last animal in the queue was millipede.
+#Page10Time1#		3.2
+
+#Page10Line2#  		Maguru asked,| “Is there anyone else after you?”
+#Page10Time2#		4.0
+
+#Page10Line3#  		“No,| I am the last one,|” Millipede answered.
+#Page10Time3#		3.5
+
+
+#Page 11
+#Page11Line1-0# 	Maguru thought,| “If there is no one else,|
+#Page11Line1-1# 	what will I do with the rest of the legs?”
+#Page11Time1#		5.5
+
+#Page11Line2#   	Maguru gave all the remaining legs to Millipede.
+#Page11Time2#		4.2
+
+
+##Page 12
+#Page12Line1-0# 	Millipede went away very happy,| 
+#Page12Line1-1# 	because he had many legs.
+#Page12Time1#		4.5
+
+#Page12Line2#   	“I will move faster than any of them,|” he thought.
+#Page12Time2#		3.5
+
+
+##Page 13
+#Page13Line1-0# 	As soon as Millipede had left,| 
+#Page13Line1-1# 	the snake came to Maguru’s house.
+#Page13Time1#		5.0
+
+#Page13Line2# 		“Maguru,| please give me some legs,|” Snake begged.
+#Page13Time2#		4.0
+
+
+##Page 14
+#Page14Line1-0# 	“I have given out all the legs.| 
+#Page14Line1-1# 	Where were you?|” Maguru asked.
+#Page14Time1#		4.0
+
+#Page14Line2# 		“I over-slept,|” Snake replied.
+#Page14Time2#		2.5
+
+
+##Page 15
+#Page15Line1-0# 	Maguru checked in his house to see 
+#Page15Line1-1# 	whether there were any legs remaining.
+#Page15Time1#		4.5
+
+#Page15Line2# 		But he did not find any.
+#Page15Time2#		1.5
+
+
+##Page 16
+#Page16Line1-0# 	Maguru came out and said, 
+#Page16Line1-1# 	“Sorry Snake,| there are no legs remaining.”
+#Page16Time1#		5.0
+
+#Page16Line2# 		Snake had to crawl back home without legs.
+#Page16Time2#		3.5
+
+#Page16Line3-0# 	Since that day Snake does not sleep much.|
+#Page16Line3-1# 	He is always waiting for the next chance to get legs.
+#Page16Time3#		8.2
+
+
+##Page 17
+#Page17Pic#		african-storybook
+#Page17Text1-0# Maguru Gives Out Legs
+#Page17Text1-1# Writer: Mutugi Kamundi
+#Page17Text1-2# Illustration: Wiehan de Jager
+#Page17Text1-3# Audio: Hyeon Shaw 
+#Page17Text1-4# VT Software: AJR, NJA, TLG
+
+#Page17Text2-0# © African Storybook Initiative, 2015
+#Page17Text2-1# This work is licensed under a Creative Commons Attribution
+#Page17Text2-2# (CC-BY 4.0) Version 4.0 International Licence
+#Page17Text2-3# Disclaimer: You are free to download, copy, translate 
+#Page17Text2-4# or adapt this story and use the illustrations as long as you  
+#Page17Text2-5# attribute or credit the original creator/s.
+
+
+

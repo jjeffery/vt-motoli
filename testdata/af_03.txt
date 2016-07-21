@@ -1,0 +1,94 @@
+
+# This is the title of the story
+#StoryName#	Disability is not Inability
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	9
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+####################################
+
+
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Disability is not Inability
+#Page0Time1#		2.2
+
+#Page0Text2#		Writer: Agnes Mabururu
+#Page0Text3#		Illustration: Wiehan de Jager
+#Page0Text4#		© African Storybook Initiative, 2014
+
+##Page 1
+#Page1Line1-0#  	This is Agnes.| 
+#Page1Line1-1#  	She is my teacher.
+#Page1Time1#		2.7
+
+##Page 2
+#Page2Line1#  		Agnes uses crutches to walk. 
+#Page2Time1#		2.0
+
+##Page 3
+#Page3Line1-0#  	This is Metobu.|
+#Page3Line1-1#  	He is my favourite radio DJ.
+#Page3Time1#		3.4
+
+##Page 4
+#Page4Line1#  		He has problems with his eyes. 
+#Page4Time1#		1.6
+
+##Page 5
+#Page5Line1-0#  	My neighbour is Moraa.|  
+#Page5Line1-1#  	She's a farmer.
+#Page5Time1#		2.4
+
+##Page 6
+#Page6Line1-0#  	Moraa cannot hear.|
+#Page6Line1-1#  	She speaks using Sign language.
+#Page6Time1#		3.0
+
+##Page 7
+#Page7Line1-0#  	This is Osero.|  
+#Page7Line1-1#  	He is the best soccer player at my school. 
+#Page7Time1#		4.2
+
+##Page 8
+#Page8Line1-0#  	Osero has no hands.| 
+#Page8Line1-1#  	But he scores many goals for our team!
+#Page8Time1#		4.5
+
+##Page 9
+#Page9Pic#				african-storybook
+#Page9Text1-0#		Agnes Mabururu
+#Page9Text1-1#		Writer: Mutugi Kamundi
+#Page9Text1-2#		Illustration: Wiehan de Jager
+#Page9Text1-3#		Audio: Logan McAuliffe
+#Page9Text1-4# 		VT Software: AJR, NJA, TLG
+
+#Page9Text2-0#		© African Storybook Initiative, 2014
+#Page9Text2-1# 		This work is licensed under a Creative Commons Attribution
+#Page9Text2-2# 		(CC-BY 4.0) Version 4.0 International Licence
+#Page9Text2-3# 		Disclaimer: You are free to download, copy, translate 
+#Page9Text2-4# 		or adapt this story and use the illustrations as long as you  
+#Page9Text2-5# 		attribute or credit the original creators.
+
+
+

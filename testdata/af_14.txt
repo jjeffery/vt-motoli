@@ -1,0 +1,165 @@
+# This is the title of the story
+#StoryName#	Grandma's Bananas
+# This is the layout of the story
+#Format#	side
+# This is the total number of story pages not including the title page
+#MaxPages#	11
+# This is the maximum number of lines on any page
+#MaxLines#	10
+# This is the maximum number of continuation lines
+#MaxCont# 5
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+####################################
+#Following are the lines of text for each page
+<Identifier>		<-- Start of line -------------------- End of line -->
+##Title Page
+#Page0Line1#		Grandma's Bananas
+#Page0Time1#		1.6
+#Page0Text2#		Writer: Ursula Nafula
+#Page0Text3#		Illustration: Catherine Groenewald
+#Page0Text4#		© African Storybook Initiative, 2014
+ 
+##Page 1
+#Page1Line1-0#		Grandma's garden was wonderful -|| full of
+#Page1Line1-1#		sorghum, millet, and cassava.| But best
+#Page1Line1-2#		of all were the bananas.
+#Page1Time1#		10.6
+#Page1Line2-0#		Although Grandma had many grandchildren,| I
+#Page1Line2-1#		secretly knew that I was her favourite.
+#Page1Time2#		6.8
+#Page1Line3-0#		She invited me often to her house.||
+#Page1Line3-1#		She also told me little secrets.
+#Page1Time3#		6.6
+#Page1Line4-0#		But there was one secret she did not share
+#Page1Line4-1#		with me:|| where she ripened bananas.
+#Page1Time4#		7.5
+ 
+##Page 2
+#Page2Line1-0#		One day I saw a big straw basket placed in the
+#Page2Line1-1#		sun outside Grandma's house.
+#Page2Time1#		7.0
+#Page2Line2-0#		When I asked what it was for, the only answer I
+#Page2Line2-1#		got was,| "It's my magic basket."
+#Page2Time2#		7.2
+#Page2Line3-0#		Next to the basket,| there were several banana
+#Page2Line3-1#		leaves that Grandma turned from time to time.
+#Page2Time3#		6.8
+#Page2Line4-0#		I was curious.|| "What are the leaves for,|
+#Page2Line4-1#		Grandma?" I asked.
+#Page2Time4#		6.2
+#Page2Line5-0#		The only answer I got was,| "They are my
+#Page2Line5-1#		magic leaves."
+#Page2Time5#		4.4
+ 
+##Page 3
+#Page3Line1-0#	It was so interesting watching Grandma,| the
+#Page3Line1-1#	bananas,| the banana leaves and the big straw basket.
+#Page3Time1#		7.9
+#Page3Line2#		But Grandma sent me off to my mother on an errand.
+#Page3Time2#		3.85
+#Page3Line3-0#	"Grandma,| please, let me watch as you prepare..."|
+#Page3Line3-1#	"Don't be stubborn child, do as you are told,"|
+#Page3Line3-2#	she insisted.
+#Page3Time3#		10
+#Page3Line4#		I took off running.
+#Page3Time4#		1.2
+ 
+##Page 4
+#Page4Line1-0#		When I returned,| Grandma was sitting outside but
+#Page4Line1-1#		neither the basket nor the bananas.
+#Page4Time1#		7.0
+#Page4Line2-0#		"Grandma,| where is the basket,| where are all the
+#Page4Line2-1#		bananas, and where...".
+#Page4Time2#		5.6
+#Page4Line3-0#		But the only answer I got was,| "They are in my
+#Page4Line3-1#		magic place."
+#Page4Time3#		5.9
+#Page4Line4#		It was so disappointing!
+#Page4Time4#		2.8
+ 
+##Page 5
+#Page5Line1-0#		Two days later,| Grandma sent me to fetch her
+#Page5Line1-1#		walking stick from her bedroom.
+#Page5Time1#		6.1
+#Page5Line2-0#		As soon as I opened the door,| I was welcomed by
+#Page5Line2-1#		the strong smell of ripening bananas.
+#Page5Time2#		8.0
+#Page5Line3-0#		In the inner room was grandma's big magic straw
+#Page5Line3-1#		basket.| It was well hidden by an old blanket.
+#Page5Time3#		8.6
+#Page5Line4#		I lifted it and sniffed that glorious smell.
+#Page5Time4#		4.2
+ 
+##Page 6
+#Page6Line1-0#		Grandma's voice startled me when she called,|
+#Page6Line1-1#		"What are you doing? Hurry up and bring me the stick."
+#Page6Time1#		7.1
+#Page6Line2-0#		I hurried out with her walking stick.||
+#Page6Line2-1#		"What are you smiling about?" Grandma asked.
+#Page6Time2#		7.3
+#Page6Line4-0#		Her question made me realise that I was still
+#Page6Line4-1#		smiling at the discovery of her magic place.
+#Page6Time4#		6.0
+ 
+##Page 7
+#Page7Line1-0#		The following day when grandma came to visit my
+#Page7Line1-1#		mother, I rushed to her house to check the bananas once more.
+#Page7Time1#		7.7
+#Page7Line2-0#		There was a bunch of very ripe ones.||
+#Page7Line2-1#		I picked one and hid it in my dress.
+#Page7Time2#		8.0
+#Page7Line3-0#		After covering the basket again, I went behind
+#Page7Line3-1#		the house and quickly ate it.|
+#Page7Line3-2#		It was the sweetest banana I had ever tasted.
+#Page7Time3#		11.2
+ 
+##Page 8
+#Page8Line1-0#		The following day, when grandma was in the garden
+#Page8Line1-1#		picking vegetables,| I sneaked in and peered at the
+#Page8Line1-2#		bananas.| Nearly all were ripe.
+#Page8Time1#		11.3
+#Page8Line2-0#		I couldn't help taking a bunch of four.||
+#Page8Line2-1#		As I tiptoed towards the door,| I heard
+#Page8Line2-2#		grandma coughing outside.
+#Page8Time2#		8.8
+#Page8Line3-0#		I just managed to hide the bananas under my
+#Page8Line3-1#		dress as I walked past her.
+#Page8Time3#		4.5
+ 
+##Page 9
+#Page9Line1-0#		The following day was market day.|
+#Page9Line1-1#		Grandma woke up early.
+#Page9Time1#		5.1
+#Page9Line2-0#		She always took ripe bananas and the cassava
+#Page9Line2-1#		to sell at the market.
+#Page9Time2#		5.1
+#Page9Line3-0#		I did not hurry to visit her that day.|
+#Page9Line3-1#		But I could not avoid her for long.
+#Page9Time3#		6.2
+ 
+##Page 10
+#Page10Line1-0#		Later that evening I was called by my mother and
+#Page10Line1-1#		father,| and Grandma.|| I knew why.
+#Page10Time1#		8.3
+#Page10Line2-0#		That night as I lay down to sleep,| I knew I could
+#Page10Line2-1#		never steal again,|| not from grandma, not from my
+#Page10Line2-2#		parents, and certainly not from anyone else.
+#Page10Time2#		13.7
+ 
+##Page 11
+#Page11Text1-0#		Grandma's Bananas.
+#Page11Text1-1#		Writer: Ursula Nafula.
+#Page11Text1-2#		Illustration: Catherine Groenewald.
+#Page11Text1-3#		Language: English.
+#Page11Text1-4#		Audio: Hyeon Shaw
+#Page11Text1-5#		VT Software: AJR, NJA, TLG
+
+#Page11Text2-0#		© African Storybook Initiative, 2014.
+#Page11Text2-1# 	This work is licensed under a Creative Commons Attribution
+#Page11Text2-2# 	(CC-BY) Version 3.0 Unported Licence
+#Page11Text2-3# 	Disclaimer: You are free to download, copy, translate 
+#Page11Text2-4# 	or adapt this story and use the illustrations as long as you  
+#Page11Text2-5# 	attribute or credit the original creators.
+

@@ -1,0 +1,75 @@
+﻿
+# This is the title of the story
+#StoryName#	Feelings
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	6
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 30
+#ScaleTop#  60
+
+####################################
+
+
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Feelings
+#Page0Time1#		0.8
+
+#Page0Text2#		Writer: Clare Verbeek, Thembani Dladla and Zanele Buthelezi
+#Page0Text3#		Illustration: Kathy Arbuckle
+#Page0Text4#		© School of Education and Development (Centre for Adult Education),
+#Page0Text5#		University of KwaZulu-Natal, 2007
+
+##Page 1
+#Page1Line1#    My heart feels a lot of things.
+#Page1Time1#		2.0
+
+##Page 2
+#Page2Line1#  	I feel happy| when my granny tells us stories in the evening. 
+#Page2Time1#		3.2
+
+##Page 3
+#Page3Line1#  	I feel silly| when I play with my friend.
+#Page3Time1#		2.5
+
+##Page 4
+#Page4Line1#  	I feel bad| when my dad says he does not have money.
+#Page4Time1#		3.0
+
+##Page 5
+#Page5Line1#  	I feel loved| when my mom gives me a hug. 
+#Page5Time1#		2.5
+
+##Page 6
+#Page6Pic#		african-storybook
+#Page6Text1-0#	Feelings
+#Page6Text1-1#	Writer: Clare Verbeek, Thembani Dladla and Zanele Buthelezi
+#Page6Text1-2#	Illustration: Kathy Arbuckle
+#Page6Text1-3#	Audio: Logan McAuliffe
+#Page6Text1-4# 	VT Software: AJR, NJA, TLG
+
+#Page6Text2-0#	© School of Education and Development (Centre for Adult Education), 
+#Page6Text2-1#	University of KwaZulu-Natal, 2007
+#Page6Text2-2# 	This story is licensed under a Creative Commons Attribution 
+#Page6Text2-3#	Non-Commercial licence: CC-BY-NC 3.0 unported. 
+#Page6Text2-4# 	You are free to download, copy, translate or adapt this story
+#Page6Text2-5# 	and use the illustrations as long as you attribute or credit  
+#Page6Text2-6# 	the original creators.
+
+
+
+
