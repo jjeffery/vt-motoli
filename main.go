@@ -32,36 +32,38 @@ func scanStory(r io.Reader) *story.Story {
 	s := story.New()
 	scan := scanner.New(r)
 	for scan.Scan() {
-		if scan.Prefixes.Match("Page", "Line") {
-			pageNum := scan.Prefixes[0].Index
-			lineNum := scan.Prefixes[1].Index
-			continuationNum := scan.Prefixes[1].Cont
-			line := s.Page(pageNum).Line(lineNum)
-			line.SetText(continuationNum, scan.Arg)
-		} else if scan.Prefixes.Match("Page", "Text") {
-			pageNum := scan.Prefixes[0].Index
-			textNum := scan.Prefixes[1].Index
-			page := s.Page(pageNum)
-			page.SetText(textNum, scan.Arg)
-		} else if scan.Prefixes.Match("Page", "Time") {
-			pageNum := scan.Prefixes[0].Index
-			lineNum := scan.Prefixes[1].Index
-			line := s.Page(pageNum).Line(lineNum)
-			value, err := strconv.ParseFloat(scan.Arg, 64)
-			if err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
-			line.Time = value
-		} else if scan.Prefixes.Match("Page") {
-			pageNum := scan.Prefixes[0].Index
-			page := s.Page(pageNum)
-			if err := page.Process(scan.Command, scan.Arg); err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
-		} else if scan.Prefixes.Match() {
-			if err := s.Process(scan.Command, scan.Arg); err != nil {
-				log.Fatalf("line %d: %v", scan.Line, err)
-			}
+		if scan.Command.Matches("Page", "Line") {
+			pageNum := scan.Command[0].Index
+			lineNum := scan.Command[1].Index
+			continuationNum := scan.Command[1].Cont
+			s.Page(pageNum).Line(lineNum).Texts[continuationNum] = scan.Arg
+		} else if scan.Command.Matches("Page", "Text") {
+			pageNum := scan.Command[0].Index
+			textNum := scan.Command[1].Index
+			s.Page(pageNum).Texts[textNum] = scan.Arg
+		} else if scan.Command.Matches("Page", "Time") {
+			pageNum := scan.Command[0].Index
+			lineNum := scan.Command[1].Index
+			s.Page(pageNum).Line(lineNum).Time = floatArg(scan)
+		} else if scan.Command.Matches("Page", "Pic") {
+			pageNum := scan.Command[0].Index
+			s.Page(pageNum).Image = scan.Arg
+		} else if scan.Command.Matches("StoryName") {
+			s.Name = scan.Arg
+		} else if scan.Command.Matches("Format") {
+			s.Format = scan.Arg
+		} else if scan.Command.Matches("MaxPages") ||
+			scan.Command.Matches("MaxLines") ||
+			scan.Command.Matches("MaxCont") {
+			// do nothing: not needed anymore
+		} else if scan.Command.Matches("ScaleSide") {
+			s.ScaleSide = intArg(scan)
+		} else if scan.Command.Matches("ScaleTop") {
+			s.ScaleTop = intArg(scan)
+		} else if scan.Command.Matches("Pause") {
+			s.Pause = intArg(scan)
+		} else {
+			log.Fatalf("line %d: unknown command", scan.Line)
 		}
 	}
 	if scan.Err != nil {
@@ -69,6 +71,22 @@ func scanStory(r io.Reader) *story.Story {
 	}
 
 	return s
+}
+
+func floatArg(scan *scanner.Scanner) float64 {
+	v, err := strconv.ParseFloat(scan.Arg, 64)
+	if err != nil {
+		log.Fatalf("line %d: %v", scan.Line, err)
+	}
+	return v
+}
+
+func intArg(scan *scanner.Scanner) int {
+	v, err := strconv.Atoi(scan.Arg)
+	if err != nil {
+		log.Fatalf("line %d: %v", scan.Line, err)
+	}
+	return v
 }
 
 func printStory(s *story.Story) {

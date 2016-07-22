@@ -32,13 +32,3 @@ func (p *Page) Line(lineNum int) *Line {
 func (page *Page) SetText(num int, text string) {
 	page.Texts[num] = text
 }
-
-func (page *Page) Process(command, arg string) error {
-	switch command {
-	case "Pic":
-		page.Image = arg
-	default:
-		return fmt.Errorf("invalid command")
-	}
-	return nil
-}
