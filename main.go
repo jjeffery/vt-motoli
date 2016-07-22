@@ -36,11 +36,12 @@ func scanStory(r io.Reader) *story.Story {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
 			continuationNum := scan.Command[1].Cont
-			s.Page(pageNum).Line(lineNum).Texts[continuationNum] = scan.Arg
+			s.Page(pageNum).Line(lineNum).Segments[continuationNum] = scan.Arg
 		} else if scan.Command.Matches("Page", "Text") {
 			pageNum := scan.Command[0].Index
 			textNum := scan.Command[1].Index
-			s.Page(pageNum).Texts[textNum] = scan.Arg
+			continuationNum := scan.Command[1].Cont
+			s.Page(pageNum).Text(textNum).Segments[continuationNum] = scan.Arg
 		} else if scan.Command.Matches("Page", "Time") {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
@@ -106,15 +107,22 @@ const tmpl = `<!doctype html>
 {{range .Pages -}}
 <div>
 	<div>Page {{.Number}}</div>
-	{{range .Lines}}
-		<div>
-			{{range .Texts -}}
-			<div>{{.}}</div>
-			{{- end -}}
-		</div>
-	{{end}}
+	{{range .Lines -}}
+	<div>
+		{{range .Segments -}}
+		<div>{{.}}</div>
+		{{- end}}
+	</div>
+	{{- end}}
+	{{range .Texts -}}
+	<div>
+		{{range .Segments -}}
+		<div>{{.}}</div>
+		{{- end}}
+	</div>
+	{{- end}}
 </div>
-{{- end -}}
+{{end -}}
 </body>
 </html>
 `
