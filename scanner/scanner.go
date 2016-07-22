@@ -21,8 +21,8 @@ var (
 	}
 
 	commandREs = []*regexp.Regexp{
-		regexp.MustCompile(`^#([A-Za-z0-9-]+)#\s+(.*)$`),
-		regexp.MustCompile(`^([A-Za-z0-9-]+)\s*:\s+(.*)$`),
+		regexp.MustCompile(`^#([A-Za-z0-9-]+)#\s+(.*)$`),   // #command# arg
+		regexp.MustCompile(`^([A-Za-z0-9-]+)\s*:\s+(.*)$`), // command: arg
 	}
 
 	segmentREs = []*regexp.Regexp{
