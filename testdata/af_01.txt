@@ -69,8 +69,8 @@
 #Page3Line3-1#  	Hare said.
 #Page3Time3#		3.4
 
-#Page3Line4#    	Then Hare told Hyena| to till the land,| plant,| and weed.
-#Page3Time4#		3.0
+#Page3Line4#    	Then Hare told Hyena to till the land,| plant,| and weed.
+#Page3Time4#		3.2
 
 ##Page 4
 #Page4Line1#    	Hyena complained that he had been given more work.

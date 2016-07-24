@@ -1,12 +1,15 @@
 package main
 
 import (
-	"html/template"
+	"text/template"
 	"io"
+	"github.com/fsnotify/fsnotify"
 	"log"
+	"net/http"
 	"os"
+	"path"
 	"strconv"
-
+	"strings"
 	"github.com/jjeffery/vt-motoli/scanner"
 	"github.com/jjeffery/vt-motoli/story"
 )
@@ -19,13 +22,35 @@ func main() {
 		log.Fatal("usage: vt-motoli <file>")
 	}
 
-	file, err := os.Open(os.Args[1])
+	makeStory(os.Args[1])
+
+	fs := http.FileServer(http.Dir("."))
+	http.Handle("/", fs)
+
+
+	watchForFileChanges(os.Args[1])
+
+
+	log.Println("Listening...")
+	http.ListenAndServe(":3000", nil)
+
+}
+
+func makeStory(sourceFilename string){
+	sourceFile, err := os.Open(sourceFilename)
 	if err != nil {
 		log.Fatal(err)
 	}
+	story := scanStory(sourceFile)
 
-	s := scanStory(file)
-	printStory(s)
+	dir, filename  := path.Split(sourceFilename)
+	resultFilename := path.Join(dir,filename[:len(filename)-len(path.Ext(filename))] + ".html")
+	resultFile, err := os.Create(resultFilename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resultFile.Close()
+	printStory(story, resultFile)
 }
 
 func scanStory(r io.Reader) *story.Story {
@@ -45,7 +70,7 @@ func scanStory(r io.Reader) *story.Story {
 		} else if scan.Command.Matches("Page", "Time") {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
-			s.Page(pageNum).Line(lineNum).Time = floatArg(scan)
+			s.Page(pageNum).Line(lineNum).Time = scan.Arg
 		} else if scan.Command.Matches("Page", "Pic") {
 			pageNum := scan.Command[0].Index
 			s.Page(pageNum).Image = scan.Arg
@@ -58,11 +83,11 @@ func scanStory(r io.Reader) *story.Story {
 			scan.Command.Matches("MaxCont") {
 			// do nothing: not needed anymore
 		} else if scan.Command.Matches("ScaleSide") {
-			s.ScaleSide = intArg(scan)
+			s.ScaleSide = scan.Arg
 		} else if scan.Command.Matches("ScaleTop") {
-			s.ScaleTop = intArg(scan)
+			s.ScaleTop = scan.Arg
 		} else if scan.Command.Matches("Pause") {
-			s.Pause = intArg(scan)
+			s.Pause = scan.Arg
 		} else {
 			log.Fatalf("line %d: unknown command", scan.Line)
 		}
@@ -90,39 +115,78 @@ func intArg(scan *scanner.Scanner) int {
 	return v
 }
 
-func printStory(s *story.Story) {
-	t := template.Must(template.New("tmpl").Parse(tmpl))
-	t.Execute(os.Stdout, s)
+func substitute(s string) string {
+	s = strings.Replace(s, "|", "</span><span class=\"pause\">|</span><span>", -1)
+	if (s == "&nil") {
+		s = "<br />"
+	}
+	return s
 }
 
-// TODO(jpj): This is just an example of formatting the HTML based
-// on the story data model. Need to examine the existing script and
-// update tmpl accordingly.
-const tmpl = `<!doctype html>
-<html>
-<head>
-</head>
-<body>
-<div>Name: {{.Name}}</div>
-{{range .Pages -}}
-<div>
-	<div>Page {{.Number}}</div>
-	{{range .Lines -}}
-	<div>
-		{{range .Segments -}}
-		<div>{{.}}</div>
-		{{- end}}
-	</div>
-	{{- end}}
-	{{range .Texts -}}
-	<div>
-		{{range .Segments -}}
-		<div>{{.}}</div>
-		{{- end}}
-	</div>
-	{{- end}}
-</div>
-{{end -}}
-</body>
-</html>
-`
+func watchForFileChanges(sourceFile string) {
+	watcher, err := fsnotify.NewWatcher()
+	if err != nil {
+		log.Fatal(err)
+	}
+	//defer watcher.Close()
+
+	//done := make(chan bool)
+	go func() {
+		for {
+			select {
+			case event := <-watcher.Events:
+				//log.Println("event:", event)
+				if event.Op&fsnotify.Write == fsnotify.Write {
+					log.Println("modified file:", event.Name)
+					makeStory(sourceFile)
+
+				}
+			case err := <-watcher.Errors:
+				log.Println("error:", err)
+			}
+		}
+	}()
+
+	err = watcher.Add(sourceFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	//<-done
+}
+
+func printStory(s *story.Story, outputFile *os.File) {
+	tmpl, err := template.New("").Parse(`{{ template "story.html" . }}`)
+	if err != nil {
+		panic(err)
+	}
+	tmpl, err = tmpl.ParseFiles(
+		"../../../templates/story.html",
+		"../../../templates/page.html",
+		"../../../templates/text.html",
+		"../../../templates/line.html",
+		"../../../templates/single_segment.html",
+		"../../../templates/segment.html",
+		"../../../templates/text.html")
+	if err != nil {
+		panic(err)
+	}
+
+	for k, v := range s.Pages {
+		  for k1, v1 := range v.Lines {
+			  for k3, v3 := range v1.Segments {
+				  s.Pages[k].Lines[k1].Segments[k3] = substitute(v3)
+			  }
+
+		  }
+		for k2, v2 := range v.Texts {
+			for k3, v3 := range v2.Segments {
+				s.Pages[k].Texts[k2].Segments[k3] = substitute(v3)
+			}
+		}
+	}
+	err = tmpl.Execute(outputFile, s)
+	if err != nil {
+		panic(err)
+	}
+
+}

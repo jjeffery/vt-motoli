@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Feelings
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Feelings</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.0', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Clare Verbeek, Thembani Dladla and Zanele Buthelezi
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Kathy Arbuckle
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© School of Education and Development (Centre for Adult Education),
+</span><br />
+<!-- Text line 5 --><tr><td><span> 
+University of KwaZulu-Natal, 2007
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>My heart feels a lot of things.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '2.0', 'p1', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I feel happy when my granny tells us stories in the evening.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '2.5', 'p2', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I feel silly when I play with my friend.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '2.3', 'p3', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I feel bad when my dad says he does not have money.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '2.5', 'p4', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I feel loved when my mom gives me a hug.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '2.5', 'p5', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/african-storybook.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/african-storybook.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Feelings</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span> 
+Feelings
+</span><br />
+<!-- Text line 2 --><tr><td><span> 
+Writer: Clare Verbeek, Thembani Dladla and Zanele Buthelezi
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Kathy Arbuckle
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© School of Education and Development (Centre for Adult Education), University of KwaZulu-Natal, 2007
+</span><br />
+<!-- Text line 5 --><tr><td><span> 
+This story is licensed under a Creative Commons Attribution Non-Commercial licence: CC-BY-NC 3.0 unported.
+</span><br />
+<!-- Text line 6 --><tr><td><span> 
+You are free to download, copy, translate or adapt this story
+</span><br />
+<!-- Text line 7 --><tr><td><span> 
+and use the illustrations as long as you attribute or credit
+</span><br />
+<!-- Text line 8 --><tr><td><span> 
+the original writer/s and illustrator/s.
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Feelings</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

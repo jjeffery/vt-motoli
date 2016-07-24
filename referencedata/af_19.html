@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Wind
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Wind</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '0.5', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Ursula Nafula
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Marion Drew
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© African Storybook Initiative, 2015
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The wind roars.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '2.3', 'p1', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>It roars past our home.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '2.8', 'p1', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The wind is powerful.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '1.7', 'p2', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>It tears my kite from my hand.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound2.mp3', '2.75', 'p2', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I run after my kite.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '1.9', 'p3', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>The wind blows me away from the kite!</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '2.75', 'p3', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The wind becomes a tornado.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '1.95', 'p4', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>It carries my kite higher</span><span class="pause">|</span><span> and higher.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '3.65', 'p4', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The tornado swallows me up!</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '1.75', 'p5', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>I see nothing, I touch nothing.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound2.mp3', '2.1', 'p5', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Where is my kite now?</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '1.5', 'p6', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>Perhaps it is caught in a tree.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '2.1', 'p6', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Perhaps my kite is still flying in the sky.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '3.15', 'p7', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p8pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p8pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The wind finally dies down.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound1.mp3', '2.3', 'p8', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>I am still spinning.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound2.mp3', '2.0', 'p8', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p9pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p9pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>When I stop spinning</span><span class="pause">|</span><span> I look around.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound1.mp3', '3.0', 'p9', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>Where did the wind go?</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound2.mp3', '1.4', 'p9', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 9 -->
+
+
+<!-- PAGE 10 -->
+<div class="page" id="p10">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p10pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p10pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>I cannot see my kite anywhere.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound1.mp3', '2.25', 'p10', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>I cannot hear the wind anymore.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound2.mp3', '2.5', 'p10', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 10 -->
+
+
+<!-- PAGE 11 -->
+<div class="page" id="p11">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p11pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p11pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Perhaps tomorrow</span><span class="pause">|</span><span> I will find my kite.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound1.mp3', '3.92', 'p11', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 11 -->
+
+
+<!-- PAGE 12 -->
+<div class="page" id="p12">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p12pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p12pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Now,</span><span class="pause">|</span><span> I must go home,</span><span class="pause">|</span><span></span><span class="pause">|</span><span> before the wind starts to</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>roar again.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound1.mp3', '5.62', 'p12', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 12 -->
+
+
+<!-- PAGE 13 -->
+<div class="page" id="p13">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p13pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p13pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Wind</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+Wind.<br />
+Writer: Ursula Nafula.<br />
+Illustration: Marion Drew.<br />
+Adapted By: Ursula Nafula.<br />
+Audio: Tricia Gibney-Glass<br />
+Software: AJR, NJA, TLG.<br />
+<!-- Text line 2 --><tr><td><span>
+© African Storybook Initiative, 2015.<br />
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY 4.0) Version 4.0 International Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original creator/s.<br />
+</table>
+</div>
+</div>
+<!-- END PAGE 13 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Wind</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

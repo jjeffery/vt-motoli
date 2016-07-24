@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Who is Big?
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Who is Big?</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.6', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Sara Saunders
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Wiehan de Jager, Karen Lilje and blackmoondev.com
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© Sara Saunders (text), 2015
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Ant looked at the little plants and pebbles</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>around him.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '3.1', 'p1', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span><span class="pause">|</span><span> he said.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '1.9', 'p1', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>"No, Ant.</span><span class="pause">|</span><span> You are not big," said Squirrel.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '2.7', 'p2', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound2.mp3', '1.25', 'p2', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>"No, Squirrel. You are not big," said Cat.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '3.9', 'p3', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '1.5', 'p3', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>"No, Cat.</span><span class="pause">|</span><span> You are not big," said Hyena.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '4.8', 'p4', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '1.7', 'p4', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>"No, Hyena.</span><span class="pause">|</span><span> You are not big,</span><span class="pause">|</span><span>" said Rhinoceros.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '4.9', 'p5', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound2.mp3', '1.2', 'p5', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>"No, Rhinoceros.</span><span class="pause">|</span><span> You are not big," said Elephant.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '4.5', 'p6', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I am big!"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '1.05', 'p6', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Then Elephant looked up at the sky.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '2.2', 'p7', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>The sky was full of stars.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound2.mp3', '1.9', 'p7', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>The sky was big</span><span class="pause">|</span><span> and wide.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound3.mp3', '2.4', 'p7', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>It stretched forever in every direction.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound4.mp3', '3.3', 'p7', '4' )"></img></td>
+</tr>
+
+<tr><!-- Text line 5 -->
+<td class="textLine wrap">
+<span class="line"><span>"No,</span><span class="pause">|</span><span> I am not big, either!</span><span class="pause">|</span><span></span><span class="pause">|</span><span> All of us are small!</span><span class="pause">|</span><span>"</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>smiled Elephant.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound5.mp3', '6.8', 'p7', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/african-storybook.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/african-storybook.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Who is Big?</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+Who is Big?<br />
+Writer: Sara Saunders.<br />
+Illustration: Wiehan de Jager, Karen Lilje and blackmoondev.com<br />
+Audio: Tricia Gibney-Glass<br />
+Software: AJR, NJA, TLG.<br />
+</span></td></tr>
+<!-- Text line 2 --><tr><td><span>
+© Sara Saunders (text), 2015.<br />
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY 4.0) Version 4.0 International Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original creator/s.<br />
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Who is Big?</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

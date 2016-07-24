@@ -1,0 +1,38 @@
+<!-- PAGE {{.Number}} -->
+<div class="page" id="p{{.Number}}">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+                <td><img src="p{{.Number}}pic.jpg" class="mainpic"></img></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p{{.Number}}pic.jpg" class="mainpic"></img>
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+                <td><span class="title">{{.Story.Name}}</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        {{range .Lines}}
+            {{ if .Time }}
+        {{ template "line.html" . }}
+            {{ else }}
+        {{ template "simple_no_audio_line.html" . }}
+            {{end}}
+        {{ end }}
+        {{ range .Texts}}
+          {{ template "text.html" . }}
+        {{ end }}
+    </table>
+</div>
+</div>
+<!-- END PAGE {{.Number}} -->

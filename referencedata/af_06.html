@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Hyena and Raven
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Hyena and Raven</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.6', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Ann Nduku
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Wiehan de Jager
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© African Storybook Initiative, 2014
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Hyena and Raven were once great friends,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>even though they were quite different in some ways.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '2.2', 'p1', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>Raven could fly but Hyena was only able to walk.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '2.2', 'p1', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>One day Hyena, curious to know something about his friend, asked Raven,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"What is this white thing which is always below your neck?"</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '2.1', 'p2', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Raven answered, "It is the fatty meat which I usually eat in the sky.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>I have been eating it for so long now it is stuck on my neck."</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '3.0', 'p3', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>On hearing about meat, saliva started pouring out of Hyena's</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>mouth for he was greedy and he loved meat very much.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '3.0', 'p3', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Hyena really wanted to eat that meat. But how could he</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>reach the meat in the sky if he had no wings to fly?</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound3.mp3', '3.0', 'p3', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>"Please my friend," he asked Raven, "lend me some feathers so that I</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>can make myself some wings. I really want to be able to fly like you."</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound4.mp3', '3.0', 'p3', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Raven was not mean, so he gave him some feathers.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '3.0', 'p4', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>Hyena sewed them together into wings.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '2.5', 'p4', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He fastened them to his body, and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>tried to take off into the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound3.mp3', '2.5', 'p4', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>But he was far too heavy for the few feathers to carry him.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound4.mp3', '2.5', 'p4', '4' )"></img></td>
+</tr>
+
+<!-- Text line 5 -->
+<tr><td class="textLine">
+<span class="line"><span>So he had to think of another plan.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound5.mp3', '2.0', 'p4', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>"Please my friend," he asked Raven, "could I hold</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>onto your tail as you fly up into the sky?"</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '3.0', 'p5', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>"All right," said Raven. "I know how much you</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>want to fly. Let's do it tomorrow morning."</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound2.mp3', '3.0', 'p5', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>When day came, Hyena took hold of Raven's tail</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and Raven flew up into the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound3.mp3', '3.0', 'p5', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Raven flew and flew and flew until he was exhausted.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>But Hyena said, "Just a little further, my friend!"</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '3.0', 'p6', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He could see the white and fatty meat just above them,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and his mouth was watering.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '3.0', 'p6', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>When they reached the first piece of fatty meat, Hyena felt a jerk.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>One of Raven's tail feathers came off in his hand!</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '3.0', 'p7', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Then there was another jerk, and another.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Raven felt much lighter, and the ache in his tail was going.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound2.mp3', '3.0', 'p7', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He sang: Raven's feathers, unpluck yourselves.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Raven's feathers, unpluck yourselves.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound3.mp3', '3.0', 'p7', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>In response, Hyena sang the opposite:</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound4.mp3', '3.0', 'p7', '4' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Raven's feathers hold on, don't unpluck yourselves.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Raven's feathers hold on, don't unpluck yourselves.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound5.mp3', '3.0', 'p7', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p8pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p8pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Finally, the feathers could not hold Hyena anymore.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He was in the middle of nowhere in the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound1.mp3', '3.1', 'p8', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He jumped onto the fatty meat thinking that as he ate,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>the fatty meat would hold him.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound2.mp3', '3.1', 'p8', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>But as he tried to hold and eat the 'meat',</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>all he felt was moist cloud!</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound3.mp3', '3.1', 'p8', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p9pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p9pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>By now he was falling fast. "Help, help!" he shouted.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound1.mp3', '2.3', 'p9', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>But no one could hear him. Raven was lost in the clouds.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound2.mp3', '2.3', 'p9', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 9 -->
+
+
+<!-- PAGE 10 -->
+<div class="page" id="p10">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p10pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p10pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Hyena fell on the ground with a crash</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and lay silent for some minutes.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound1.mp3', '3.0', 'p10', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He woke up howling in pain, with a broken leg</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and dark scars all over his body.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound2.mp3', '3.0', 'p10', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 10 -->
+
+
+<!-- PAGE 11 -->
+<div class="page" id="p11">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p11pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p11pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>From that day to now, Hyena limps and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>he has many scars on his body.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound1.mp3', '3.0', 'p11', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>He has never been able to fly.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound2.mp3', '2.0', 'p11', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>And he and Raven are no longer friends.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound3.mp3', '2.0', 'p11', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 11 -->
+
+
+<!-- PAGE 12 -->
+<div class="page" id="p12">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/african-storybook.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/african-storybook.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Hyena and Raven</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span> 
+Hyena and Raven
+</span><br />
+<!-- Text line 2 --><tr><td><span> 
+Writer: Ann Nduku
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Wiehan de Jager
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© African Storybook Initiative, 2014
+</span><br />
+<!-- Text line 5 --><tr><td><span> 
+This work is licensed under a Creative Commons Attribution
+</span><br />
+<!-- Text line 6 --><tr><td><span> 
+(CC-BY) Version 3.0 Unported Licence
+</span><br />
+<!-- Text line 7 --><tr><td><span> 
+Disclaimer: You are free to download, copy, translate
+</span><br />
+<!-- Text line 8 --><tr><td><span> 
+or adapt this story and use the illustrations as long as you
+</span><br />
+<!-- Text line 9 --><tr><td><span> 
+attribute or credit the original author/s and illustrator/s.
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 12 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Hyena and Raven</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

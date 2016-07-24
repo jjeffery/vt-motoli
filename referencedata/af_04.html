@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Anansi gives people stories
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Anansi gives people stories</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '2.1', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Ghanaian folktale
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Wiehan de Jager
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© African Storybook Initiative, 2014
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Long long ago the Sky God,</span><span class="pause">|</span><span> Nyame,</span><span class="pause">|</span><span> kept all stories locked in</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>a wooden box,</span><span class="pause">|</span><span> high in the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '8.2', 'p1', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>People down on earth had no stories to tell and they were very sad.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '4.7', 'p1', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>They asked Anansi the clever Spider to help them.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound3.mp3', '3.4', 'p1', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Anansi spun a long thread,</span><span class="pause">|</span><span> and climbed</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>up his sticky thread,</span><span class="pause">|</span><span> all the way to heaven.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '5.1', 'p2', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"Can I have the stories please?</span><span class="pause">|</span><span>" he asked the Sky God.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound2.mp3', '2.6', 'p2', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>But Nyame laughed at Anansi and said,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"Oh these are very expensive stories.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>You wouldn't be able to pay for them little spider, ha ha ha."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound3.mp3', '8.0', 'p2', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>"How much do the stories cost?</span><span class="pause">|</span><span>" asked Anansi.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '2.8', 'p3', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"You have to bring me three rare and fierce animals.</span><span class="pause">|</span><span>" Nyame answered.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '3.8', 'p3', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>"A leopard with sharp teeth like spears,</span><span class="pause">|</span><span> a hornet that stings people,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and a snake that swallows people whole."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound3.mp3', '7.2', 'p3', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>He laughed and laughed.</span><span class="pause">|</span><span> He thought his stories were quite safe.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound4.mp3', '4.0', 'p3', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>So Anansi climbed slowly back down his</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>sticky thread to the earth.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '4.0', 'p4', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>He thought and he thought,</span><span class="pause">|</span><span> and he came up with a plan.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '3.4', 'p4', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>He dug a deep hole,</span><span class="pause">|</span><span> covered it with branches and dirt</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>so it was hidden,</span><span class="pause">|</span><span> and he went home for supper.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound3.mp3', '5.7', 'p4', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>In the morning,</span><span class="pause">|</span><span> sure enough</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>a leopard had fallen into his pit.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound4.mp3', '4.0', 'p4', '4' )"></img></td>
+</tr>
+
+<tr><!-- Text line 5 -->
+<td class="textLine wrap">
+<span class="line"><span>He was furiously scratching at the side of the pit,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>but he couldn't get out.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound5.mp3', '4.3', 'p4', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>"Oh let me help you my dear friend!"</span><span class="pause">|</span><span> said Anansi.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"Just lie down on these sticks and I'll pull you out."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '5.5', 'p5', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>Anansi wound his sticky web round the leopard and the sticks,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and pulled him up to heaven to show the Sky God.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound2.mp3', '6.8', 'p5', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>But Nyame just laughed and said,</span><span class="pause">|</span><span> "Where are the other two?"</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound3.mp3', '3.1', 'p5', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>So Anansi went back down to earth to get the second creature.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '3.5', 'p6', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>He thought and he thought,</span><span class="pause">|</span><span> and he came up with a plan.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '3.2', 'p6', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>He took a gourd full of water,</span><span class="pause">|</span><span> and went to the tree</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>where the hornets lived.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound3.mp3', '3.9', 'p6', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>He poured out some of the water all over their nest.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound4.mp3', '3.1', 'p6', '4' )"></img></td>
+</tr>
+
+<tr><!-- Text line 5 -->
+<td class="textLine wrap">
+<span class="line"><span>Then he cut a leaf from a banana tree and held it over his head,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and he poured the rest of the water all over himself.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound5.mp3', '6.1', 'p6', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>He called out to the hornets,</span><span class="pause">|</span><span> "Hey hornets!</span><span class="pause">|</span><span> Come see!</span><span class="pause">|</span><span> It's raining!"</span><span class="pause">|</span><span></span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '3.1', 'p7', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>Quick,</span><span class="pause">|</span><span> get inside my gourd,</span><span class="pause">|</span><span> and it will keep all of you dry."</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound2.mp3', '2.9', 'p7', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>Hornets don't like to get wet,</span><span class="pause">|</span><span> they all flew into Anansi's gourd.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound3.mp3', '3.9', 'p7', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p8pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p8pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Then,</span><span class="pause">|</span><span> Anansi quickly spun a web across the opening,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>so the hornets couldn't get out,</span><span class="pause">|</span><span> no matter how much they buzzed.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound1.mp3', '6.0', 'p8', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>He carried them up to heaven,</span><span class="pause">|</span><span> and showed them to the Sky God.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound2.mp3', '2.5', 'p8', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>But Nyame just said,</span><span class="pause">|</span><span> "Where's the last one?"</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He wasn't laughing so much anymore.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound3.mp3', '4.1', 'p8', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p9pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p9pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>So Anansi went back down to earth again.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He thought and he thought,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>but he couldn't come up with a plan.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound1.mp3', '6.0', 'p9', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>So he asked his wife,</span><span class="pause">|</span><span> who had a very good idea.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound2.mp3', '3.3', 'p9', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>Together they found a good long thick branch and some strong vines.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound3.mp3', '4.2', 'p9', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>When they got near the stream where the snake lived,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>they began to argue.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound4.mp3', '3.0', 'p9', '4' )"></img></td>
+</tr>
+
+<tr><!-- Text line 5 -->
+<td class="textLine wrap">
+<span class="line"><span>"My branch is longer!"</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"No, it isn't!"</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"Yes it is!"</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound5.mp3', '2.5', 'p9', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 9 -->
+
+
+<!-- PAGE 10 -->
+<div class="page" id="p10">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p10pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p10pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Soon,</span><span class="pause">|</span><span> the snake came out,</span><span class="pause">|</span><span> and asked what the argument was.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound1.mp3', '2.7', 'p10', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>"I was arguing with my wife,"</span><span class="pause">|</span><span> said Anansi.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"She says this stick is longer than you are.</span><span class="pause">|</span><span> But I don't agree."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound2.mp3', '6.1', 'p10', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>"Of course I'm longer than this stick!"</span><span class="pause">|</span><span> said the snake.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound3.mp3', '3.0', 'p10', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>"I'm very long!</span><span class="pause">|</span><span> I'm a huge snake!</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Just put your stick next to me and measure!"</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound4.mp3', '5.5', 'p10', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 10 -->
+
+
+<!-- PAGE 11 -->
+<div class="page" id="p11">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p11pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p11pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>So Anansi did that,</span><span class="pause">|</span><span> and he tied the snake</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>to the stick with his vine to keep him straight.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound1.mp3', '5.2', 'p11', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>When he was all tied up,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Anansi took the snake up to heaven.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound2.mp3', '3.8', 'p11', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 11 -->
+
+
+<!-- PAGE 12 -->
+<div class="page" id="p12">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p12pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p12pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Nyame had to admit that Anansi had paid his price.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound1.mp3', '3.9', 'p12', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>So he went to his wooden box,</span><span class="pause">|</span><span> opened the lid,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and gave all the stories to Anansi.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound2.mp3', '4.8', 'p12', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>Anansi carried the stories triumphantly down to earth.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound3.mp3', '3.3', 'p12', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>He shared them with his wife,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and all the other animals and people.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound4.mp3', '3.4', 'p12', '4' )"></img></td>
+</tr>
+
+<!-- Text line 5 -->
+<tr><td class="textLine">
+<span class="line"><span>Stories are for telling,</span><span class="pause">|</span><span> not for keeping in wooden boxes.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound5.mp3', '3.0', 'p12', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 12 -->
+
+
+<!-- PAGE 13 -->
+<div class="page" id="p13">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/african-storybook.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/african-storybook.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Anansi gives people stories</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+Anansi gives people stories<br />
+Writer: Ghanaian folktale<br />
+Illustration: Wiehan de Jager<br />
+Audio: Sophia Goodwin<br />
+Software: AJR, NJA, TLG<br />
+</span></td></tr>
+<!-- Text line 2 --><tr><td><span>
+© African Storybook Initiative, 2014<br />
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY 4.0) Version 4.0 International Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original creators.<br />
+</table>
+</div>
+</div>
+<!-- END PAGE 13 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Anansi gives people stories</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	Our wonderful world
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Our wonderful world</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.23', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Herminder Ohri
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+© Pratham Books, 2014
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Once upon a time,</span><span class="pause">|</span><span> when there were no</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>people,</span><span class="pause">|</span><span> God looked down at a beautiful world he had made.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '6.26', 'p1', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>He thought,</span><span class="pause">|</span><span> I must have someone to look after my</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>creation.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '3.45', 'p1', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The lion roared,</span><span class="pause">|</span><span> "I am the king of the jungle, I</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>can look after the world."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '4.92', 'p2', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The elephant trumpeted loudly,</span><span class="pause">|</span><span> "My Lord,</span><span class="pause">|</span><span> you have</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>made me so big and majestic."</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"Surely I am right for the job."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '7.7', 'p3', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The whale looked up at the sky and spouted a</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>fountain of water,</span><span class="pause">|</span><span> "Do they know how to swim and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>look after fish,</span><span class="pause">|</span><span> the reefs,</span><span class="pause">|</span><span> the coral and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>millions of tiny sea animals?".</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '9.4', 'p4', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I can look after the oceans."</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '1.7', 'p4', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>"I can also keep my head above water and see what</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>is going on</span><span class="pause">|</span><span> on the land."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound3.mp3', '5.7', 'p4', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>"I am so LARGE,</span><span class="pause">|</span><span> no one will dare to do anything</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>against your will."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound4.mp3', '4.2', 'p4', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The shark thought his sharp teeth were all that</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>were needed to do the job.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '5.35', 'p5', '1' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The eagle laughed,</span><span class="pause">|</span><span> "These animals can look</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>after those on land,</span><span class="pause">|</span><span> while the whale and the shark</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>can only see the water animals."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '8.0', 'p6', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"But I fly,</span><span class="pause">|</span><span> I see the land,</span><span class="pause">|</span><span> sky and water."</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '3.6', 'p6', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>"I am the only one fit to be the keeper of the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>world."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound3.mp3', '3.15', 'p6', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>God listened carefully to the animals,</span><span class="pause">|</span><span> to the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>fish and the birds.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '3.7', 'p7', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>"I will create man.</span><span class="pause">|</span><span>" he said.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound2.mp3', '1.5', 'p7', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The animals all wondered,</span><span class="pause">|</span><span> what was this thing</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>called "man".</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound3.mp3', '3.22', 'p7', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>What colour,</span><span class="pause">|</span><span> with feathers or fur,</span><span class="pause">|</span><span> or scales?</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Will he run like a lion?</span><span class="pause">|</span><span> Swim like a fish?</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Fly high like an eagle?</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound4.mp3', '6.9', 'p7', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p8pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p8pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The sun had set and it was night.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound1.mp3', '1.8', 'p8', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>He wrapped himself in the night sky,</span><span class="pause">|</span><span> put the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>twinkle of stars into the eyes and used the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>black clouds for hair.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound2.mp3', '6.3', 'p8', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>He also put pieces of the moon in nails and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>the shine of far away stars in teeth.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound3.mp3', '5.15', 'p8', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>So the first man and woman were created with</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>shiny black skins like the night.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound4.mp3', '4.27', 'p8', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p9pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p9pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Soon the night faded and it was morning.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound1.mp3', '2.65', 'p9', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>God covered himself in the white morning light,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>took the blue sky for the eyes,</span><span class="pause">|</span><span> the gold of the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>sun he spun into hair,</span><span class="pause">|</span><span> and before him stood a man</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and woman with white skins,</span><span class="pause">|</span><span> blue eyes and golden hair.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound2.mp3', '12.1', 'p9', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 9 -->
+
+
+<!-- PAGE 10 -->
+<div class="page" id="p10">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p10pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p10pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Now the morning had turned into afternoon.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound1.mp3', '2.45', 'p10', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>The sun was very bright,</span><span class="pause">|</span><span> so he pulled the yellow</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>light,</span><span class="pause">|</span><span> and the deep black shadows of the afternoon,</span><span class="pause">|</span><span> and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>made a man and woman with yellow skins,</span><span class="pause">|</span><span> black hair and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>eyes that slanted to look into the sun.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound2.mp3', '12.2', 'p10', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 10 -->
+
+
+<!-- PAGE 11 -->
+<div class="page" id="p11">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p11pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p11pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>It was now evening,</span><span class="pause">|</span><span> the sky had become dusky and</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>a few stars had also appeared in the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound1.mp3', '5.8', 'p11', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>God looked down and saw the beautiful rich brown</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>of the earth and the dusk of the sky for the skin.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound2.mp3', '6.1', 'p11', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The black colour of the night was for the hair</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>and he used the sparkle of the stars for the eyes.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound3.mp3', '5.56', 'p11', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>Before him stood a man and woman with brown</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>skins,</span><span class="pause">|</span><span> black hair and eyes.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound4.mp3', '4.8', 'p11', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 11 -->
+
+
+<!-- PAGE 12 -->
+<div class="page" id="p12">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p12pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p12pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The animals all looked in wonder at the strange</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>creature who stood on two legs, with naked skin,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>with no fur or feathers or even scales.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound1.mp3', '8.9', 'p12', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>The lion looked down his kingly nose and roared,</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"I can outrun them with a swipe of my paw I</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>can kill them,</span><span class="pause">|</span><span> sorry for saying so."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound2.mp3', '8.5', 'p12', '2' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 12 -->
+
+
+<!-- PAGE 13 -->
+<div class="page" id="p13">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p13pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p13pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Zebra suggested,</span><span class="pause">|</span><span> "Some stripes would have</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>improved their look."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p13sound1.mp3', '3.8', 'p13', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>The leopard said,</span><span class="pause">|</span><span> "A few spots."</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p13sound2.mp3', '1.8', 'p13', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The elephant trumpeted,</span><span class="pause">|</span><span> "Surely grey would have</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>been a better colour?"</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p13sound3.mp3', '3.7', 'p13', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 13 -->
+
+
+<!-- PAGE 14 -->
+<div class="page" id="p14">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p14pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p14pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The shark looked at their teeth and smiled</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>showing his sharp teeth.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p14sound1.mp3', '4.4', 'p14', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>"Ah! No fins,</span><span class="pause">|</span><span> how will they swim?</span><span class="pause">|</span><span> And they are</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>going to be the keeper."</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>"Ha! Ha! Ha!".</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p14sound2.mp3', '5.4', 'p14', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The fish,</span><span class="pause">|</span><span> big and small,</span><span class="pause">|</span><span> laughed as they dived</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>into the deep water leaving a trail of bubbles</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>of laughter.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p14sound3.mp3', '6.0', 'p14', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 14 -->
+
+
+<!-- PAGE 15 -->
+<div class="page" id="p15">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p15pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p15pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>God smiled kindly,</span><span class="pause">|</span><span> "You see,</span><span class="pause">|</span><span> to survive,</span><span class="pause">|</span><span> man will</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>have to look after the animals,</span><span class="pause">|</span><span> the oceans with all</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>their life,</span><span class="pause">|</span><span> the plants,</span><span class="pause">|</span><span> from the tiniest to the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>largest."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p15sound1.mp3', '8.8', 'p15', '1' )"></img></td>
+</tr>
+
+<tr><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>"The day he starts destroying the world with his</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>greed,</span><span class="pause">|</span><span> he will be destroyed."</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p15sound2.mp3', '4.2', 'p15', '2' )"></img></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The animals,</span><span class="pause">|</span><span> the fish and the birds bowed their</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>heads and hoped they would be safe.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p15sound3.mp3', '5.1', 'p15', '3' )"></img></td>
+</tr>
+
+<tr><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>So let us,</span><span class="pause">|</span><span> YOU and I,</span><span class="pause">|</span><span> look after this wonderful</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>world.</span></span><br /><progress value="0"></progress><br />
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p15sound4.mp3', '3.7', 'p15', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 15 -->
+
+
+<!-- PAGE 16 -->
+<div class="page" id="p16">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/pratham-books.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/pratham-books.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">Our wonderful world</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+Our wonderful world.<br />
+Writer: Herminder Ohri.<br />
+Audio: Eve McKenzie-McHugh.<br />
+Software: AJR, NJA, TLG.<br />
+</span></td></tr>
+<!-- Text line 2 --><tr><td><span>
+© Pratham Books, 2014.<br />
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY) Version 3.0 Unported Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original creators.<br />
+</table>
+</div>
+</div>
+<!-- END PAGE 16 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">Our wonderful world</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

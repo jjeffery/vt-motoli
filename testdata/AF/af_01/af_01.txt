@@ -1,0 +1,268 @@
+
+# This is the title of the story
+#StoryName#	Hare and Hyena
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	17
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+####################################
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Hare and Hyena
+#Page0Time1#		2.0
+
+#Page0Text2#		Writer: Mutugi Kamundi
+#Page0Text3#		Illustration: Rob Owen
+#Page0Text4#		© African Storybook Initiative, 2014
+
+
+##Page 1
+#Page1Line1#    Long time ago Hare and Hyena were great friends.
+#Page1Time1#		4.0
+
+#Page1Line2-0#  They did many things together.|
+#Page1Line2-1#  They danced and sang together.
+#Page1Time2#		3.2
+
+##Page 2
+#Page2Line1-0#  One day,| Hare said,| “My friend Hyena,|
+#Page2Line1-1#  let us start farming together and we will be rich.”
+#Page2Time1#		6.5
+
+#Page2Line2-0#  “Oh yes, we can plant a lot of food,| harvest it,|
+#Page2Line2-1#  and sell it to others,” Hyena said.
+#Page2Time2#		5.0
+
+#Page2Line3#    “But what shall we plant?” asked Hare.
+#Page2Time3#		2.5
+
+##Page 3
+#Page3Line1-0#  Hyena suggested that it was good to plant maize.|
+#Page3Line1-1#  Hare agreed.
+#Page3Time1#		4.0
+
+#Page3Line2-0#  Hare also told Hyena that it was good for
+#Page3Line2-1#  them to share duties on the farm.
+#Page3Time2#		5.0
+
+#Page3Line3-0#  “My work will be guarding the maize from birds,”
+#Page3Line3-1#  Hare said.
+#Page3Time3#		3.4
+
+#Page3Line4#    Then Hare told Hyena to till the land,| plant,| and weed.
+#Page3Time4#		3.2
+
+##Page 4
+#Page4Line1#    Hyena complained that he had been given more work.
+#Page4Time1#		3.0
+
+#Page4Line2-0#  But Hare told Hyena that the work of chasing birds
+#Page4Line2-1#  was the most difficult and most important.
+#Page4Time2#		5.5
+
+
+#Page4Line3-0#  “My work is not easy.| I will be climbing
+#Page4Line3-1#  trees and chasing birds away day and night.
+#Page4Time3#		5.5
+
+#Page4Line4-0#  And you are not able to climb a tree,”| Hare
+#Page4Line4-1#  explained.
+#Page4Time4#		2.7
+
+
+##Page 5
+#Page5Line1-0#  Hyena was convinced by Hare's words.|
+#Page5Line1-1#  He agreed| to till the land alone.|
+#Page5Line1-2#  It was a lot of work.| Hare did not help| at all.
+#Page5Time1#		6.5
+
+
+#Page5Line2-0#  After tilling the land,| Hyena planted maize in
+#Page5Line2-1#  the whole field, alone.
+#Page5Time2#		4.5
+
+
+##Page 6
+#Page6Line1-0#  When weeds grew in the field,|
+#Page6Line1-1#  Hyena used a hoe to weed.|
+#Page6Line1-2#  It was a lot of work.
+#Page6Time1#		4.0
+
+#Page6Line2-0#  Hare sat on the rock singing:|
+#Page6Line2-1#  “My friend is a worker,| I am his adviser'|
+#Page6Line2-2#  He works like a tractor,| I am his manager.
+#Page6Time2#		7.5
+
+#Page6Line3-0#  The soil he toils,| the hills he tills,|
+#Page6Line3-1#  The seeds he plants,| the weeds he cuts,|
+#Page6Line3-2#  The maize we harvest.”
+#Page6Time3#		7.5
+
+
+##Page 7
+#Page7Line1-0#  When the maize was almost ready,|
+#Page7Line1-1#  Hare enjoyed himself singing in the field 
+#Page7Line1-2#  to keep birds away.
+#Page7Time1#		5.0
+
+#Page7Line2-0#  Chasing the birds was not a hard job.|
+#Page7Line2-1#  He did not sweat at all.
+#Page7Time2#		4.0
+
+
+##Page 8
+#Page8Line1#    Finally,| the maize was ready to harvest.
+#Page8Time1#		2.2
+
+#Page8Line2-0#  Hare told Hyena| that they would share the harvest 
+#Page8Line2-1#  between themselves.
+#Page8Time2#		3.3
+
+#Page8Line3-0#  Hare said,| “I will harvest everything that grows 
+#Page8Line3-1#  above the soil,| and you will harvest everything 
+#Page8Line3-2#  that grows below the soil.”
+#Page8Time3#		6.0
+
+#Page8Line4#    Hyena thought that it was a good idea.
+#Page8Time4#		2.3
+
+##Page 9
+#Page9Line1-0#  Hare said,| “I will first get my harvest 
+#Page9Line1-1#  then you will harvest yours.”
+#Page9Time1#		3.7
+
+#Page9Line2-0#  So Hare harvested all the maize in the field 
+#Page9Line2-1#  and put it in his store.
+#Page9Time2#		4.3
+
+
+#Page 10
+#Page10Line1#   Hyena went to harvest things that grew below the soil.
+#Page10Time1#		3.6
+
+#Page10Line2-0# He dug,| hoping to get a good harvest.|
+#Page10Line2-1# But he only found roots under the soil.
+#Page10Time2#		3.8
+
+#Page10Line3-0# He dug everywhere.|
+#Page10Line3-1# He did not find anything to harvest.
+#Page10Time3#		3.5
+
+
+##Page 11
+#Page11Line1-0# Hyena realised that he had been cheated.|
+#Page11Line1-1# He was angry.
+#Page11Time1#		4.5
+
+#Page11Line2#   He returned home carrying empty baskets.
+#Page11Time2#		3.2
+
+#Page11Line3#   In the evening he went to Hare’s home very annoyed.
+#Page11Time3#		3.5
+
+#Page11Line4-0# He told Hare, 
+#Page11Line4-1# “Let us now farm together again my friend.”
+#Page11Time4#		4.3
+
+
+##Page 12
+#Page12Line1-0# Hyena told Hare,| “This time I will harvest
+#Page12Line1-1# everything that grows above the ground,| and you  
+#Page12Line1-2# will harvest everything that grows below the soil.”
+#Page12Time1#		8.0
+
+#Page12Line2#   Hare accepted. 
+#Page12Time2#		1.2
+
+#Page12Line3-0# He told Hyena| that instead of planting maize,|
+#Page12Line3-1# it was good to change the crop. 
+#Page12Time3#		3.2
+
+#Page12Line4# 	They agreed to plant potatoes.
+#Page12Time4#		1.6
+
+
+##Page 13
+#Page13Line1-0# Hyena also insisted,| that this time they would both
+#Page13Line1-1# do the digging, planting and weeding.
+#Page13Time1#		5.6
+
+#Page13Line2-0# Hare accepted.| 
+#Page13Line2-1# So they worked on the farm together singing.
+#Page13Time2#		3.5
+
+
+##Page 14
+#Page14Line1-0# When the potatoes were ready,| Hare told Hyena 
+#Page14Line1-1# to harvest what grows above the soil.
+#Page14Time1#		4.5
+
+#Page14Line2-0# Hyena went looking for something to harvest.|
+#Page14Line2-1# But he did not find anything.
+#Page14Time2#		3.7
+
+#Page14Line3-0# He only found potato leaves.|
+#Page14Line3-1# He went back home with empty baskets.
+#Page14Time3#		3.8
+
+
+##Page 15
+#Page15Line1-0# Hare harvested a lot of big potatoes.|
+#Page15Line1-1# He put them in his store.
+#Page15Time1#		3.6
+
+#Page15Line2-0# When Hyena saw Hare’s harvest, he was annoyed.|
+#Page15Line2-1# “Why did you cheat me?” Hyena asked Hare.
+#Page15Time2#		6.7
+
+#Page15Line3-0# Hare explained that it was Hyena himself who chose 
+#Page15Line3-1# to harvest the things that grew above the soil.
+#Page15Time3#		6.0
+
+
+##Page 16
+#Page16Line1-0# Hyena was very angry.|
+#Page16Line1-1# He chased after Hare in order to get revenge.|
+#Page16Line1-2# But Hare ran away fast.
+#Page16Time1#   5.3
+
+#Page16Line2#   Since that day,| Hare and Hyena have not been friends.
+#Page16Time2#		3.3
+
+##Page 17
+#Page17Pic#				african-storybook
+#Page17Text1-0#		Hare and Hyena
+#Page17Text1-1#		Writer: Mutugi Kamundi
+#Page17Text1-2#		Illustration: Rob Owen
+#Page17Text1-3#		Audio: Hyeon Shaw
+#Page17Text1-4#		Software: AJR, NJA, TLG.
+
+#Page17Text2-0#		© African Storybook Initiative, 2014
+#Page17Text2-1# 	This work is licensed under a Creative Commons Attribution
+#Page17Text2-2# 	(CC-BY 4.0) Version 4.0 International Licence
+#Page17Text2-3# 	Disclaimer: You are free to download, copy, translate 
+#Page17Text2-4# 	or adapt this story and use the illustrations as long as you  
+#Page17Text2-5# 	attribute or credit the original author/s and illustrator/s.
+
+
+

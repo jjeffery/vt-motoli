@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	A Fish and a Gift
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p0pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>A Fish and a Gift</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.2', 'p0', '1' )"></img></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Liesl Jobson
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Jesse Breeytenbach
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© Liesl Jobson, Jesse Breytenbach,
+</span><br />
+<!-- Text line 5 --><tr><td><span> 
+Andy Thesen and bookdash.org, 2014
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p1pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>One special Friday Yusuf’s father gets dressed before a</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>flicker of light brightens the sky.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '7.0', 'p1', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He pulls on his heavy weather-proof jacket and the green</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>woolen cap that covers his ears.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He waves his boy goodbye.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '12.0', 'p1', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Yusuf’s eyes brighten when Papa says,</span><span class="pause">|</span><span> “Today is the day</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>I will catch a fish and bring a gift home for you.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound3.mp3', '8.0', 'p1', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p2pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>A fish and a gift? Oh, what will it be?</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '3.5', 'p2', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Papa cycles down to Muizenberg Beach. Squeak squeak go the</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>wheels all the way to Surfer’s Corner.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound2.mp3', '9.0', 'p2', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Gulls circle the sky. “Whaaat? Whaaat? Whaaat?” they cry.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“What will you bring back for Yusuf?”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound3.mp3', '9.0', 'p2', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>Papa rings his bell. “Wait and see what it will be!”</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound4.mp3', '4.0', 'p2', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p3pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The fishermen watch the sun rise.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '2.5', 'p3', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>They check their nets.</span><span class="pause">|</span><span></span><span class="pause">|</span><span> They check their oars.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>They listen to the wind.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '6.0', 'p3', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>They drag their boats down to the water.</span><span class="pause">|</span><span></span><span class="pause">|</span><span> Yusuf’s</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>grandfather,</span><span class="pause">|</span><span> Oupa Salie was a treknet fisherman.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound3.mp3', '8.0', 'p3', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>Before him his father, Oupagrootjie Ridwaan, knew the sea too.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound4.mp3', '5.5', 'p3', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p4pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p4pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>The boat rides into the waves.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '1.6', 'p4', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Papa’s arms stretch to the oar.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>His leg braces against the side.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound2.mp3', '8.0', 'p4', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>His neck strains, his back muscles ripple.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound3.mp3', '5.0', 'p4', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Papa sings as he works: “Drop and swish.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Find a fish. Pull and plop. Don’t you stop.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound4.mp3', '9.0', 'p4', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p5pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p5pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>All day long Yusuf looks at the sky.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>It is bright and clear and windless.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound1.mp3', '8.0', 'p5', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>A fish and a gift! What will Papa bring home from</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>the sea?</span><span class="pause">|</span><span> Sometimes he brings a beautiful shell.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound2.mp3', '9.0', 'p5', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Sometimes he brings a jewel green bottle rinsed</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>by the waves.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p5sound3.mp3', '7.0', 'p5', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p6pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p6pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Some days Yusuf’s father brings a story.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound1.mp3', '2.0', 'p6', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Like the time they found sea turtles on the sand,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>hundreds washed up in a storm.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound2.mp3', '2.0', 'p6', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Whaaat? Whaaat? Whaaat?” cried the gulls.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“What will you do to help the turtles?”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound3.mp3', '2.0', 'p6', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Papa said, “We saved those turtles,</span><span class="pause">|</span><span> I tell you straight.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>We sent them back to the ocean,</span><span class="pause">|</span><span> every last one.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p6sound4.mp3', '2.0', 'p6', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 6 -->
+
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p7pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p7pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Always Papa brings a song.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound1.mp3', '2.5', 'p7', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He sings the song while he pulls the oars.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He sings the song while he pulls the nets.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound2.mp3', '8.0', 'p7', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>He sings the song as he winds the ropes.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He sings the song as he cycles home.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound3.mp3', '8.0', 'p7', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Drop and swish.</span><span class="pause">|</span><span> Find a fish.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Pull and plop.</span><span class="pause">|</span><span> Don’t you stop.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p7sound4.mp3', '6.0', 'p7', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 7 -->
+
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p8pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p8pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Ouma Safiya wants a nice fat yellowtail for her supper.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Mother wants a new dress.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound1.mp3', '7.0', 'p8', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Don’t be silly,” says Ouma. “You’ll be lucky if they</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>catch even a tiny crab. More likely it will be fish tail</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Friday. There’s not so many fish left in the sea.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound2.mp3', '12.0', 'p8', '2' )"></img></td>
+</tr>
+
+<!-- Text line 3 -->
+<tr><td class="textLine">
+<span class="line"><span>Yusuf holds Ouma’s hand. They cross the road at the bathing cabins.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound3.mp3', '4.1', 'p8', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Whaaat? Whaaat? Whaaat?” cry the gulls perched on the bright</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>rooftops. “What is for supper?”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p8sound4.mp3', '8.0', 'p8', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 8 -->
+
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p9pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p9pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Last year the fishermen fought with the surfers.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Angry fists and shouting words.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound1.mp3', '7.0', 'p9', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>“Whaaat? Whaaat? Whaaat?” cried the gulls.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound2.mp3', '2.3', 'p9', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“There’s enough sea for everybody,” said Yusuf’s father.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>He showed them the fishing license that had been Oupa Salie’s.</span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“Waves for all. Water for free.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p9sound3.mp3', '10.0', 'p9', '3' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 9 -->
+
+
+<!-- PAGE 10 -->
+<div class="page" id="p10">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p10pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p10pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Ouma Safiya watches through her binoculars,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>her fingers curled in curiosity.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound1.mp3', '5.0', 'p10', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>The shark siren sounds.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound2.mp3', '1.6', 'p10', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Swimmers run back to the sand and grab their towels.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Surfers rush to the shore, carrying their boards under their arms.</span><span class="pause">|</span><span></span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Under the showers they strip off their wetsuits.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound3.mp3', '10.0', 'p10', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Whaaat? Whaaat? Whaaat?” cry the gulls.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“What will Yusuf’s father bring from the ocean?”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p10sound4.mp3', '7.0', 'p10', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 10 -->
+
+
+<!-- PAGE 11 -->
+<div class="page" id="p11">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p11pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p11pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr><td class="textLine">
+<span class="line"><span>Yusuf’s father and uncle and cousins heave and pull.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound1.mp3', '2.0', 'p11', '1' )"></img></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr><td class="textLine">
+<span class="line"><span>A little shark has been caught.</span><span class="pause">|</span><span> It twists and thrashes in the waves.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound2.mp3', '3.0', 'p11', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>Yusuf’s father untangles the nets, singing to the shark:</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“Drop and swish. Find a fish.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>Pull and plop. Don’t you stop.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound3.mp3', '7.0', 'p11', '3' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>When the shark at last is free it streaks back into the waves,</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>leaving only one fat yellowtail in the net.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound4.mp3', '7.0', 'p11', '4' )"></img></td>
+</tr>
+
+<!-- Text line 5 -->
+<tr><td class="textLine">
+<span class="line"><span>Ouma Safiya will be pleased.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p11sound5.mp3', '2.0', 'p11', '5' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 11 -->
+
+
+<!-- PAGE 12 -->
+<div class="page" id="p12">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="p12pic.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p12pic.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>The men pull the boat in and coil up the cables.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>A hard white triangle catches Papa’s finger.</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound1.mp3', '7.0', 'p12', '1' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>“Whaaat? Whaaat? Whaaat?” cry the gulls.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“What did you bring back for Yusuf?”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound2.mp3', '7.0', 'p12', '2' )"></img></td>
+</tr>
+<tr><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>As the sun goes down,</span><span class="pause">|</span><span> Papa answers the gulls.</span><span class="pause">|</span><span></span></span><br /><progress value="0"></progress><br />
+<span class="line"><span>“A lucky shark tooth for my boy.”</span></span><br /><progress value="0"></progress><br />
+</td>
+
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound3.mp3', '7.0', 'p12', '3' )"></img></td>
+</tr>
+
+<!-- Text line 4 -->
+<tr><td class="textLine">
+<span class="line"><span>At home Yusuf holds his gift up to the stars.</span></span><br /><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p12sound4.mp3', '3.0', 'p12', '4' )"></img></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 12 -->
+
+
+<!-- PAGE 13 -->
+<div class="page" id="p13">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><img src="../../common/african-storybook.jpg" class="mainpic"></img></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/african-storybook.jpg" class="mainpic"></img>
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></img></td>
+	<td><span class="title">A Fish and a Gift</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></img></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+A Fish and a Gift<br />
+Writer: Liesl Jobson<br />
+Illustration: Jesse Breeytenbach<br />
+© Liesl Jobson, Jesse Breytenbach,<br />
+Andy Thesen and bookdash.org, 2014<br />
+Audio: Amy Felman<br />
+Software: AJR, NJA, TLG<br />
+</span></td></tr>
+<!-- Text line 2 --><tr><td><span>
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY) Version 3.0 Unported Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original creators.<br />
+</span></td></tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 13 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">A Fish and a Gift</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

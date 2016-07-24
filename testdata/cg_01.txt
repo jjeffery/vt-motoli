@@ -1,0 +1,114 @@
+
+# This is the title of the story
+#StoryName#	The Lonely Cat
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	12
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+####################################
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		The Lonely Cat
+#Page0Time1#		1.5
+
+#Page0Text2#		Writer: Chris Gleisner, Rotana Seang
+#Page0Text3#		Illustration: Chris Gleisner
+#Page0Text4#		© Chris Gleisner, Rotana Seang 2016
+
+
+##Page 1
+#Page1Line1#    The lonely cat sat by the river all day.
+#Page1Time1#		3.0
+
+##Page 2
+#Page2Line1#    One day a cow came and asked why he was looking so sad.
+#Page2Time1#		3.5
+
+##Page 3
+#Page3Line1-0#  The cat said, | “I am sad because 
+#Page3Line1-1#  I want to cross the river but I can not swim.”
+#Page3Time1#		5.0
+
+##Page 4
+#Page4Line1-0#  The cow said, | “I can help you. 
+#Page4Line1-1#  Climb on my back and we can cross the river together.”
+#Page4Time1#		5.0
+
+
+##Page 5
+#Page5Line1#	  The cat climbed onto the cow and they crossed the river together.
+#Page5Time1#		4.2
+
+
+##Page 6
+#Page6Line1#  	Across the river,| the grass was long and green.
+#Page6Time1#		3.2
+
+#Page6Line2#  	The cat and cow played all day in the sun.
+#Page6Time2#		3.2
+
+
+##Page 7
+#Page7Line1-0#  When the sun went down,| the cat climbed onto the cow
+#Page7Line1-1#  and they crossed the river together to go home.
+#Page7Time1#		5.5
+
+
+##Page 8
+#Page8Line1#    The cow and cat were so happy.
+#Page8Time1#		2.5
+
+
+##Page 9
+#Page9Line1#	  The cat thanked the cow for his help.
+#Page9Time1#		2.5
+
+
+#Page 10
+#Page10Line1-0# The cow said he was happy to help.|
+#Page10Line1-1# That is what a friend does.
+#Page10Time1#		3.5
+
+
+##Page 11
+#Page11Line1-0#	The cat was never lonely again because he had a 
+#Page11Line1-1#	new friend to play with every day. 
+#Page11Time1#		4.5
+
+
+##Page 12
+#Page12Pic#				motoli-credits
+#Page12Text1-0#		The Lonely Cat
+#Page12Text1-1#		Writers: Chris Gleisner, Rotana Seang
+#Page12Text1-2#		Illustration: Chris Gleisner
+#Page12Text1-3#		© Chris Gleisner 2016
+#Page12Text1-4#	 	Software AJR, NJA, TLG
+
+#Page12Text2-0# 	This work is licensed under a Creative Commons Attribution
+#Page12Text2-1# 	(CC-BY 4.0) Version 4.0 International Licence
+#Page12Text2-2# 	Disclaimer: You are free to download, copy, translate 
+#Page12Text2-3# 	or adapt this story and use the illustrations as long as you  
+#Page12Text2-4# 	attribute or credit the original author/s and illustrator/s.
+
+
+
