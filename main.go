@@ -3,6 +3,7 @@ package main
 import (
 	"text/template"
 	"io"
+	"fmt"
 	"github.com/fsnotify/fsnotify"
 	"log"
 	"net/http"
@@ -61,19 +62,21 @@ func scanStory(r io.Reader) *story.Story {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
 			continuationNum := scan.Command[1].Cont
-			s.Page(pageNum).Line(lineNum).Segments[continuationNum] = scan.Arg
+			s.Page(pageNum).Line(lineNum, true).Segments[continuationNum] = scan.Arg
 		} else if scan.Command.Matches("Page", "Text") {
 			pageNum := scan.Command[0].Index
 			textNum := scan.Command[1].Index
 			continuationNum := scan.Command[1].Cont
-			s.Page(pageNum).Text(textNum).Segments[continuationNum] = scan.Arg
+			s.Page(pageNum).Line(textNum, false).Segments[continuationNum] = scan.Arg
 		} else if scan.Command.Matches("Page", "Time") {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
-			s.Page(pageNum).Line(lineNum).Time = scan.Arg
+			s.Page(pageNum).Line(lineNum, true).Time = scan.Arg
 		} else if scan.Command.Matches("Page", "Pic") {
 			pageNum := scan.Command[0].Index
-			s.Page(pageNum).Image = scan.Arg
+			if (scan.Arg != ""){
+				s.Page(pageNum).Image = fmt.Sprintf("../../common/%s.jpg", scan.Arg)
+			}
 		} else if scan.Command.Matches("StoryName") {
 			s.Name = scan.Arg
 		} else if scan.Command.Matches("Format") {
@@ -165,6 +168,7 @@ func printStory(s *story.Story, outputFile *os.File) {
 		"../../../templates/text.html",
 		"../../../templates/line.html",
 		"../../../templates/single_segment.html",
+		"../../../templates/simple_no_audio_line.html",
 		"../../../templates/segment.html",
 		"../../../templates/text.html")
 	if err != nil {
@@ -174,15 +178,18 @@ func printStory(s *story.Story, outputFile *os.File) {
 	for k, v := range s.Pages {
 		  for k1, v1 := range v.Lines {
 			  for k3, v3 := range v1.Segments {
+				  //if(v3=="&nil" && len(v1.Segments)==1){
+					//  s.Pages[k].Lines[k1].IsLineType = true
+				  //}
 				  s.Pages[k].Lines[k1].Segments[k3] = substitute(v3)
 			  }
 
 		  }
-		for k2, v2 := range v.Texts {
-			for k3, v3 := range v2.Segments {
-				s.Pages[k].Texts[k2].Segments[k3] = substitute(v3)
-			}
-		}
+		//for k2, v2 := range v.Texts {
+		//	for k3, v3 := range v2.Segments {
+		//		s.Pages[k].Texts[k2].Segments[k3] = substitute(v3)
+		//	}
+		//}
 	}
 	err = tmpl.Execute(outputFile, s)
 	if err != nil {

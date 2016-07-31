@@ -5,11 +5,11 @@
 {{ else }}
 <tr><!-- Text line {{.Number}} -->
     <td class="textLine wrap">
-{{range .Segments}}<span class="line"><span>{{.}}</span></span><br /><progress value="0"></progress><br />
+{{range .Segments}}<span class="line"><span>{{.}}</span></span><progress value="0"></progress>
         {{end}}
     </td>
 {{ end }}
     <!-- Audio file, time in secs, page ID, line No. -->
-    <td class="button"><img src="../../common/play.png" onclick="playAudio('p{{.Page.Number}}sound{{.Number}}.mp3', '{{.Time}}', 'p{{.Page.Number}}', '{{.Number}}' )"></img></td>
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p{{.Page.Number}}sound{{.Number}}.mp3', '{{.Time}}', 'p{{.Page.Number}}', '{{.Number}}' )"></td>
 
 </tr>
