@@ -29,11 +29,13 @@ func main() {
 	http.Handle("/", fs)
 
 
+
+
+	go func() {
+		log.Println("Listening...")
+		http.ListenAndServe(":3000", nil)
+	}()
 	watchForFileChanges(os.Args[1])
-
-
-	log.Println("Listening...")
-	http.ListenAndServe(":3000", nil)
 
 }
 
@@ -131,9 +133,9 @@ func watchForFileChanges(sourceFile string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	//defer watcher.Close()
+	defer watcher.Close()
 
-	//done := make(chan bool)
+	done := make(chan bool)
 	go func() {
 		for {
 			select {
@@ -154,7 +156,7 @@ func watchForFileChanges(sourceFile string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	//<-done
+	<-done
 }
 
 func printStory(s *story.Story, outputFile *os.File) {
