@@ -22,10 +22,10 @@
 #Pause# 300
 
 
-####################################
+##########################################
 #Following are the lines of text for each page
 
-<Identifier>		<-- Start of line -------------------- End of line -->
+<Identifier>		<-- Start of line ---------d----------- End of line -->
 
 ##Title Page
 #Page0Line1#		Hare and Hyena
@@ -37,7 +37,7 @@
 
 
 ##Page 1
-#Page1Line1#    Long time ago Hare and Hyena were great friends.
+#Page1Line1#    Longish time ago Hare and Hyena were great friends.
 #Page1Time1#		4.0
 
 #Page1Line2-0#  They did many things together.|

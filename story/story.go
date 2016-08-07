@@ -67,6 +67,7 @@ type Line struct {
 	Time     string
 	Page *Page
 	IsLineType bool // as opposed to a text type
+	Lang   string
 }
 
 func (line *Line)OnlyOneSegment() bool {

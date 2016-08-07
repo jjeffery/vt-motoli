@@ -13,7 +13,7 @@
 #ScaleTop#  60
 ####################################
 #Following are the lines of text for each page
-<Identifier>		<-- Start of line -------------------- End of line -->
+<Identifier>		<-- Start of line ------------------- End of line -->
 ##Title Page
 #Page0Line1#		Our wonderful world
 #Page0Time1#		1.23

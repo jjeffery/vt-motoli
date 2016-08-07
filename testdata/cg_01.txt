@@ -22,7 +22,7 @@
 #Pause# 300
 
 
-####################################
+###################################
 #Following are the lines of text for each page
 
 <Identifier>		<-- Start of line -------------------- End of line -->

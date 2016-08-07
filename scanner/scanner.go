@@ -32,6 +32,7 @@ var (
 		regexp.MustCompile(`^(Text)([0-9]+)-([0-9]+)`),
 		regexp.MustCompile(`^(Text)([0-9]+)`),
 		regexp.MustCompile(`^(Time)([0-9]+)`),
+		regexp.MustCompile(`^(Lang)([0-9]+)`),
 	}
 )
 
