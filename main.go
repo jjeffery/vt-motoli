@@ -1,5 +1,7 @@
 package main
 
+//go:generate go run assets_generate.go
+
 import (
 	"bufio"
 	"fmt"
@@ -17,8 +19,6 @@ import (
 
 	"github.com/braintree/manners"
 	"github.com/fsnotify/fsnotify"
-	"github.com/kardianos/osext"
-	"github.com/spkg/zipfs"
 
 	"github.com/jjeffery/vt-motoli/graceful"
 	"github.com/jjeffery/vt-motoli/scanner"
@@ -27,16 +27,7 @@ import (
 	"github.com/jjeffery/vt-motoli/touch"
 )
 
-//func MotoLiHandler(w http.ResponseWriter, r *http.Request) {
-//	fs := http.FileServer(http.Dir("."))
-//	fs(w, r)
-//	//w.Write([]byte("Hello World"))
-//}
-
 func main() {
-	_, _ = osext.Executable()
-	//fmt.Println(filename)
-
 	log.SetFlags(0)
 
 	switch len(os.Args) {
@@ -69,20 +60,14 @@ func main() {
 
 func webServer() {
 	staticFileServer := http.FileServer(http.Dir("."))
-	zipFileSystem, err := zipfs.New("resources.zip")
-	if err != nil {
-		log.Printf("cannot open zip filesystem: %v", err)
-		graceful.Shutdown()
-		return
-	}
-	zipFileServer := zipfs.FileServer(zipFileSystem)
+	assetServer := http.FileServer(assets)
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		log.Println(req.URL.Path)
 		if _, err := os.Stat("./" + req.URL.Path); err == nil {
 			// path/to/whatever exists
 			staticFileServer.ServeHTTP(w, req)
 		} else {
-			zipFileServer.ServeHTTP(w, req)
+			assetServer.ServeHTTP(w, req)
 		}
 	})
 
