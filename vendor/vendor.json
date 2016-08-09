@@ -37,6 +37,12 @@
 			"path": "golang.org/x/sys/unix",
 			"revision": "a646d33e2ee3172a661fc09bca23bb4889a41bc8",
 			"revisionTime": "2016-07-15T05:43:45Z"
+		},
+		{
+			"checksumSHA1": "NC6sRRBg4e1wHOkOu2doF24QWh0=",
+			"path": "golang.org/x/tools/godoc/vfs",
+			"revision": "72064bd64745c21ad7fe43d550d08e8f07bf4f73",
+			"revisionTime": "2016-08-05T20:40:13Z"
 		}
 	],
 	"rootPath": "github.com/jjeffery/vt-motoli"
