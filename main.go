@@ -2,26 +2,29 @@ package main
 
 import (
 	"bufio"
-	"text/template"
-	"io"
 	"fmt"
-	"github.com/fsnotify/fsnotify"
+	"io"
 	"log"
 	"net/http"
 	"os"
 	"path"
 	"path/filepath"
-	"strconv"
 	"regexp"
+	"strconv"
 	"strings"
-	_ "github.com/jteeuwen/go-bindata"
+	"sync"
+	"text/template"
+
+	"github.com/braintree/manners"
+	"github.com/fsnotify/fsnotify"
+	"github.com/kardianos/osext"
+	"github.com/spkg/zipfs"
+
+	"github.com/jjeffery/vt-motoli/graceful"
 	"github.com/jjeffery/vt-motoli/scanner"
 	"github.com/jjeffery/vt-motoli/story"
 	"github.com/jjeffery/vt-motoli/templates"
 	"github.com/jjeffery/vt-motoli/touch"
-	"github.com/kardianos/osext"
-	//"github.com/spkg/bom"
-	"github.com/spkg/zipfs"
 )
 
 //func MotoLiHandler(w http.ResponseWriter, r *http.Request) {
@@ -31,44 +34,73 @@ import (
 //}
 
 func main() {
-	filename, _ := osext.Executable()
-	fmt.Println(filename)
+	_, _ = osext.Executable()
+	//fmt.Println(filename)
 
 	log.SetFlags(0)
 
-	go func() {
-
-		staticFileServer := http.FileServer(http.Dir("."))
-		zipFileSystem, err := zipfs.New("resources.zip")
-		if err != nil {
+	switch len(os.Args) {
+	case 0, 1:
+		break
+	case 2:
+		if err := os.Chdir(os.Args[1]); err != nil {
 			log.Fatal(err)
 		}
-		zipFileServer := zipfs.FileServer(zipFileSystem)
-		http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-			log.Println(req.URL.Path)
-			if _, err := os.Stat("./"+req.URL.Path); err == nil {
-				// path/to/whatever exists
-				staticFileServer.ServeHTTP(w,req)
-			} else {
-				zipFileServer.ServeHTTP(w,req)
-			}
+	default:
+		log.Fatalf("usage: %s [ directory ]", os.Args[0])
+	}
 
-		})
-		log.Println("Listening...")
-		http.ListenAndServe(":3000", nil)
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go func() {
+		webServer()
+		wg.Done()
 	}()
-	watchForFileChanges("./")
+
+	wg.Add(1)
+	go func() {
+		watchForFileChanges("./")
+		wg.Done()
+	}()
+
+	wg.Wait()
 }
 
-func makeStory(sourceFilename string){
+func webServer() {
+	staticFileServer := http.FileServer(http.Dir("."))
+	zipFileSystem, err := zipfs.New("resources.zip")
+	if err != nil {
+		log.Printf("cannot open zip filesystem: %v", err)
+		graceful.Shutdown()
+		return
+	}
+	zipFileServer := zipfs.FileServer(zipFileSystem)
+	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
+		log.Println(req.URL.Path)
+		if _, err := os.Stat("./" + req.URL.Path); err == nil {
+			// path/to/whatever exists
+			staticFileServer.ServeHTTP(w, req)
+		} else {
+			zipFileServer.ServeHTTP(w, req)
+		}
+	})
+
+	graceful.OnShutdown(func() { manners.Close() })
+	log.Println("Listening...")
+	manners.ListenAndServe(":3000", http.DefaultServeMux)
+	log.Println("web server stopped")
+}
+
+func makeStory(sourceFilename string) {
 	sourceFile, err := os.Open(sourceFilename)
 	if err != nil {
 		log.Fatal(err)
 	}
 	story := scanStory(sourceFile)
 
-	dir, filename  := path.Split(sourceFilename)
-	resultFilename := path.Join(dir,filename[:len(filename)-len(path.Ext(filename))] + ".html")
+	dir, filename := path.Split(sourceFilename)
+	resultFilename := path.Join(dir, filename[:len(filename)-len(path.Ext(filename))]+".html")
 	resultFile, err := os.Create(resultFilename)
 	if err != nil {
 		log.Fatal(err)
@@ -97,7 +129,7 @@ func scanStory(r io.Reader) *story.Story {
 			s.Page(pageNum).Line(lineNum, true).Time = scan.Arg
 		} else if scan.Command.Matches("Page", "Pic") {
 			pageNum := scan.Command[0].Index
-			if (scan.Arg != ""){
+			if scan.Arg != "" {
 				s.Page(pageNum).Image = fmt.Sprintf("../../common/%s.jpg", scan.Arg)
 			}
 		} else if scan.Command.Matches("Page", "Lang") {
@@ -148,7 +180,7 @@ func intArg(scan *scanner.Scanner) int {
 
 func substitute(s string) string {
 	s = strings.Replace(s, "|", "</span><span class=\"pause\">|</span><span>", -1)
-	if (s == "&nil") {
+	if s == "&nil" {
 		s = "<br />"
 	}
 	return s
@@ -163,59 +195,58 @@ func isMotoLiSourceFile(filename string) bool {
 	scanner := bufio.NewScanner(sourceFile)
 	for scanner.Scan() {
 		line := scanner.Text()
-		if(pageRegex.MatchString(line)){
-			return true;
+		if pageRegex.MatchString(line) {
+			return true
 		}
 	}
-	return false;
+	return false
 
 }
 
 var watchedDirectories map[string]bool = map[string]bool{}
+
 func watchForFileChanges(baseDirectory string) {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
-		log.Fatal(err)
+		log.Println("cannot create FS watcher:", err)
+		graceful.Shutdown()
+		return
 	}
 	defer watcher.Close()
 
-	done := make(chan bool)
-	go func() {
-		for {
-			select {
-			case event := <-watcher.Events:
-				log.Println("modified file:", event.Name)
-				if(isMotoLiSourceFile(event.Name)){
-					log.Println("yippee")
-					makeStory(event.Name)
-				}else if(path.Ext(event.Name)!=".html"){
-					touch.RecursiveTouchHtml(".")
-				}
-
-			case err := <-watcher.Errors:
-				log.Println("error:", err)
-			}
-		}
-	}()
-
 	watchSubdirectories(watcher, baseDirectory)
-	if err != nil {
-		log.Fatal(err)
+
+	for {
+		select {
+		case <-graceful.Done:
+			log.Println("file change watch stopped")
+			return
+		case event := <-watcher.Events:
+			log.Println("modified file:", event.Name)
+			if isMotoLiSourceFile(event.Name) {
+				log.Println("yippee")
+				makeStory(event.Name)
+			} else if path.Ext(event.Name) != ".html" {
+				touch.RecursiveTouchHtml(".")
+			}
+		case err := <-watcher.Errors:
+			log.Println("file watcher error:", err)
+		}
 	}
-	<-done
 }
 
-func watchSubdirectories(w *fsnotify.Watcher, directory string){
+func watchSubdirectories(w *fsnotify.Watcher, directory string) {
 	watchedDirectories[directory] = true
 	err := w.Add(directory)
 	err = filepath.Walk(directory, func(filename string, f os.FileInfo, err error) error {
-		if(filename!=directory && f.IsDir()){
+		if filename != directory && f.IsDir() {
 			watchSubdirectories(w, filename)
 		}
 		return nil
-})
+	})
 	if err != nil {
-		log.Fatal(err)
+		log.Printf("cannot walk directory %s: %v", directory, err)
+		graceful.Shutdown()
 	}
 }
 
@@ -235,16 +266,14 @@ func printStory(s *story.Story, outputFile *os.File) {
 	templates.AddSimpleNoAudioLine(tmpl)
 
 	for k, v := range s.Pages {
-		  for k1, v1 := range v.Lines {
-			  for k3, v3 := range v1.Segments {
-				  s.Pages[k].Lines[k1].Segments[k3] = substitute(v3)
-			  }
+		for k1, v1 := range v.Lines {
+			for k3, v3 := range v1.Segments {
+				s.Pages[k].Lines[k1].Segments[k3] = substitute(v3)
+			}
 
-		  }
+		}
 	}
-	err = tmpl.Execute(outputFile, s)
-	if err != nil {
+	if err := tmpl.Execute(outputFile, s); err != nil {
 		panic(err)
 	}
-
 }
