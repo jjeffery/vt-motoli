@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "wl2l/XbSHn+NjDeclOL6OXIycRc=",
+			"path": "github.com/braintree/manners",
+			"revision": "213a497c0285defc24f640dbdb8a30f7d7080310",
+			"revisionTime": "2016-03-17T16:22:23Z"
+		},
+		{
+			"checksumSHA1": "QrLPhNuDA6SntZ3ndafJoTqr8RI=",
+			"path": "github.com/fsnotify/fsnotify",
+			"revision": "a8a77c9133d2d6fd8334f3260d06f60e8d80a5fb",
+			"revisionTime": "2016-06-29T01:11:04Z"
+		},
+		{
+			"checksumSHA1": "DUvFFraTSKPb2nnjq+yVj3MLaoE=",
+			"path": "github.com/spkg/bom",
+			"revision": "54842532fe8b134759f3f87918b94f725796eb5f",
+			"revisionTime": "2016-05-30T01:13:12Z"
+		},
+		{
+			"checksumSHA1": "8fD/im5Kwvy3JgmxulDTambmE8w=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "a646d33e2ee3172a661fc09bca23bb4889a41bc8",
+			"revisionTime": "2016-07-15T05:43:45Z"
+		}
+	],
+	"rootPath": "github.com/jjeffery/vt-motoli"
+}
