@@ -15,6 +15,18 @@
 			"revisionTime": "2016-06-29T01:11:04Z"
 		},
 		{
+			"checksumSHA1": "sX0Ad0x8/qbvDgoULNCIqfizmOY=",
+			"path": "github.com/shurcooL/httpfs/vfsutil",
+			"revision": "be05fd7ae2c9f6b39b5e0ba52ca3b60366278b66",
+			"revisionTime": "2016-07-21T06:19:40Z"
+		},
+		{
+			"checksumSHA1": "EACYO6o4vbkOSyGiAaL/p8esvfo=",
+			"path": "github.com/shurcooL/vfsgen",
+			"revision": "da2abfe570cce05cf691105925ef0a1cfbb2571b",
+			"revisionTime": "2016-07-24T18:55:41Z"
+		},
+		{
 			"checksumSHA1": "DUvFFraTSKPb2nnjq+yVj3MLaoE=",
 			"path": "github.com/spkg/bom",
 			"revision": "54842532fe8b134759f3f87918b94f725796eb5f",
