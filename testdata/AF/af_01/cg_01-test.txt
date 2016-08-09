@@ -1,0 +1,101 @@
+
+# This is the title of the story
+#StoryName#	The Lonely Cat
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	4
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 5
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+####################################
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		The Lonely Cat
+#Page0Time1#		1.5
+#Page0Lang1#		en
+
+#Page0Line2#		ឆ្មារកំព្រារ 
+#Page0Time2#		1.5
+#Page0Lang2#		kh
+
+#Page0Text2#		Writer: Chris Gleisner, Rotana Seang
+#Page0Text3#		Illustration: Chris Gleisner
+#Page0Text4#		© Chris Gleisner, Rotana Seang 2016
+#Page0Text5#		Test Story - bi-lingual
+
+##Page 1 - test single lines
+#Page1Line1#    The lonely cat sat by the river all day.
+#Page1Time1#		3.0
+#Page1Lang1#		en
+
+#Page1Line2#    មានឆ្មារកំព្រារមួយក្បាលអង្គុយនៅមាត់ទន្លេរពេញមួយថ្ងៃ។
+#Page1Time2#		5.5
+#Page1Lang2#		kh
+
+
+##Page 2 - test continuation lines
+#Page2Line1-0#  One day a cow came and asked why 
+#Page2Line1-1#  he was looking so sad.
+#Page2Time1#		3.5
+#Page2Lang1#		en
+
+#Page2Line2-0#  ថ្ងៃមួយមានគោមួយក្បាលបានមកសួរឆ្មារហេតុ
+#Page2Line2-1#  អ្វីបានជាវាមើលទៅមិនសប្បាយចិត្ត ។
+#Page2Time2#		8.2
+#Page2Lang2#		kh
+
+
+##Page 3 - test single and continuation lines on same page
+#Page3Line1#	  The cat thanked the cow for his help.
+#Page3Time1#		2.5
+#Page3Lang1#		en
+
+#Page3Line2#	  ឆ្មារនិយាយអគុណគោដែលបានជួយ។
+#Page3Time2#		4.5
+#Page3Lang2#		kh
+
+#Page3Line3-0#  The cow said he was happy to help.|
+#Page3Line3-1#  That is what a friend does.
+#Page3Time3#		3.5
+#Page3Lang3#		en
+
+#Page3Line4-0#  គោនិយាយទៅឆ្មារថា វាសប្បាចិត្តនឹងជួយ |
+#Page3Line4-1#  មិត្តភ័ក្តិត្រូវតែចេះជួយគ្នា។
+#Page3Time4#		7.2
+#Page3Lang4#		kh
+
+
+##Page 4
+#Page4Pic#				motoli-credits
+#Page4Text1-0#		The Lonely Cat
+#Page4Text1-1#		Writers: Chris Gleisner, Rotana Seang
+#Page4Text1-2#		Illustration: Chris Gleisner
+#Page4Text1-3#		© Chris Gleisner 2016
+#Page4Text1-4#	 Software AJR, NJA, TLG
+
+#Page4Text2-0# 	This work is licensed under a Creative Commons Attribution
+#Page4Text2-1# 	(CC-BY 4.0) Version 4.0 International Licence
+#Page4Text2-2# 	Disclaimer: You are free to download, copy, translate 
+#Page4Text2-3# 	or adapt this story and use the illustrations as long as you  
+#Page4Text2-4# 	attribute or credit the original author/s and illustrator/s.
+
+
+

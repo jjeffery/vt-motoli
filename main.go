@@ -36,13 +36,6 @@ func main() {
 
 	log.SetFlags(0)
 
-	// TODO(jpj): start with very simple command line, can expand later
-	if len(os.Args) != 2 {
-		log.Fatal("usage: vt-motoli <file>")
-	}
-
-	makeStory(os.Args[1])
-
 	go func() {
 
 		staticFileServer := http.FileServer(http.Dir("."))
@@ -65,12 +58,6 @@ func main() {
 		http.ListenAndServe(":3000", nil)
 	}()
 	watchForFileChanges("./")
-	//fs, err := zipfs.New("testdata/testdata.zip")
-	//if err != nil {
-	//	return err
-	//}
-	//
-	//return http.ListenAndServe(":8080", zipfs.FileServer(fs))
 }
 
 func makeStory(sourceFilename string){
@@ -250,9 +237,6 @@ func printStory(s *story.Story, outputFile *os.File) {
 	for k, v := range s.Pages {
 		  for k1, v1 := range v.Lines {
 			  for k3, v3 := range v1.Segments {
-				  //if(v3=="&nil" && len(v1.Segments)==1){
-					//  s.Pages[k].Lines[k1].IsLineType = true
-				  //}
 				  s.Pages[k].Lines[k1].Segments[k3] = substitute(v3)
 			  }
 

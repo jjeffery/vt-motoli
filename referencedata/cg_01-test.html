@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+	The Lonely Cat
+	</title>
+	<link rel="stylesheet" href="../../common/storyStyles.css">
+	<script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+<!-- Data for this story -->
+<p class="data">
+<span id="platform"></span>
+<span id="onloads">0</span>
+<span id="pScaleSide">40</span>
+<span id="pScaleTop">60</span>
+<span id="barPause">300</span>
+<span id="backColor">white</span>
+<span id="diagnostic">off</span>
+</p>
+
+<!-- PAGE 0 -->
+<div class="page" id="p0">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><img src="p0pic.jpg" class="mainpic"></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p0pic.jpg" class="mainpic">
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><span class="title">The Lonely Cat</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr class="l-en"><td class="textLine">
+<span class="line"><span>The Lonely Cat</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '1.5', 'p0', '1' )"></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr class="l-kh"><td class="textLine">
+<span class="line"><span>ឆ្មារកំព្រារ</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound2.mp3', '1.5', 'p0', '2' )"></td>
+</tr>
+<!-- Text line 2 --><tr><td><span> 
+Writer: Chris Gleisner, Rotana Seang
+</span><br />
+<!-- Text line 3 --><tr><td><span> 
+Illustration: Chris Gleisner
+</span><br />
+<!-- Text line 4 --><tr><td><span> 
+© Chris Gleisner, Rotana Seang 2016
+</span><br />
+<!-- Text line 5 --><tr><td><span> 
+Test Story - bi-lingual
+</span><br />
+</table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+
+<!-- PAGE 1 -->
+<div class="page" id="p1">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><img src="p1pic.jpg" class="mainpic"></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p1pic.jpg" class="mainpic">
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><span class="title">The Lonely Cat</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr class="l-en"><td class="textLine">
+<span class="line"><span>The lonely cat sat by the river all day.</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '3.0', 'p1', '1' )"></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr class="l-kh"><td class="textLine">
+<span class="line"><span>មានឆ្មារកំព្រារមួយក្បាលអង្គុយនៅមាត់ទន្លេរពេញមួយថ្ងៃ។</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound2.mp3', '5.5', 'p1', '2' )"></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><img src="p2pic.jpg" class="mainpic"></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p2pic.jpg" class="mainpic">
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><span class="title">The Lonely Cat</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<tr class="l-en"><!-- Text line 1 -->
+<td class="textLine wrap">
+<span class="line"><span>One day a cow came and asked why</span></span><progress value="0"></progress>
+<span class="line"><span>he was looking so sad.</span></span><progress value="0"></progress>
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '3.5', 'p2', '1' )"></td>
+</tr>
+
+<tr class="l-kh"><!-- Text line 2 -->
+<td class="textLine wrap">
+<span class="line"><span>ថ្ងៃមួយមានគោមួយក្បាលបានមកសួរឆ្មារហេតុ</span></span><progress value="0"></progress>
+<span class="line"><span>អ្វីបានជាវាមើលទៅមិនសប្បាយចិត្ត ។</span></span><progress value="0"></progress>
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound2.mp3', '8.2', 'p2', '2' )"></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><img src="p3pic.jpg" class="mainpic"></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="p3pic.jpg" class="mainpic">
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><span class="title">The Lonely Cat</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+
+<!-- Text line 1 -->
+<tr class="l-en"><td class="textLine">
+<span class="line"><span>The cat thanked the cow for his help.</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '2.5', 'p3', '1' )"></td>
+</tr>
+
+<!-- Text line 2 -->
+<tr class="l-kh"><td class="textLine">
+<span class="line"><span>ឆ្មារនិយាយអគុណគោដែលបានជួយ។</span></span><progress value="0" max="100"></progress></td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '4.5', 'p3', '2' )"></td>
+</tr>
+
+<tr><!-- Text line 3 -->
+<td class="textLine wrap">
+<span class="line"><span>The cow said he was happy to help.</span><span class="pause">|</span><span></span></span><progress value="0"></progress>
+<span class="line"><span>That is what a friend does.</span></span><progress value="0"></progress>
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound3.mp3', '3.5', 'p3', '3' )"></td>
+</tr>
+
+<tr class="l-kh"><!-- Text line 4 -->
+<td class="textLine wrap">
+<span class="line"><span>គោនិយាយទៅឆ្មារថា វាសប្បាចិត្តនឹងជួយ </span><span class="pause">|</span><span></span></span><progress value="0"></progress>
+<span class="line"><span>មិត្តភ័ក្តិត្រូវតែចេះជួយគ្នា។</span></span><progress value="0"></progress>
+</td>
+<!-- Audio file, time in secs, page ID, line No. -->
+<td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound4.mp3', '7.2', 'p3', '4' )"></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+
+<div class="pict">
+<div class="underpic"> <!-- Format for a vertically oriented page -->
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><img src="../../common/motoli-credits.jpg" class="mainpic"></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+
+<div class="sidepic"> <!-- Format for a horizontally oriented page -->
+	<img src="../../common/motoli-credits.jpg" class="mainpic">
+	<table><tr>
+	<td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+	<td><span class="title">The Lonely Cat</span><br />
+	<span class="pgnum">page #</span></td>
+	<td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+	</tr></table>
+</div>
+</div>
+
+<div class="text">
+<table class="texttab">
+<!-- Text line 1 --><tr><td><span>
+The Lonely Cat<br />
+Writers: Chris Gleisner, Rotana Seang<br />
+Illustration: Chris Gleisner<br />
+© Chris Gleisner 2016<br />
+Software AJR, NJA, TLG<br />
+</span></td></tr>
+<!-- Text line 2 --><tr><td><span>
+This work is licensed under a Creative Commons Attribution<br />
+(CC-BY 4.0) Version 4.0 International Licence<br />
+Disclaimer: You are free to download, copy, translate<br />
+or adapt this story and use the illustrations as long as you<br />
+attribute or credit the original author/s and illustrator/s.<br />
+</span></td></tr>
+</table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+
+<!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+<div class="footer underpic">
+	<strong><span class="title">The Lonely Cat</span></strong>
+	<span class="pgnum">page #</span>
+</div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+<div>
+<audio id="AudioPlayer"></audio>
+</div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

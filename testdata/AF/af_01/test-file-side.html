@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Test Story
+    </title>
+    <link rel="stylesheet" href="../../common/storyStyles.css">
+    <script src="../../common/jquery-3.1.0.min.js"></script>
+    <script src="../../common/storyScripts.js"></script>
+</head>
+<body onload="initialise()" onresize="limitPictureSize()">
+<p id="loadmsg">Loading the story...</p>
+<div class="side" id="story">
+
+    <!-- Data for this story -->
+    <p class="data">
+        <span id="platform"></span>
+        <span id="onloads">0</span>
+        <span id="pScaleSide">40</span>
+        <span id="pScaleTop">60</span>
+        <span id="barPause">300</span>
+        <span id="backColor">white</span>
+        <span id="diagnostic">off</span>
+    </p>
+    
+        <!-- PAGE 0 -->
+<div class="page" id="p0">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="p0pic.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p0pic.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+<!-- Text line 1 -->
+<tr><td class="textLine">
+    <span class="line"><span>Hare and Hyena</span></span><progress value="0" max="100"></progress></td>
+
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p0sound1.mp3', '2.0', 'p0', '1' )"></td>
+
+</tr>
+
+            
+        
+            
+                
+                    
+    <!-- Text line 2 --><tr><td><span>
+    Writer: Mutugi Kamundi
+</span><br />
+
+
+
+                
+            
+        
+            
+                
+                    
+    <!-- Text line 3 --><tr><td><span>
+    Illustration: Rob Owen
+</span><br />
+
+
+
+                
+            
+        
+            
+                
+                    
+    <!-- Text line 4 --><tr><td><span>
+    © African Storybook Initiative, 2014
+</span><br />
+
+
+
+                
+            
+        
+            
+                
+                    
+    <!-- Text line 5 --><tr><td><span>
+    Test story - side format
+</span><br />
+
+
+
+                
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 0 -->
+
+    
+        <!-- PAGE 1 -->
+<div class="page" id="p1">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="p1pic.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p1pic.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+<!-- Text line 1 -->
+<tr><td class="textLine">
+    <span class="line"><span>Long time ago Hare and Hyena were great friends.</span></span><progress value="0" max="100"></progress></td>
+
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p1sound1.mp3', '4.0', 'p1', '1' )"></td>
+
+</tr>
+
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 1 -->
+
+    
+        <!-- PAGE 2 -->
+<div class="page" id="p2">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="p2pic.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p2pic.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+<tr><!-- Text line 1 -->
+    <td class="textLine wrap">
+<span class="line"><span>One day,</span><span class="pause">|</span><span> Hare said,</span><span class="pause">|</span><span> “My friend Hyena,</span><span class="pause">|</span><span></span></span><progress value="0"></progress>
+        <span class="line"><span>let us start farming together and we will be rich.”</span></span><progress value="0"></progress>
+        
+    </td>
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p2sound1.mp3', '6.5', 'p2', '1' )"></td>
+
+</tr>
+
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 2 -->
+
+    
+        <!-- PAGE 3 -->
+<div class="page" id="p3">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="p3pic.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p3pic.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+<tr><!-- Text line 1 -->
+    <td class="textLine wrap">
+<span class="line"><span>Hyena suggested that it was good to plant maize.</span><span class="pause">|</span><span></span></span><progress value="0"></progress>
+        <span class="line"><span>Hare agreed.</span></span><progress value="0"></progress>
+        
+    </td>
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound1.mp3', '4.0', 'p3', '1' )"></td>
+
+</tr>
+
+            
+        
+            
+                
+<tr><!-- Text line 2 -->
+    <td class="textLine wrap">
+<span class="line"><span>Hare also told Hyena</span><span class="pause">|</span><span> that it was good for</span></span><progress value="0"></progress>
+        <span class="line"><span>them to share duties on the farm.</span></span><progress value="0"></progress>
+        
+    </td>
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound2.mp3', '4.7', 'p3', '2' )"></td>
+
+</tr>
+
+            
+        
+            
+                
+<tr><!-- Text line 3 -->
+    <td class="textLine wrap">
+<span class="line"><span>“My work will be guarding the maize from the birds,”</span></span><progress value="0"></progress>
+        <span class="line"><span>Hare said.</span></span><progress value="0"></progress>
+        
+    </td>
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound3.mp3', '3.4', 'p3', '3' )"></td>
+
+</tr>
+
+            
+        
+            
+                
+<!-- Text line 4 -->
+<tr><td class="textLine">
+    <span class="line"><span>Then Hare told Hyena</span><span class="pause">|</span><span> to till the land,</span><span class="pause">|</span><span> plant,</span><span class="pause">|</span><span> and weed.</span></span><progress value="0" max="100"></progress></td>
+
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p3sound4.mp3', '3.0', 'p3', '4' )"></td>
+
+</tr>
+
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 3 -->
+
+    
+        <!-- PAGE 4 -->
+<div class="page" id="p4">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="p4pic.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="p4pic.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+<!-- Text line 1 -->
+<tr><td class="textLine">
+    <span class="line"><span>Hyena complained that he had been given more work.</span></span><progress value="0" max="100"></progress></td>
+
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound1.mp3', '3.0', 'p4', '1' )"></td>
+
+</tr>
+
+            
+        
+            
+                
+                    
+    <!-- Text line 2 --><tr><td><span>
+    <br />
+</span><br />
+
+
+
+                
+            
+        
+            
+                
+<tr><!-- Text line 3 -->
+    <td class="textLine wrap">
+<span class="line"><span>“My work is not easy.</span><span class="pause">|</span><span> I will be climbing</span></span><progress value="0"></progress>
+        <span class="line"><span>trees and chasing birds away day and night.</span></span><progress value="0"></progress>
+        
+    </td>
+
+    <!-- Audio file, time in secs, page ID, line No. -->
+    <td class="button"><img src="../../common/play.png" onclick="playAudio('p4sound3.mp3', '5.5', 'p4', '3' )"></td>
+
+</tr>
+
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 4 -->
+
+    
+        <!-- PAGE 5 -->
+<div class="page" id="p5">
+    <div class="pict">
+        <div class="underpic"> <!-- Format for a vertically oriented page -->
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><img src="../../common/african-storybook.jpg" class="mainpic"></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+
+        <div class="sidepic"> <!-- Format for a horizontally oriented page -->
+            <img src="../../common/african-storybook.jpg" class="mainpic">
+            <table><tr>
+                <td><img src="../../common/back.png" class="btnback" onclick="pageBack()"></td>
+                <td><span class="title">Test Story</span><br />
+                    <span class="pgnum">page #</span></td>
+                <td><img src="../../common/fwd.png" class="btnfwd" onclick="pageFwd()"></td>
+            </tr></table>
+        </div>
+    </div>
+
+<div class="text">
+    <table class="texttab">
+        
+            
+                
+                    
+    <!-- Text line 1 -->
+    <tr><td><span>
+        
+            Hare and Hyena<br />
+
+        
+            Writer: Mutugi Kamundi<br />
+
+        
+            Illustration: Rob Owen<br />
+
+        
+            Audio: Hyeon Shaw<br />
+
+        
+            VT Software: AJR, NJA, TLG.<br />
+
+        
+    </span></td></tr>
+
+
+
+                
+            
+        
+            
+                
+                    
+    <!-- Text line 2 -->
+    <tr><td><span>
+        
+            © African Storybook Initiative, 2014<br />
+
+        
+            This work is licensed under a Creative Commons Attribution<br />
+
+        
+            (CC-BY 4.0) Version 4.0 International Licence<br />
+
+        
+            Disclaimer: You are free to download, copy, translate<br />
+
+        
+            or adapt this story and use the illustrations as long as you<br />
+
+        
+            attribute or credit the original author/s and illustrator/s.<br />
+
+        
+    </span></td></tr>
+
+
+
+                
+            
+        
+            
+                
+                    
+    <!-- Text line 3 --><tr><td><span>
+    This is a single text line for testing.
+</span><br />
+
+
+
+                
+            
+        
+    </table>
+</div>
+</div>
+<!-- END PAGE 5 -->
+
+    
+    <!-- PAGE IDENTIFICATION SECTION - DO NOT CHANGE -->
+    <div class="footer underpic">
+        <strong><span class="title">Test Story</span></strong>
+        <span class="pgnum">page #</span>
+    </div> <!-- END PAGE IDENTIFICATION SECTION -->
+
+    <div>
+        <audio id="AudioPlayer"></audio>
+    </div>
+</div>
+<!-- END OF STORY -->
+</body>
+</html>

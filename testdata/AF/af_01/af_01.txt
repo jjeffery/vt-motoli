@@ -28,7 +28,7 @@
 <Identifier>		<-- Start of line ---------d----------- End of line -->
 
 ##Title Page
-#Page0Line1#		Hare and Hyena
+#Page0Line1#		Hairy and Hyena
 #Page0Time1#		2.0
 
 #Page0Text2#		Writer: Mutugi Kamundi

@@ -1,0 +1,94 @@
+
+# This is the title of the story
+#StoryName#	Test Story
+
+# This is the layout of the story
+#Format#	side
+
+# This is the total number of story pages not including the title page
+#MaxPages#	5
+
+# This is the maximum number of lines on any page
+#MaxLines#	10
+
+# This is the maximum number of continuation lines
+#MaxCont# 10
+
+# This is the picture scaling %
+#ScaleSide# 40
+#ScaleTop#  60
+
+# This is the pause timing
+#Pause# 300
+
+
+####################################
+#Following are the lines of text for each page
+
+<Identifier>		<-- Start of line -------------------- End of line -->
+
+##Title Page
+#Page0Line1#		Hare and Hyena
+#Page0Time1#		2.0
+
+#Page0Text2#		Writer: Mutugi Kamundi
+#Page0Text3#		Illustration: Rob Owen
+#Page0Text4#		© African Storybook Initiative, 2014
+#Page0Text5#    Test story - side format
+
+##Page 1 - test a single line
+#Page1Line1#    	Long time ago Hare and Hyena were great friends.
+#Page1Time1#		4.0
+
+
+##Page 2 - test a continuation line
+#Page2Line1-0#  	One day,| Hare said,| “My friend Hyena,|
+#Page2Line1-1#  	let us start farming together and we will be rich.”
+#Page2Time1#		6.5
+
+
+##Page 3 - test continuation lines and single lines on the same page
+#Page3Line1-0#  	Hyena suggested that it was good to plant maize.|
+#Page3Line1-1#  	Hare agreed.
+#Page3Time1#		4.0
+
+#Page3Line2-0#  	Hare also told Hyena| that it was good for
+#Page3Line2-1#  	them to share duties on the farm.
+#Page3Time2#		4.7
+
+#Page3Line3-0#  	“My work will be guarding the maize from the birds,”
+#Page3Line3-1#  	Hare said.
+#Page3Time3#		3.4
+
+#Page3Line4#    	Then Hare told Hyena| to till the land,| plant,| and weed.
+#Page3Time4#		3.0
+
+
+##Page 4 - test blank line
+#Page4Line1#    	Hyena complained that he had been given more work.
+#Page4Time1#		3.0
+
+#Page4Text2#  	  &nil
+
+#Page4Line3-0#  	“My work is not easy.| I will be climbing
+#Page4Line3-1#  	trees and chasing birds away day and night.
+#Page4Time3#		5.5
+
+
+##Page 5 - test text lines
+#Page5Pic#				african-storybook
+#Page5Text1-0#		Hare and Hyena
+#Page5Text1-1#		Writer: Mutugi Kamundi
+#Page5Text1-2#		Illustration: Rob Owen
+#Page5Text1-3#		Audio: Hyeon Shaw
+#Page5Text1-4#		VT Software: AJR, NJA, TLG.
+
+#Page5Text2-0#		© African Storybook Initiative, 2014
+#Page5Text2-1# 	This work is licensed under a Creative Commons Attribution
+#Page5Text2-2# 	(CC-BY 4.0) Version 4.0 International Licence
+#Page5Text2-3# 	Disclaimer: You are free to download, copy, translate 
+#Page5Text2-4# 	or adapt this story and use the illustrations as long as you  
+#Page5Text2-5# 	attribute or credit the original author/s and illustrator/s.
+
+#Page5Text3#    This is a single text line for testing.
+
