@@ -125,7 +125,7 @@ func (s *Scanner) Scan() bool {
 		}
 
 		s.Err = fmt.Errorf("line %d: %q", s.Line, text)
-		return false
+		return true
 	}
 	return false
 }

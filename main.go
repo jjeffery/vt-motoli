@@ -19,7 +19,6 @@ import (
 
 	"github.com/braintree/manners"
 	"github.com/fsnotify/fsnotify"
-
 	"github.com/jjeffery/vt-motoli/graceful"
 	"github.com/jjeffery/vt-motoli/scanner"
 	"github.com/jjeffery/vt-motoli/story"
@@ -98,7 +97,11 @@ func scanStory(r io.Reader) *story.Story {
 	s := story.New()
 	scan := scanner.New(r)
 	for scan.Scan() {
-		if scan.Command.Matches("Page", "Line") {
+		if scan.Err != nil {
+			page := s.CurrentPage()
+			page.Errors = append(page.Errors, scan.Err.Error())
+			scan.Err = nil
+		} else if scan.Command.Matches("Page", "Line") {
 			pageNum := scan.Command[0].Index
 			lineNum := scan.Command[1].Index
 			continuationNum := scan.Command[1].Cont

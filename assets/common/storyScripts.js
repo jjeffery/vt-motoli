@@ -45,6 +45,12 @@ function poll(){
 function initialise() {
 	onloadCount = parseInt(document.getElementById("onloads").innerHTML) + 1;
 	document.getElementById("onloads").innerHTML = onloadCount;
+
+	// If no page 0 don't bother trying to do much it will only fail
+	if(!document.getElementById("p0")){
+		setTimeout(poll, 2000);
+		return;
+	}
 	//Only process if this is the first call. Subsequent calls are ignored until the file is reloaded.
 	if (initStatus === false) {
 		initStatus = true;
@@ -234,26 +240,34 @@ function showPage(i, evnt) {
 		document.getElementsByClassName("pgnum")[j].innerHTML = pagenumber;
 	}
 	hideAllPages()	//and then display the desired one
-	document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
 
-    // change page address to include anchor
-	window.history.pushState("", "", window.location=document.location.href.match(/(^[^#]*)/)[0]+"#page"+i);
+	page = document.getElementById(pageID);
+	if(!page){
+		page = document.getElementById("p0");
+	}
+	if(page) {
+		page.style.display = "block"; //enable the page to be displayed
+
+		// change page address to include anchor
+		window.history.pushState("", "", window.location = document.location.href.match(/(^[^#]*)/)[0] + "#page" + i);
 
 
-	//Now set the progress bar lengths for each text line of the page
-    console.log(pageID);
-	lineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
-	console.log(lineNodes.length);
-	//This will also set the first line of a wrapped set, but it will be overwritten in the following for loop.
+		//Now set the progress bar lengths for each text line of the page
+		console.log(pageID);
+		lineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
+		console.log(lineNodes.length);
+		//This will also set the first line of a wrapped set, but it will be overwritten in the following for loop.
 		for (j = 0; j < lineNodes.length; j++) {
 			textNode = lineNodes[j].getElementsByClassName("line")[0];  //This is the text whose length we want
-			textLength = textNode.offsetWidth;
+			textLength = textNode ? textNode.offsetWidth : 0;
 			progNode = lineNodes[j].getElementsByTagName("progress")[0];  //This is the progress element to be set
-			progNode.style.width = (textLength + "px");
-			progNode.value = 0;
+			if (progNode) {
+				progNode.style.width = (textLength + "px");
+				progNode.value = 0;
+			}
 		}
-	//Set the progress bar lengths for each line of any wrapped sets of lines
-	wrapNodes = document.getElementById(pageID).getElementsByClassName("wrap");
+		//Set the progress bar lengths for each line of any wrapped sets of lines
+		wrapNodes = document.getElementById(pageID).getElementsByClassName("wrap");
 		for (j = 0; j < wrapNodes.length; j++) {
 			//get number of lines for each node
 			wrapLines = wrapNodes[j].getElementsByClassName("line").length;
@@ -265,15 +279,16 @@ function showPage(i, evnt) {
 				progNode.value = 0;
 			}
 		}
-	//At this point all progress bars for the page have been set to the correct length and initialised to zero.
-	//This is true for the XOs, although they do not display the new status, nor respond when activated.
-	//The following action seems to be necessary to kick-start them back to life!
-	document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
-	
-	if (evnt === "load") {
-		//Use brute force (page fwd and back) to force page 0 buttons to position correctly
-		document.getElementById(pageID).getElementsByClassName("btnfwd")[0].click();
-		document.getElementById(pageID).getElementsByClassName("btnback")[0].click();
+		//At this point all progress bars for the page have been set to the correct length and initialised to zero.
+		//This is true for the XOs, although they do not display the new status, nor respond when activated.
+		//The following action seems to be necessary to kick-start them back to life!
+		document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
+
+		if (evnt === "load") {
+			//Use brute force (page fwd and back) to force page 0 buttons to position correctly
+			document.getElementById(pageID).getElementsByClassName("btnfwd")[0].click();
+			document.getElementById(pageID).getElementsByClassName("btnback")[0].click();
+		}
 	}
 }
 

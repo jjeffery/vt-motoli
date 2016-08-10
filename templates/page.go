@@ -1,11 +1,16 @@
 package templates
+
 import (
-    "text/template"
+	"text/template"
 )
+
 func AddPage(t *template.Template) {
-    t.New("page.html").Parse(`
+	t.New("page.html").Parse(`
     <!-- PAGE {{.Number}} -->
 <div class="page" id="p{{.Number}}">
+{{range .Errors}}
+<div class="error">{{.}}</div>
+{{ end }}
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>
