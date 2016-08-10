@@ -88,7 +88,10 @@ function initialise() {
 		var jumpPage = parseInt(firstPageNumber)
 
 		showPage(pgOn, "load");
-		autoPlay(pgOn); //Play the audio automatically for page 0 on first load
+		//Play the audio automatically for page 0 on first load
+		if(jumpPage==0){
+			autoPlay(pgOn);
+		}
 		resetEndChangeButtons();	//At the extremes - start and end of the story
 		//Display the fully styled first page
 		if (document.getElementById("loadmsg")) document.getElementById("loadmsg").style.display = "none";
