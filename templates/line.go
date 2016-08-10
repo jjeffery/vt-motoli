@@ -1,7 +1,9 @@
 package templates
+
 import (
-"text/template"
+	"text/template"
 )
+
 func AddLine(t *template.Template) {
 	t.New("line.html").Parse(`
 {{ if .OnlyOneSegment }}
@@ -11,7 +13,7 @@ func AddLine(t *template.Template) {
 {{ else }}
 <tr{{ if .Lang}} class="l-{{.Lang}}"{{ end}}><!-- Text line {{.Number}} -->
     <td class="textLine wrap">
-{{range .Segments}}<span class="line"><span>{{.}}</span></span><progress value="0"></progress>
+{{range .Segments}}<span class="line"><span>{{.}}</span></span><br /><progress value="0"></progress><br />
         {{end}}
     </td>
 {{ end }}
