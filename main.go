@@ -27,7 +27,7 @@ import (
 )
 
 func main() {
-	log.SetFlags(0)
+	log.SetFlags(log.Lshortfile)
 
 	switch len(os.Args) {
 	case 0, 1:
