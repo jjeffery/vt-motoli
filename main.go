@@ -175,9 +175,15 @@ func substitute(s string) string {
 }
 
 func isMotoLiSourceFile(filename string) bool {
+	if strings.ToLower(filepath.Ext(filename)) != ".txt" {
+		return false
+	}
 	pageRegex := regexp.MustCompile(`^#Page[0-9]+`)
 	sourceFile, err := os.Open(filename)
 	if err != nil {
+		if err == os.ErrNotExist {
+			return false
+		}
 		log.Fatal(err)
 	}
 	scanner := bufio.NewScanner(sourceFile)
