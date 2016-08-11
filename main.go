@@ -4,6 +4,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -28,12 +29,15 @@ import (
 
 func main() {
 	log.SetFlags(log.Lshortfile)
+	flag.Parse()
 
-	switch len(os.Args) {
-	case 0, 1:
+	debug.Printf("command line args: %v", flag.Args())
+	switch len(flag.Args()) {
+	case 0:
 		break
-	case 2:
-		if err := os.Chdir(os.Args[1]); err != nil {
+	case 1:
+		debug.Printf("changing directory to %q", flag.Arg(0))
+		if err := os.Chdir(flag.Arg(0)); err != nil {
 			log.Fatal(err)
 		}
 	default:
