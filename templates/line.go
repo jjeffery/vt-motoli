@@ -13,7 +13,7 @@ func AddLine(t *template.Template) {
 {{ else }}
 <tr{{ if .Lang}} class="l-{{.Lang}}"{{ end}}><!-- Text line {{.Number}} -->
     <td class="textLine wrap">
-{{range .Segments}}<span class="line"><span>{{.}}</span></span><br /><progress value="0"></progress><br />
+{{range .Segments}}<span class="line"><span>{{.}}</span><br /><progress value="0"></progress><br />
         {{end}}
     </td>
 {{ end }}
