@@ -179,13 +179,18 @@ func substitute(s string) string {
 }
 
 func isMotoLiSourceFile(filename string) bool {
+	debug.Printf("start isMotoLiSourceFile(%q)", filename)
+	defer debug.Printf("end isMotoLiSourceFile(%q)", filename)
+
 	if strings.ToLower(filepath.Ext(filename)) != ".txt" {
+		debug.Printf("%q: does not end with '.txt'", filename)
 		return false
 	}
 	pageRegex := regexp.MustCompile(`^#Page[0-9]+`)
 	sourceFile, err := os.Open(filename)
 	if err != nil {
 		if err == os.ErrNotExist {
+			debug.Printf("%q: does not exist", filename)
 			return false
 		}
 		log.Fatal(err)
@@ -194,11 +199,12 @@ func isMotoLiSourceFile(filename string) bool {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if pageRegex.MatchString(line) {
+			debug.Printf("%q: matches", filename)
 			return true
 		}
 	}
+	debug.Printf("%q: does not match")
 	return false
-
 }
 
 var watchedDirectories map[string]bool = map[string]bool{}
