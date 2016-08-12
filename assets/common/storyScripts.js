@@ -11,16 +11,16 @@ var timerIDs;	//An array of all timeout timer IDs set when a progress bar is run
 var pInterval; 	//length of a pause. Its value is extracted from the story container div in the HTML file
 var initStatus = false;	//Set to true if initialisation has already occurred. Needed to overcome multiple onload events in the XOs
 var newPlay = false;	//Flags when a play button has been clicked. When true, all updates on a progress bar will be ignored
-				
+
 var Key = {
-  PAGEUP:	33,
-  PAGEDOWN:	34,
-  END:		35,
-  HOME:		36,
-  LEFT:		37,
-  UP:		38,
-  RIGHT:	39,
-  DOWN:		40
+	PAGEUP:	33,
+	PAGEDOWN:	34,
+	END:		35,
+	HOME:		36,
+	LEFT:		37,
+	UP:		38,
+	RIGHT:	39,
+	DOWN:		40
 };
 
 var previousLastModified = null;
@@ -54,16 +54,16 @@ function initialise() {
 	//Only process if this is the first call. Subsequent calls are ignored until the file is reloaded.
 	if (initStatus === false) {
 		initStatus = true;
-		
+
 		//Set the page related global variables
 		pgOn = 0;
-		pgMax = document.getElementsByClassName("page").length;	
-		
+		pgMax = document.getElementsByClassName("page").length;
+
 		//Get the story name for the footers
 		for (i = 0; i < document.getElementsByClassName("title").length; i++) {
 			document.getElementsByClassName("title")[i].innerHTML = document.getElementsByTagName("title")[0].innerHTML;
 		}
-		
+
 		//Modify styles specified in the HTML data.
 		document.getElementsByTagName("body")[0].style.backgroundColor = document.getElementById("backColor").innerHTML;
 		var diagnosticState = document.getElementById("diagnostic").innerHTML;
@@ -130,22 +130,22 @@ function setFormat() {	//Establishes text-beside-pic or text-under-pic format, a
 }
 
 function showLanguages() {
-    var i, j;
+	var i, j;
 	var visLangs = [];
 	var hashIndex = window.location.href.indexOf('#');
 	var textLineNodes;
 	var textRowNodes;
 	var visLangClass;
-	
+
 	if (hashIndex > 0) {
 		visLangs = window.location.href.slice(hashIndex + 1).split(',');
 	}
 //	alert(visLangs);
 	if (!visLangs[0]) return;
-	
+
 	textLineNodes = document.getElementsByClassName("textLine");
 	for (i = 0; i < textLineNodes.length; i++) {
-	//textLineNodes[i].parentNode.style.display = "none";
+		//textLineNodes[i].parentNode.style.display = "none";
 	}
 	for (i = 0; i < visLangs.length; i++){
 		visLangClass = visLangs[i]
@@ -160,7 +160,7 @@ function limitPictureSize() {
 	//Limits the width or height of the main picture, depending on the story format.
 	//The limits are a percentage of screen size, defined in the HTML file.
 	//This function is called at initialisation, and also at any subsequent change in window size.
-	
+
 	if (document.getElementById("story").className === "side") {	//Limit the 'side' picture size
 		var w = window.innerWidth;
 		var scale = parseInt(document.getElementById("pScaleSide").innerHTML);
@@ -185,11 +185,11 @@ function limitPictureSize() {
 				picNodes[j].height = picSpace;
 			}
 		}
-	}	
+	}
 }
 
 function resetEndChangeButtons() {
-	//There are 2 of each back and fwd buttons on every page - 
+	//There are 2 of each back and fwd buttons on every page -
 	//one set for 'text beside' format, and one set for 'text under' format
 	//reset the back button icons on page 0
 	var startPageNode = document.getElementById("p0");
@@ -205,7 +205,7 @@ function resetEndChangeButtons() {
 }
 
 function newStory() {
-   	stopAllTimers();
+	stopAllTimers();
 	window.history.back();
 }
 
@@ -221,14 +221,14 @@ function showPage(i, evnt) {
 	//Function does the basics of making the page visible, and inserting the correct page number.
 	//However, its main purpose is to set the lengths (widths) of any progress bars on the page
 	//to align exactly with the lengths of the corresponding text lines.
-	
+
 	var pagenumber;
 	var pageID;
 	var textNode;	//the <span> element containing a line of text
 	var textLength;	//the length of the text in the textNode, in px
 	var progNode;	//the <progress> element corresponding to the textNode
 	var lineNodes;	//the set of <td> nodes on the page containing a single line of text
-	var wrapNodes;	//the set of <td> nodes on the page containing multiple (wrapped) lines of text	
+	var wrapNodes;	//the set of <td> nodes on the page containing multiple (wrapped) lines of text
 	var wrapLines;	//the number of text lines in each single wrapNode
 
 	var player = document.getElementById("AudioPlayer");
@@ -297,18 +297,18 @@ function autoPlay(i) {
 	if (platform === "iPad") {return; //function doesn't work on iPad/Android mobile
 	} else if (platform === "Linux armv7l") {return;
 	} else {
-	// Finds the first visible text line on the page, and clicks its play button
-	var pageID = "p" + i;
-	var textLineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
-	var rowNode; //the parent <tr> node of the text line
+		// Finds the first visible text line on the page, and clicks its play button
+		var pageID = "p" + i;
+		var textLineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
+		var rowNode; //the parent <tr> node of the text line
 
-	for (i = 0; i < textLineNodes.length; i++) {
-		rowNode = textLineNodes[i].parentNode;
-		if (rowNode.style.display != "none") {
-			rowNode.getElementsByClassName("button")[0].childNodes[0].click();
-			return;
+		for (i = 0; i < textLineNodes.length; i++) {
+			rowNode = textLineNodes[i].parentNode;
+			if (rowNode.style.display != "none") {
+				rowNode.getElementsByClassName("button")[0].childNodes[0].click();
+				return;
+			}
 		}
-	}
 	}
 }
 
@@ -335,30 +335,30 @@ function pageBack() {
 }
 
 //Add a listener for keyboard events and define the keys to act on
-// IE: attachEvent, Firefox & Chrome: addEventListener 
+// IE: attachEvent, Firefox & Chrome: addEventListener
 function _addEventListener(evt, element, fn) {
-  if (window.addEventListener) {element.addEventListener(evt, fn, false);}
-  else {element.attachEvent('on'+evt, fn);}
+	if (window.addEventListener) {element.addEventListener(evt, fn, false);}
+	else {element.attachEvent('on'+evt, fn);}
 }
 
 function onInputKeydown(evt) {
-  if (!evt) {evt = window.event;} // for IE compatible
-  var keycode = evt.keyCode || evt.which; // also for cross-browser compatible
-  if (keycode == Key.LEFT) {pageBack();}
-  else if (keycode == Key.RIGHT) {pageFwd();}
-  else if (keycode == Key.UP) {pageBack();}
-  else if (keycode == Key.DOWN) {pageFwd();}
-  else if (keycode == Key.PAGEUP) {pageBack();}
-  else if (keycode == Key.PAGEDOWN) {pageFwd();}
-  else if (keycode == Key.HOME) {pgOn = 0; showPage(pgOn, "change");}
-  else if (keycode == Key.END) {pgOn = pgMax - 1; showPage(pgOn, "change");}
-  else {//do nothing
-  }
+	if (!evt) {evt = window.event;} // for IE compatible
+	var keycode = evt.keyCode || evt.which; // also for cross-browser compatible
+	if (keycode == Key.LEFT) {pageBack();}
+	else if (keycode == Key.RIGHT) {pageFwd();}
+	else if (keycode == Key.UP) {pageBack();}
+	else if (keycode == Key.DOWN) {pageFwd();}
+	else if (keycode == Key.PAGEUP) {pageBack();}
+	else if (keycode == Key.PAGEDOWN) {pageFwd();}
+	else if (keycode == Key.HOME) {pgOn = 0; showPage(pgOn, "change");}
+	else if (keycode == Key.END) {pgOn = pgMax - 1; showPage(pgOn, "change");}
+	else {//do nothing
+	}
 }
 
 function addNavKeyEvt() {
-  _addEventListener('keydown', document, onInputKeydown);
-}				
+	_addEventListener('keydown', document, onInputKeydown);
+}
 
 
 //FUNCTIONS TO INITIALISE PROGRESS BARS WHEN 'PLAY' BUTTONS ARE CLICKED
@@ -377,7 +377,7 @@ function playAudio(file, time, pageNo, lineNo) {
 	var lineNode;	//the specific <span> element enclosing the full text to match progNode and lineTime
 	var pauseListLine;	//Array of pause times for a single line (i.e. a single progress bar)
 	var pauseListWrap;	//An array of pauseListLines - only one entry if the text is a
-						//single line, multiple entries for wrapped lines.
+	//single line, multiple entries for wrapped lines.
 
 	newPlay = true; //This prevents the incProgBar() function from updating anything until newPlay is reset to false
 	player = document.getElementById("AudioPlayer");
@@ -390,19 +390,19 @@ function playAudio(file, time, pageNo, lineNo) {
 	// but not too long or it will interfere with the start of the new line. Keep well short of the standard
 	// delay at the start of a line. 10 msec seems to quite OK.
 	var timer = setTimeout(function() {clearInterval(timerInt);}, 10);
-	
+
 	//zero all the progress bars on the page
 	progNodes = document.getElementById(pageNo).getElementsByTagName("progress");
 	for (i = 0; i < progNodes.length; i++) {
 		progNodes[i].value = 0;
 	}
-	
+
 	//Clear any pause time data
 	pauseListLine = [];
 	pauseListWrap = [];
-	
+
 	textNode = document.getElementById(pageNo).getElementsByClassName("textLine")[line];
-	//If it's a set of wrapped lines, we need to set the max times for each progress bar. The full audio time is known, 
+	//If it's a set of wrapped lines, we need to set the max times for each progress bar. The full audio time is known,
 	//so each line's proportion of this is simply the ratio of it's width to the total widths of all the lines.
 	if (textNode.className === "textLine wrap") {
 		//Add the widths of all the lines, i.e. get the paragraph length
@@ -429,7 +429,7 @@ function playAudio(file, time, pageNo, lineNo) {
 		pauseListLine = getPauseList(progNode, lineNode, 0);	//Builds a list of data about the line, mainly its nodes and pause times
 		pauseListWrap.push(pauseListLine);	//Wrap the line data into a list of line data sets - although in this case it will be the only entry
 	}
-	
+
 	//Start the audio file and the progress bar, once the file is loaded
 	player.src = file;
 	player.oncanplaythrough = startAudioBar(player, pauseListWrap);
@@ -441,13 +441,13 @@ function startAudioBar(player, pauseListWrap) {
 }
 
 function getPauseList(progNode, lineNode, index) {
-	//Function is called by playAudio() to build an array of objects for a line of text, in order: 
+	//Function is called by playAudio() to build an array of objects for a line of text, in order:
 	//line index (starts at 0 for a wrapped set), progress bar node, list of times when pauses will be triggered.
-	//This provides all the info needed to run a particular progress bar. 
-	
-	//The calling function [playAudio()] assembles all line arrays for a single audio file into a wrap 
+	//This provides all the info needed to run a particular progress bar.
+
+	//The calling function [playAudio()] assembles all line arrays for a single audio file into a wrap
 	//array - even if it's only a single line.
-	
+
 	var lineLength;
 	var pNodes;	//the set of <span> elements defining pauses in the line
 	var pList;	//An array that contains the index, progNode, plus any pause times
@@ -455,7 +455,7 @@ function getPauseList(progNode, lineNode, index) {
 	var numPauses;
 	var lineTime;	//audio time for the progress bar
 	var prevPauseTime;	//Need to track it to add to each successive pause interval
-						//i.e. all pause times are referenced to the start of the bar
+	//i.e. all pause times are referenced to the start of the bar
 
 	pInterval = parseInt(document.getElementById("barPause").innerHTML);
 	pList = [];
@@ -497,16 +497,16 @@ function runProgBar(pauseListWrap) {
 	var wrapItems;	//the No. of objects in pauseListWrap - wrapID will be the last
 	var timer;		//ID for any timer when it is set
 	var platform;	//time delays when starting the progress bars will depend on the OS platform.
-	
+
 	//This function sets the timer to increment a progress bar and all the timeout timers to trigger pauses
 	//along the bar. All the info for this is contained in the pauseListLine array, which itself is an object
 	//in the pauseListWrap array. If we are running a multi-line set of progress bars, the incProgBar() function
-	//will detect when a progress bar is full, and recall runProgBar() to set up the new timers for the next 
+	//will detect when a progress bar is full, and recall runProgBar() to set up the new timers for the next
 	//line (if one exists in the pauseListWrap array).
 	//Therefore we need to clear all timers before setting up a new line. However, there can be a variable number
-	//of timeout timers, depending on the pauses in the line. Their IDs are stored in the global timerIDs array 
+	//of timeout timers, depending on the pauses in the line. Their IDs are stored in the global timerIDs array
 	//to enable them all to be cleared in the stopAllTimers() function.
-	
+
 	//Stop all timers before continuing
 	stopAllTimers();
 	clearInterval(timerInt);
@@ -519,46 +519,46 @@ function runProgBar(pauseListWrap) {
 		startDelay = 1000;
 		defaultDelay = 200;
 	}
-	
+
 	wrapItems = pauseListWrap.length;
 	pauseListLine = pauseListWrap.shift();
-	
+
 	lineIndex = pauseListLine.shift();
 	if (lineIndex == 0) {delay = startDelay} else {delay = defaultDelay};
 	progNode = pauseListLine.shift();	//Only pause times will now remain in this array
-		progNode.value = 0;
-		maxTime = progNode.max;
-		//Start the interval timer after the appropriate delay
-		//The global newPlay flag *must not* be reset to false until after the setTimeout delay
-		//clearInterval must always precede setInterval to ensure only one instance of the timer is ever running.
-		timer = setTimeout(function() {clearInterval(timerInt); newPlay = false; timerInt = setInterval(function() {incProgBar(progNode, maxTime, pauseListWrap);}, 50)}, delay);
-		timerIDs.push(timer);
-	
-		//Loop - for each time on pauseListLine
-		var numPauses = pauseListLine.length;
-		if (numPauses > 0) {
-			for (i = 0; i < numPauses; i++) {
-				time = pauseListLine[i] + delay;
-				timer = setTimeout(function() {pauseBar(progNode, maxTime, pauseListWrap);}, time);
-				timerIDs.push(timer);
-			}
+	progNode.value = 0;
+	maxTime = progNode.max;
+	//Start the interval timer after the appropriate delay
+	//The global newPlay flag *must not* be reset to false until after the setTimeout delay
+	//clearInterval must always precede setInterval to ensure only one instance of the timer is ever running.
+	timer = setTimeout(function() {clearInterval(timerInt); newPlay = false; timerInt = setInterval(function() {incProgBar(progNode, maxTime, pauseListWrap);}, 50)}, delay);
+	timerIDs.push(timer);
+
+	//Loop - for each time on pauseListLine
+	var numPauses = pauseListLine.length;
+	if (numPauses > 0) {
+		for (i = 0; i < numPauses; i++) {
+			time = pauseListLine[i] + delay;
+			timer = setTimeout(function() {pauseBar(progNode, maxTime, pauseListWrap);}, time);
+			timerIDs.push(timer);
 		}
+	}
 }
 
 function stopAllTimers() {
 	var timer;
-	
+
 	for (i = 0; i < timerIDs.length; i++) {
 		timer = timerIDs.pop;
 		clearTimeout(timer);
 	}
-	 timerIDs = [];
-	 clearInterval(timerInt); //there should only ever be one instance of the interval timer running, and its ID is the global timerInt
+	timerIDs = [];
+	clearInterval(timerInt); //there should only ever be one instance of the interval timer running, and its ID is the global timerInt
 }
 
 function incProgBar(progNode, maxTime, pauseListWrap) {
 	var barTime;
-	
+
 	if (newPlay == true) return;	//This means a Play button has been clicked, and we are not yet cleared to update anything.
 	barTime = progNode.value;
 	barTime += 50;
