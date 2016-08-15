@@ -27,6 +27,8 @@ import (
 	"github.com/jjeffery/vt-motoli/touch"
 )
 
+var developmentMode bool
+
 func main() {
 	log.SetFlags(log.Lshortfile)
 	flag.Parse()
@@ -45,6 +47,8 @@ func main() {
 	}
 
 	var wg sync.WaitGroup
+
+	regenerateObsoleteHtmls(".", false)
 
 	wg.Add(1)
 	go func() {
@@ -87,8 +91,7 @@ func makeStory(sourceFilename string) {
 	}
 	story := scanStory(sourceFile)
 
-	dir, filename := path.Split(sourceFilename)
-	resultFilename := path.Join(dir, filename[:len(filename)-len(path.Ext(filename))]+".html")
+	resultFilename := getCorrespondingHtmlFilename(sourceFilename)
 	resultFile, err := os.Create(resultFilename)
 	if err != nil {
 		log.Fatal(err)
@@ -98,7 +101,7 @@ func makeStory(sourceFilename string) {
 }
 
 func scanStory(r io.Reader) *story.Story {
-	s := story.New()
+	s := story.New(developmentMode)
 	scan := scanner.New(r)
 	for scan.Scan() {
 		if scan.Err != nil {
@@ -280,4 +283,49 @@ func printStory(s *story.Story, outputFile *os.File) {
 	if err := tmpl.Execute(outputFile, s); err != nil {
 		panic(err)
 	}
+}
+
+func regenerateObsoleteHtmls(path string, isFinalReleaseMode bool) {
+	filepath.Walk(path, func(path string, textInfo os.FileInfo, err error) {
+		if textInfo.IsDir() {
+			regenerateObsoleteHtmls(path, isFinalReleaseMode)
+		} else if isMotoLiSourceFile(path) {
+			htmlFilename := getCorrespondingHtmlFilename(path)
+			htmlInfo, err := os.Stat(htmlFilename)
+			if err != nil || (textInfo.ModTime() > htmlInfo.ModTime() || isFinalReleaseMode != getIsFinalDevelopmentMode(htmlFilename)) {
+				makeStory(path)
+			}
+		}
+		return nil
+	})
+}
+
+func getCorrespondingHtmlFilename(sourceFilename string) string {
+	dir, filename := path.Split(sourceFilename)
+	return path.Join(dir, filename[:len(filename)-len(path.Ext(filename))]+".html")
+}
+
+func getIsFinalDevelopmentMode(htmlFilename string) bool {
+	debug.Printf("start getIsFinalReleaseMode(%q)", htmlFilename)
+	defer debug.Printf("end getIsFinalReleaseMode(%q)", htmlFilename)
+
+	pageRegex := regexp.MustCompile(`^<!-- vt-motoli development mode --!>$`)
+	sourceFile, err := os.Open(htmlFilename)
+	if err != nil {
+		if err == os.ErrNotExist {
+			debug.Printf("%q: does not exist", htmlFilename)
+			return false
+		}
+		log.Fatal(err)
+	}
+	scanner := bufio.NewScanner(sourceFile)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if pageRegex.MatchString(line) {
+			debug.Printf("%q: matches", htmlFilename)
+			return true
+		}
+	}
+	debug.Printf("%q: does not match")
+	return false
 }

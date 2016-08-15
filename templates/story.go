@@ -1,11 +1,15 @@
 package templates
+
 import (
-    "text/template"
+	"text/template"
 )
+
 func AddStory(t *template.Template) {
-    t.New("story.html").Parse(`
+	t.New("story.html").Parse(`
     <!DOCTYPE html>
 <html>
+{{ if .DevelopmentMode }}
+<!-- vt-motoli development mode --!>
 <head>
     <meta charset="UTF-8">
     <title>

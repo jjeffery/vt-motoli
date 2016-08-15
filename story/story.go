@@ -5,25 +5,27 @@ import (
 )
 
 type Story struct {
-	Name      string
-	Format    string
-	ScaleSide string
-	ScaleTop  string
-	Pause     string
-	BackColor string
-	Debug     string
-	Pages     map[int]*Page
+	Name            string
+	Format          string
+	ScaleSide       string
+	ScaleTop        string
+	Pause           string
+	BackColor       string
+	Debug           string
+	Pages           map[int]*Page
+	DevelopmentMode bool
 }
 
-func New() *Story {
+func New(developmentMode bool) *Story {
 	return &Story{
-		Pages:     make(map[int]*Page),
-		Format:    "side",
-		ScaleSide: "40",
-		ScaleTop:  "60",
-		Pause:     "300",
-		BackColor: "white",
-		Debug:     "off",
+		Pages:           make(map[int]*Page),
+		Format:          "side",
+		ScaleSide:       "40",
+		ScaleTop:        "60",
+		Pause:           "300",
+		BackColor:       "white",
+		Debug:           "off",
+		DevelopmentMode: developmentMode,
 	}
 }
 
