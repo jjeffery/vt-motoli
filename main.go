@@ -29,9 +29,24 @@ import (
 
 var developmentMode bool
 
+var (
+	// Version gets set during the formal build.
+	Version     = "development"
+	showVersion bool
+)
+
+func init() {
+	flag.BoolVar(&showVersion, "version", false, "show version")
+}
+
 func main() {
 	log.SetFlags(log.Lshortfile)
 	flag.Parse()
+
+	if showVersion {
+		fmt.Println(Version)
+		os.Exit(0)
+	}
 
 	debug.Printf("command line args: %v", flag.Args())
 	switch len(flag.Args()) {

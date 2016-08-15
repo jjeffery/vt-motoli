@@ -15,14 +15,14 @@ type debugT struct {
 func (d debugT) Printf(format string, args ...interface{}) {
 	if d.enabled {
 		msg := fmt.Sprintf(format, args...)
-		log.Output(1, msg)
+		log.Output(2, msg)
 	}
 }
 
 func (d debugT) Println(args ...interface{}) {
 	if d.enabled {
 		msg := fmt.Sprintln(args...)
-		log.Output(1, msg)
+		log.Output(2, msg)
 	}
 }
 
