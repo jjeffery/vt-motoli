@@ -41,33 +41,54 @@ func init() {
 
 func main() {
 	log.SetFlags(log.Lshortfile)
+	serveCommand := flag.NewFlagSet("serve", flag.ExitOnError)
+	portFlag := serveCommand.Int("p", 3000, "specify port to use.  defaults to 3000.")
+
+	generateCommand := flag.NewFlagSet("generate", flag.ExitOnError)
+
+	flag.Usage = showUsage
 	flag.Parse()
 
 	if showVersion {
 		fmt.Println(Version)
 		os.Exit(0)
 	}
-
-	debug.Printf("command line args: %v", flag.Args())
-	switch len(flag.Args()) {
-	case 0:
-		break
-	case 1:
-		debug.Printf("changing directory to %q", flag.Arg(0))
-		if err := os.Chdir(flag.Arg(0)); err != nil {
-			log.Fatal(err)
+	fmt.Printf("other args: %+v\n", flag.Args())
+	fmt.Printf("other args: %+v\n", flag.Args()[1:])
+	fmt.Printf("hello %d", len(flag.Args()))
+	fmt.Println(*portFlag)
+	//generateCommand.Parse(os.Args[2:])
+	//debug.Printf("command line args: %v", flag.Args())
+	if len(flag.Args()) > 0 {
+		switch flag.Args()[0] {
+		case "serve":
+			serveCommand.Parse(flag.Args()[1:])
+		case "generate":
+			generateCommand.Parse(flag.Args()[1:])
+		default:
+			showUsage()
+			os.Exit(0)
 		}
-	default:
-		log.Fatalf("usage: %s [ directory ]", os.Args[0])
+	}
+
+	//debug.Printf("changing directory to %q", flag.Arg(0))
+	//if err := os.Chdir(flag.Arg(0)); err != nil {
+	//	log.Fatal(err)
+	//}
+
+	if serveCommand.Parsed() {
+		developmentMode = true
+		regenerateObsoleteHtmls(".")
+	} else {
+		regenerateObsoleteHtmls(".")
+		os.Exit(0)
 	}
 
 	var wg sync.WaitGroup
 
-	regenerateObsoleteHtmls(".", false)
-
 	wg.Add(1)
 	go func() {
-		webServer()
+		webServer(*portFlag)
 		wg.Done()
 	}()
 
@@ -80,7 +101,14 @@ func main() {
 	wg.Wait()
 }
 
-func webServer() {
+func showUsage() {
+	fmt.Printf("usage: %s generate | serve \n", filepath.Base(os.Args[0]))
+	fmt.Printf("%s generate  - to make a final set of html files\n", filepath.Base(os.Args[0]))
+	fmt.Printf("%s serve - to run a dynamic refresh server on localhost:3000/\n", filepath.Base(os.Args[0]))
+	flag.PrintDefaults()
+}
+
+func webServer(port int) {
 	staticFileServer := http.FileServer(http.Dir("."))
 	assetServer := http.FileServer(assets)
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
@@ -95,7 +123,8 @@ func webServer() {
 
 	graceful.OnShutdown(func() { manners.Close() })
 	log.Println("Listening...")
-	manners.ListenAndServe(":3000", http.DefaultServeMux)
+	fmt.Println(":", port)
+	manners.ListenAndServe(fmt.Sprintf(":%d", port), http.DefaultServeMux)
 	log.Println("web server stopped")
 }
 
@@ -245,7 +274,9 @@ func watchForFileChanges(baseDirectory string) {
 			return
 		case event := <-watcher.Events:
 			log.Println("modified file:", event.Name)
-			if isMotoLiSourceFile(event.Name) {
+			if strings.HasPrefix(event.Name, ".idea") || strings.HasPrefix(event.Name, ".git") {
+				// do nothing
+			} else if isMotoLiSourceFile(event.Name) {
 				log.Println("yippee")
 				makeStory(event.Name)
 			} else if path.Ext(event.Name) != ".html" {
@@ -300,16 +331,16 @@ func printStory(s *story.Story, outputFile *os.File) {
 	}
 }
 
-func regenerateObsoleteHtmls(parentPath string, isFinalReleaseMode bool) {
+func regenerateObsoleteHtmls(parentPath string) {
 	filepath.Walk(parentPath, func(path string, textInfo os.FileInfo, err error) error {
 		if path != parentPath {
 
 			if textInfo.IsDir() {
-				regenerateObsoleteHtmls(path, isFinalReleaseMode)
+				regenerateObsoleteHtmls(path)
 			} else if isMotoLiSourceFile(path) {
 				htmlFilename := getCorrespondingHtmlFilename(path)
 				htmlInfo, err := os.Stat(htmlFilename)
-				if err != nil || (textInfo.ModTime().After(htmlInfo.ModTime()) || isFinalReleaseMode != getIsFinalDevelopmentMode(htmlFilename)) {
+				if err != nil || (textInfo.ModTime().After(htmlInfo.ModTime()) || developmentMode != getIsFinalDevelopmentMode(htmlFilename)) {
 					makeStory(path)
 				}
 			}

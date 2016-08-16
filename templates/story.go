@@ -20,7 +20,7 @@ func AddStory(t *template.Template) {
     <script src="../../common/jquery-3.1.0.min.js"></script>
     <script src="../../common/storyScripts.js"></script>
 </head>
-<body onload="initialise()" onresize="limitPictureSize()">
+<body onload="initialise()" onresize="limitPictureSize()" {{ if .DevelopmentMode }}class="development-mode"{{ end }}>
 <p id="loadmsg">Loading the story...</p>
 <div class="{{.Format}}" id="story">
 

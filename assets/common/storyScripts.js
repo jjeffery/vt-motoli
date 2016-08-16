@@ -34,7 +34,6 @@ function poll(){
 				window.location.reload(true);
 			};
 			previousLastModified = lastModified;
-			console.log(previousLastModified);
 			setTimeout(poll, 2000);
 		},
 		error : function(){
@@ -107,7 +106,9 @@ function initialise() {
 		document.getElementById("story").style.visibility = "visible";
 		showPage(jumpPage, "change");
 
-		setTimeout(poll, 2000);
+		if ($("body.development-mode").length>0) {
+			setTimeout(poll, 2000);
+		}
 	}
 }
 
