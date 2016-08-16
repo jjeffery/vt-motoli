@@ -300,15 +300,18 @@ func printStory(s *story.Story, outputFile *os.File) {
 	}
 }
 
-func regenerateObsoleteHtmls(path string, isFinalReleaseMode bool) {
-	filepath.Walk(path, func(path string, textInfo os.FileInfo, err error) {
-		if textInfo.IsDir() {
-			regenerateObsoleteHtmls(path, isFinalReleaseMode)
-		} else if isMotoLiSourceFile(path) {
-			htmlFilename := getCorrespondingHtmlFilename(path)
-			htmlInfo, err := os.Stat(htmlFilename)
-			if err != nil || (textInfo.ModTime() > htmlInfo.ModTime() || isFinalReleaseMode != getIsFinalDevelopmentMode(htmlFilename)) {
-				makeStory(path)
+func regenerateObsoleteHtmls(parentPath string, isFinalReleaseMode bool) {
+	filepath.Walk(parentPath, func(path string, textInfo os.FileInfo, err error) error {
+		if path != parentPath {
+
+			if textInfo.IsDir() {
+				regenerateObsoleteHtmls(path, isFinalReleaseMode)
+			} else if isMotoLiSourceFile(path) {
+				htmlFilename := getCorrespondingHtmlFilename(path)
+				htmlInfo, err := os.Stat(htmlFilename)
+				if err != nil || (textInfo.ModTime().After(htmlInfo.ModTime()) || isFinalReleaseMode != getIsFinalDevelopmentMode(htmlFilename)) {
+					makeStory(path)
+				}
 			}
 		}
 		return nil

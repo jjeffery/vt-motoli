@@ -10,6 +10,7 @@ func AddStory(t *template.Template) {
 <html>
 {{ if .DevelopmentMode }}
 <!-- vt-motoli development mode --!>
+{{ end }}
 <head>
     <meta charset="UTF-8">
     <title>
