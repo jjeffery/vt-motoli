@@ -136,15 +136,11 @@ function setFormat() {	//Establishes text-beside-pic or text-under-pic format, a
 
 function showLanguages() {
     var i, j;
-	var visLangs = [];
-	var hashIndex = window.location.href.indexOf('#');
 	var textLineNodes;
 	var textRowNodes;
 	var visLangClass;
 
-	if (hashIndex > 0) {
-		visLangs = window.location.href.slice(hashIndex + 1).split(',');
-	}
+	var visLangs = getVisibleLanguages();
 	if (!visLangs[0]) return;
 
 	textLineNodes = document.getElementsByClassName("textLine");
@@ -152,12 +148,28 @@ function showLanguages() {
 	textLineNodes[i].parentNode.style.visibility = "hidden";
 	}
 	for (i = 0; i < visLangs.length; i++){
-		visLangClass = visLangs[i]
+		visLangClass = visLangs[i];
 		textRowNodes = document.getElementsByClassName(visLangClass);
 		for (j = 0; j < textRowNodes.length; j++){
 			textRowNodes[j].style.visibility = "visible";
 		}
 	}
+}
+
+function getVisibleLanguages() {
+	var visLangs = [];
+	var hashIndex = window.location.href.indexOf('#');
+
+	if (hashIndex > 0) {
+		var visLangsAndPage = window.location.href.slice(hashIndex + 1).split(',');
+		$.each(visLangsAndPage, function(i, s){
+			if (!s.startsWith('page')){
+				visLangs.push(s);
+			}
+		})
+
+	}
+	return visLangs;
 }
 
 function limitPictureSize() {
@@ -226,6 +238,7 @@ function showPage(i, evnt) {
 	//However, its main purpose is to set the lengths (widths) of any progress bars on the page
 	//to align exactly with the lengths of the corresponding text lines.
 
+	pgOn = i;
 	var pagenumber;
 	var pageID;
 	var textNode;	//the <span> element containing a line of text
@@ -244,20 +257,35 @@ function showPage(i, evnt) {
 		document.getElementsByClassName("pgnum")[j].innerHTML = pagenumber;
 	}
 	hideAllPages()	//and then display the desired one
-	document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
 
-	//Now set the progress bar lengths for each text line of the page
-	lineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
-	//This will also set the first line of a wrapped set, but it will be overwritten in the following for loop.
+	page = document.getElementById(pageID);
+	if(!page){
+		pageId = "p0";
+		page = document.getElementById(pageId);
+	}
+	if(page) {
+		page.style.display = "block"; //enable the page to be displayed
+
+		// change page address to include anchor
+		var visLangs = getVisibleLanguages();
+		visLangs.unshift("#page" + i)
+		window.history.pushState("", "", window.location = document.location.href.match(/(^[^#]*)/)[0] + visLangs.join(","));
+
+
+		//Now set the progress bar lengths for each text line of the page
+		lineNodes = document.getElementById(pageID).getElementsByClassName("textLine");
+		//This will also set the first line of a wrapped set, but it will be overwritten in the following for loop.
 		for (j = 0; j < lineNodes.length; j++) {
 			textNode = lineNodes[j].getElementsByClassName("line")[0];  //This is the text whose length we want
-			textLength = textNode.offsetWidth;
+			textLength = textNode ? textNode.offsetWidth : 0;
 			progNode = lineNodes[j].getElementsByTagName("progress")[0];  //This is the progress element to be set
-			progNode.style.width = (textLength + "px");
-			progNode.value = 0;
+			if (progNode) {
+				progNode.style.width = (textLength + "px");
+				progNode.value = 0;
+			}
 		}
-	//Set the progress bar lengths for each line of any wrapped sets of lines
-	wrapNodes = document.getElementById(pageID).getElementsByClassName("wrap");
+		//Set the progress bar lengths for each line of any wrapped sets of lines
+		wrapNodes = document.getElementById(pageID).getElementsByClassName("wrap");
 		for (j = 0; j < wrapNodes.length; j++) {
 			//get number of lines for each node
 			wrapLines = wrapNodes[j].getElementsByClassName("line").length;
@@ -269,15 +297,16 @@ function showPage(i, evnt) {
 				progNode.value = 0;
 			}
 		}
-	//At this point all progress bars for the page have been set to the correct length and initialised to zero.
-	//This is true for the XOs, although they do not display the new status, nor respond when activated.
-	//The following action seems to be necessary to kick-start them back to life!
-	document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
+		//At this point all progress bars for the page have been set to the correct length and initialised to zero.
+		//This is true for the XOs, although they do not display the new status, nor respond when activated.
+		//The following action seems to be necessary to kick-start them back to life!
+		document.getElementById(pageID).style.display = "block"; //enable the page to be displayed
 
-	if (evnt === "load") {
-		//Use brute force (page fwd and back) to force page 0 buttons to position correctly
-		document.getElementById(pageID).getElementsByClassName("btnfwd")[0].click();
-		document.getElementById(pageID).getElementsByClassName("btnback")[0].click();
+		if (evnt === "load") {
+			//Use brute force (page fwd and back) to force page 0 buttons to position correctly
+			document.getElementById(pageID).getElementsByClassName("btnfwd")[0].click();
+			document.getElementById(pageID).getElementsByClassName("btnback")[0].click();
+		}
 	}
 }
 

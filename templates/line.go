@@ -8,10 +8,10 @@ func AddLine(t *template.Template) {
 	t.New("line.html").Parse(`
 {{ if .OnlyOneSegment }}
 <!-- Text line {{.Number}} -->
-<tr{{ if .Lang}} class="l-{{.Lang}}"{{ end}}><td class="textLine">
+<tr{{ if .Lang}} class="l-{{.Lang}} {{.Lang}}"{{ end}}><td class="textLine">
     {{ template "single_segment.html" index .Segments 0}}
 {{ else }}
-<tr{{ if .Lang}} class="l-{{.Lang}}"{{ end}}><!-- Text line {{.Number}} -->
+<tr{{ if .Lang}} class="l-{{.Lang}} {{.Lang}}"{{ end}}><!-- Text line {{.Number}} -->
     <td class="textLine wrap">
 {{range .Segments}}<span class="line"><span>{{.}}</span><br /><progress value="0"></progress><br />
         {{end}}

@@ -1,6 +1,9 @@
 
     <!DOCTYPE html>
 <html>
+
+<!-- vt-motoli development mode -->
+
 <head>
     <meta charset="UTF-8">
     <title>
@@ -10,12 +13,12 @@
     <script src="../../common/jquery-3.1.0.min.js"></script>
     <script src="../../common/storyScripts.js"></script>
 </head>
-<body onload="initialise()" onresize="limitPictureSize()">
+<body onload="initialise()" onresize="limitPictureSize()" class="development-mode">
 <p id="loadmsg">Loading the story...</p>
 <div class="side" id="story">
 
     <!-- Data for this story -->
-    <p class="data">
+    <p class="data" style="display:none">
         <span id="platform"></span>
         <span id="onloads">0</span>
         <span id="pScaleSide">40</span>
@@ -28,6 +31,7 @@
         
     <!-- PAGE 0 -->
 <div class="page" id="p0">
+
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>
@@ -55,9 +59,9 @@
                 
 
 <!-- Text line 1 -->
-<tr class="l-en"><td class="textLine">
+<tr class="l-en en"><td class="textLine">
     
-	<span class="line"><span>The Lonely Cat</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>The Lonely Cat</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -71,9 +75,9 @@
                 
 
 <!-- Text line 2 -->
-<tr class="l-kh"><td class="textLine">
+<tr class="l-kh kh"><td class="textLine">
     
-	<span class="line"><span>Writer: Chris Gleisner, Rotana Seang</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>Writer: Chris Gleisner, Rotana Seang</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -128,6 +132,7 @@
         
     <!-- PAGE 1 -->
 <div class="page" id="p1">
+
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>
@@ -155,9 +160,9 @@
                 
 
 <!-- Text line 1 -->
-<tr class="l-en"><td class="textLine">
+<tr class="l-en en"><td class="textLine">
     
-	<span class="line"><span>The lonely cat sat by the river all day.</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>The lonely cat sat by the river all day.</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -171,9 +176,9 @@
                 
 
 <!-- Text line 2 -->
-<tr class="l-kh"><td class="textLine">
+<tr class="l-kh kh"><td class="textLine">
     
-	<span class="line"><span>មានឆ្មារកំព្រារមួយក្បាលអង្គុយនៅមាត់ទន្លេរពេញមួយថ្ងៃ។</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>មានឆ្មារកំព្រារមួយក្បាលអង្គុយនៅមាត់ទន្លេរពេញមួយថ្ងៃ។</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -192,6 +197,7 @@
         
     <!-- PAGE 2 -->
 <div class="page" id="p2">
+
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>
@@ -218,10 +224,10 @@
             
                 
 
-<tr class="l-en"><!-- Text line 1 -->
+<tr class="l-en en"><!-- Text line 1 -->
     <td class="textLine wrap">
-<span class="line"><span>One day a cow came and asked why</span></span><progress value="0"></progress>
-        <span class="line"><span>he was looking so sad.</span></span><progress value="0"></progress>
+<span class="line"><span>One day a cow came and asked why</span><br /><progress value="0"></progress><br />
+        <span class="line"><span>he was looking so sad.</span><br /><progress value="0"></progress><br />
         
     </td>
 
@@ -235,10 +241,10 @@
             
                 
 
-<tr class="l-kh"><!-- Text line 2 -->
+<tr class="l-kh kh"><!-- Text line 2 -->
     <td class="textLine wrap">
-<span class="line"><span>ថ្ងៃមួយមានគោមួយក្បាលបានមកសួរឆ្មារហេតុ</span></span><progress value="0"></progress>
-        <span class="line"><span>អ្វីបានជាវាមើលទៅមិនសប្បាយចិត្ត ។</span></span><progress value="0"></progress>
+<span class="line"><span>ថ្ងៃមួយមានគោមួយក្បាលបានមកសួរឆ្មារហេតុ</span><br /><progress value="0"></progress><br />
+        <span class="line"><span>អ្វីបានជាវាមើលទៅមិនសប្បាយចិត្ត ។</span><br /><progress value="0"></progress><br />
         
     </td>
 
@@ -258,6 +264,7 @@
         
     <!-- PAGE 3 -->
 <div class="page" id="p3">
+
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>
@@ -285,9 +292,9 @@
                 
 
 <!-- Text line 1 -->
-<tr class="l-en"><td class="textLine">
+<tr class="l-en en"><td class="textLine">
     
-	<span class="line"><span>The cat thanked the cow for his help.</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>The cat thanked the cow for his help.</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -301,9 +308,9 @@
                 
 
 <!-- Text line 2 -->
-<tr class="l-kh"><td class="textLine">
+<tr class="l-kh kh"><td class="textLine">
     
-	<span class="line"><span>ឆ្មារនិយាយអគុណគោដែលបានជួយ។</span></span><progress value="0" max="100"></progress></td>
+	<span class="line"><span>ឆ្មារនិយាយអគុណគោដែលបានជួយ។</span><progress value="0" max="100"></progress></td>
 
 
     <!-- Audio file, time in secs, page ID, line No. -->
@@ -316,10 +323,10 @@
             
                 
 
-<tr class="l-en"><!-- Text line 3 -->
+<tr class="l-en en"><!-- Text line 3 -->
     <td class="textLine wrap">
-<span class="line"><span>The cow said he was happy to help.</span><span class="pause">|</span><span></span></span><progress value="0"></progress>
-        <span class="line"><span>That is what a friend does.</span></span><progress value="0"></progress>
+<span class="line"><span>The cow said he was happy to help.</span><span class="pause">|</span><span></span><br /><progress value="0"></progress><br />
+        <span class="line"><span>That is what a friend does.</span><br /><progress value="0"></progress><br />
         
     </td>
 
@@ -333,10 +340,10 @@
             
                 
 
-<tr class="l-kh"><!-- Text line 4 -->
+<tr class="l-kh kh"><!-- Text line 4 -->
     <td class="textLine wrap">
-<span class="line"><span>គោនិយាយទៅឆ្មារថា វាសប្បាចិត្តនឹងជួយ </span><span class="pause">|</span><span></span></span><progress value="0"></progress>
-        <span class="line"><span>មិត្តភ័ក្តិត្រូវតែចេះជួយគ្នា។</span></span><progress value="0"></progress>
+<span class="line"><span>គោនិយាយទៅឆ្មារថា វាសប្បាចិត្តនឹងជួយ </span><span class="pause">|</span><span></span><br /><progress value="0"></progress><br />
+        <span class="line"><span>មិត្តភ័ក្តិត្រូវតែចេះជួយគ្នា។</span><br /><progress value="0"></progress><br />
         
     </td>
 
@@ -356,6 +363,7 @@
         
     <!-- PAGE 4 -->
 <div class="page" id="p4">
+
     <div class="pict">
         <div class="underpic"> <!-- Format for a vertically oriented page -->
             <table><tr>

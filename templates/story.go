@@ -9,7 +9,7 @@ func AddStory(t *template.Template) {
     <!DOCTYPE html>
 <html>
 {{ if .DevelopmentMode }}
-<!-- vt-motoli development mode --!>
+<!-- vt-motoli development mode -->
 {{ end }}
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@ func AddStory(t *template.Template) {
 <div class="{{.Format}}" id="story">
 
     <!-- Data for this story -->
-    <p class="data">
+    <p class="data" style="display:none">
         <span id="platform"></span>
         <span id="onloads">0</span>
         <span id="pScaleSide">{{.ScaleSide}}</span>

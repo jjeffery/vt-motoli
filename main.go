@@ -42,7 +42,8 @@ func init() {
 func main() {
 	log.SetFlags(log.Lshortfile)
 	serveCommand := flag.NewFlagSet("serve", flag.ExitOnError)
-	portFlag := serveCommand.Int("p", 3000, "specify port to use.  defaults to 3000.")
+	portFlag := serveCommand.Int("port", 3000, "specify port to use.  defaults to 3000.")
+	var directoryFlag *string
 
 	generateCommand := flag.NewFlagSet("generate", flag.ExitOnError)
 
@@ -53,34 +54,39 @@ func main() {
 		fmt.Println(Version)
 		os.Exit(0)
 	}
-	fmt.Printf("other args: %+v\n", flag.Args())
-	fmt.Printf("other args: %+v\n", flag.Args()[1:])
-	fmt.Printf("hello %d", len(flag.Args()))
-	fmt.Println(*portFlag)
+
 	//generateCommand.Parse(os.Args[2:])
 	//debug.Printf("command line args: %v", flag.Args())
 	if len(flag.Args()) > 0 {
 		switch flag.Args()[0] {
 		case "serve":
+			directoryFlag = serveCommand.String("directory", "", "specify a working directory")
 			serveCommand.Parse(flag.Args()[1:])
 		case "generate":
+			directoryFlag = generateCommand.String("directory", "", "specify a working directory")
 			generateCommand.Parse(flag.Args()[1:])
 		default:
 			showUsage()
 			os.Exit(0)
 		}
+	} else {
+		showUsage()
+		os.Exit(0)
 	}
 
-	//debug.Printf("changing directory to %q", flag.Arg(0))
-	//if err := os.Chdir(flag.Arg(0)); err != nil {
-	//	log.Fatal(err)
-	//}
+	if directoryFlag != nil && *directoryFlag != "" {
+		debug.Printf("changing directory to %q", *directoryFlag)
+		if err := os.Chdir(*directoryFlag); err != nil {
+			log.Fatal(err)
+		}
+	}
 
 	if serveCommand.Parsed() {
 		developmentMode = true
 		regenerateObsoleteHtmls(".")
 	} else {
-		regenerateObsoleteHtmls(".")
+		changedFileCount := regenerateObsoleteHtmls(".")
+		fmt.Printf("%d files changed", changedFileCount)
 		os.Exit(0)
 	}
 
@@ -102,9 +108,26 @@ func main() {
 }
 
 func showUsage() {
-	fmt.Printf("usage: %s generate | serve \n", filepath.Base(os.Args[0]))
-	fmt.Printf("%s generate  - to make a final set of html files\n", filepath.Base(os.Args[0]))
-	fmt.Printf("%s serve - to run a dynamic refresh server on localhost:3000/\n", filepath.Base(os.Args[0]))
+
+	var text string = `	%s is a tool for creating html story pages from structured text (.txt) files.
+
+	Usage:
+
+	%s command [arguments]
+
+	The commands are:
+
+	generate    make a final set of html files
+		The arguments are:
+			-directory [path]  specify a the root directory of the story hierarchy
+	serve       run a dynamic refresh server on localhost:3000
+		The arguments are:
+			-port [number]	specify a port other than 3000
+			-directory [path]  specify a the root directory of the story hierarchy
+`
+
+	var exe = filepath.Base(os.Args[0])
+	fmt.Printf(text, exe, exe)
 	flag.PrintDefaults()
 }
 
@@ -112,7 +135,6 @@ func webServer(port int) {
 	staticFileServer := http.FileServer(http.Dir("."))
 	assetServer := http.FileServer(assets)
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		log.Println(req.URL.Path)
 		if _, err := os.Stat("./" + req.URL.Path); err == nil {
 			// path/to/whatever exists
 			staticFileServer.ServeHTTP(w, req)
@@ -331,22 +353,25 @@ func printStory(s *story.Story, outputFile *os.File) {
 	}
 }
 
-func regenerateObsoleteHtmls(parentPath string) {
+func regenerateObsoleteHtmls(parentPath string) int {
+	updatedFileCount := 0
 	filepath.Walk(parentPath, func(path string, textInfo os.FileInfo, err error) error {
 		if path != parentPath {
 
 			if textInfo.IsDir() {
-				regenerateObsoleteHtmls(path)
+				updatedFileCount += regenerateObsoleteHtmls(path)
 			} else if isMotoLiSourceFile(path) {
 				htmlFilename := getCorrespondingHtmlFilename(path)
 				htmlInfo, err := os.Stat(htmlFilename)
 				if err != nil || (textInfo.ModTime().After(htmlInfo.ModTime()) || developmentMode != getIsFinalDevelopmentMode(htmlFilename)) {
 					makeStory(path)
+					updatedFileCount += 1
 				}
 			}
 		}
 		return nil
 	})
+	return updatedFileCount
 }
 
 func getCorrespondingHtmlFilename(sourceFilename string) string {
@@ -358,7 +383,8 @@ func getIsFinalDevelopmentMode(htmlFilename string) bool {
 	debug.Printf("start getIsFinalReleaseMode(%q)", htmlFilename)
 	defer debug.Printf("end getIsFinalReleaseMode(%q)", htmlFilename)
 
-	pageRegex := regexp.MustCompile(`^<!-- vt-motoli development mode --!>$`)
+	pageRegex := regexp.MustCompile(`^<!-- vt-motoli development mode -->$`)
+
 	sourceFile, err := os.Open(htmlFilename)
 	if err != nil {
 		if err == os.ErrNotExist {
